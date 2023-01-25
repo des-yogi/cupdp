@@ -1,0 +1,68 @@
+{
+  "blocks": {
+    "breadcrumbs": [],
+    "btn": [],
+    "burger": [],
+    "close": [],
+    "embed-responsive": [],
+    "field-actions": [],
+    "field-checkbox": [],
+    "field-radio": [],
+    "field-select": [],
+    "field-text": [],
+    "form": [],
+    "lang-switcher": [],
+    "loader": [],
+    "logo": [],
+    "main-nav": [],
+    "modal": [],
+    "page": [],
+    "page-footer": [],
+    "page-header": [],
+    "pagination": [],
+    "scroll-link": [],
+    "sprite-svg": [],
+    "table": [],
+    "table-mobile-scroll": [],
+    "typo": []
+  },
+  "addCssBefore": [
+    "../../node_modules/bootstrap/scss/_functions",
+    "../../node_modules/bootstrap/scss/_variables",
+    "../../node_modules/bootstrap/scss/_mixins",
+    "./src/scss/variables.scss",
+    "./src/scss/mixins.scss",
+    "../../node_modules/bootstrap/scss/_dropdown",
+    "../../node_modules/bootstrap/scss/_modal",
+    "../../node_modules/bootstrap/scss/_spinners",
+    "../../node_modules/air-datepicker/air-datepicker.css",
+    "../../node_modules/swiper/swiper-bundle.min.css"
+  ],
+  "addCssAfter": [
+    "./src/scss/print.scss"
+  ],
+  "singleCompiled": [],
+  "addJsBefore": [
+    "./node_modules/focus-visible/dist/focus-visible.min.js",
+    "./node_modules/blazy/blazy.min.js",
+    "./node_modules/svg4everybody/dist/svg4everybody.js",
+    "./node_modules/autosize/dist/autosize.min.js",
+    "./node_modules/air-datepicker/air-datepicker.js",
+    "./node_modules/@popperjs/core/dist/umd/popper.min.js",
+    "./node_modules/bootstrap/dist/js/bootstrap.min.js",
+    "./node_modules/swiper/swiper-bundle.min.js"
+  ],
+  "addJsAfter": [
+    "./src/js/global-script.js"
+  ],
+  "addImages": [
+    "./src/img/*.{jpg,jpeg,gif,png,svg,ico,webp}"
+  ],
+  "copiedCss": [],
+  "copiedJs": [],
+  "dirs": {
+    "srcPath": "./src/",
+    "buildPath": "./build/",
+    "blocksDirName": "blocks"
+  }
+}
