@@ -24,7 +24,18 @@
     "sprite-svg": [],
     "table": [],
     "table-mobile-scroll": [],
-    "typo": []
+    "typo": [],
+    "social-link": [],
+    "copyrights": [],
+    "page-404": [],
+    "page-503": [],
+    "top-categories": [],
+    "search-block": [],
+    "latest-materials": [],
+    "material-card": [],
+    "blog-card": [],
+    "category-card": [],
+    "blog-block": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",

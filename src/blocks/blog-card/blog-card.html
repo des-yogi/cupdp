@@ -1,0 +1,39 @@
+<!--DEV
+@ @include('blocks/blog-card/blog-card.html')
+-->
+
+<article class="blog-card">
+  <a href="#" class="embed-responsive embed-responsive--4-3  blog-card__img" aria-hidden="true" tabindex="-1">
+    <img
+      class="b-lazy"
+      data-srcset="img/blog-img.jpg 350w,
+              img/blog-img.jpg 480w,
+              img/blog-img.jpg 645w,
+              img/blog-img.jpg 800w,
+              img/blog-img.jpg 900w"
+      sizes="(max-width: 360px) 312px,
+             (max-width: 480px) 440px,
+             (max-width: 768px) 320px,
+             (max-width: 992px) 430px,
+             (max-width: 1200px) 534px,
+             350px"
+      data-src="img/blog-img.jpg"
+      src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+      width="900"
+      height="675"
+      alt='@@title'
+    >
+  </a>
+  <div class="blog-card__text-wrapper">
+    <div class="blog-card__text">
+      <h3 class="blog-card__title"><a href="#">@@title</a></h3>
+      <p class="blog-card__intro">@@text</p>
+    </div>
+    <p class="blog-card__bottom">
+      <span class="blog-card__date">
+        <time datetime="2022-12-25">25 Грудня, 2022</time>
+      </span>
+      <span class="blog-card__views">167</span>
+    </p>
+  </div>
+</article>

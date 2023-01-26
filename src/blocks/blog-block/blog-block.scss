@@ -1,0 +1,11 @@
+.blog-block {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__card-col {
+    @include col(xs, 12);
+    @include col(md, 6);
+    @include col(xl, 4);
+    margin-bottom: 16px;
+  }
+}

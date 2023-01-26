@@ -1,80 +1,50 @@
 .lang-switcher {
-  //@include col(xs, 5, $grid-columns, 20px);
-  //@include col(md, 2);
-  display: flex;
+  display: inline-flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
 
-  @media (min-width: $screen-md) {
-    display: inline-flex;
-    max-width: 90px;
-    margin-left: 0;
+  @media (min-width: $screen-xl) {
+    order: 1;
+    margin-left: 8px;
   }
 
   $block-name:                &; // #{$block-name}__element
 
-  .dropdown-toggle {
-    padding: 5px 10px;
-    font-family: $font-family;
-    font-size: $font-size;
-    font-weight: 500;
-    text-transform: uppercase;
-    user-select: none;
-    cursor: pointer;
-    color: inherit;
-    background-color: $white;
-    border: none;
-    box-shadow: $shadow;
+  &__btn {
+    color: $text-color;
 
-    &:hover,
-    &:focus {
-      color: $main-color;
+    & > svg {
+      fill: currentColor;
+      stroke: none !important;
+    }
+  }
+
+  &__menu {
+    min-width: auto;
+    border: 2px solid $border-color;
+    border-radius: $border-radius--32;
+    overflow: hidden;
+  }
+
+  &__item {
+
+    &.active a {
+      color: $link-color--hover;
     }
 
-    &::after {
-      display: none;
-    }
+    a {
+      display: block;
+      padding: 8px 24px;
+      font-size: $font-size-sm;
+      font-weight: 500;
 
-    &::before {
-      display: inline-block;
-      vertical-align: middle;
-      content: "";
-      width: 16px;
-      height: 10px;
-      margin-right: 10px;
-      //background: svg-load('../blocks/sprite-svg/svg/bottom-arrow-s.svg', fill=$main-color, stroke=rgba(255, 255, 255, 0));
-      background: svg-load('../blocks/lang-switcher/bg-img/bottom-arrow-s.svg', fill=$main-color, stroke=rgba(255, 255, 255, 0));
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: 100%;
-      transition: transform $transition-time ease-out;
-    }
-
-    &[aria-expanded=true] {
-      &::before {
-        transform: rotate(180deg) translateY(2px);
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        color: $link-color--hover;
+        background-color: $white;
       }
     }
-  }
-
-  .dropdown-menu {
-    min-width: 65px;
-  }
-
-  .dropdown-item {
-    font-family: $font-family;
-    font-size: $font-size;
-    font-weight: 500;
-    padding-right: 5px;
-    color: inherit;
-
-    &:hover,
-    &:focus {
-      color: $main-color;
-    }
-  }
-  .dropdown-item + .dropdown-item {
-    padding-top: 10px;
   }
 }

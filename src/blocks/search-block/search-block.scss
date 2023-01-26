@@ -1,0 +1,28 @@
+.search-block {
+  padding-top: 72px;
+  padding-bottom: 72px;
+
+  @media (min-width: $screen-md) {
+    padding-top: 128px;
+    padding-bottom: 96px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  .h1,
+  .h2,
+  .h3 {
+    margin-top: 0;
+    text-align: center;
+
+    span {
+      color: $main-color;
+    }
+  }
+
+  &__wrapper-col {
+    @include col(xs, 12);
+    @include col-offset(md, 2);
+    @include col(md, 8);
+  }
+}

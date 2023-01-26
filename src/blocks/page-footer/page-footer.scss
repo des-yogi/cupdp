@@ -1,8 +1,73 @@
-// В этом файле должны быть стили для БЭМ-блока page-footer, его элементов,
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .page-footer {
+  padding-top: 40px;
+  color: $white;
+  background-color: $secondary-color;
 
   $block-name:                &; // #{$block-name}__element
+
+  &__main {
+    text-align: center;
+
+    @media (min-width: $screen-md) {
+      text-align: initial;
+    }
+  }
+
+  &__logo-col,
+  &__slogan-col,
+  &__socials-col {
+    @include col(xs, 12);
+    @include col(xl, 4);
+
+    @media (min-width: $screen-md) {
+      padding-left: 26px !important;
+    }
+  }
+
+  &__logo-col {
+    margin-bottom: 32px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__slogan-col {
+    margin-bottom: 32px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__socials-col {
+
+  }
+
+  &__slogan {
+    margin-bottom: 16px;
+    font-size: $font-size-sm;
+    //text-align: center;
+  }
+
+  &__logo-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    @media (min-width: $screen-md) {
+      justify-content: initial;
+    }
+
+    img + img {
+
+      @media (min-width: $screen-md) {
+        margin-left: 16px;
+      }
+    }
+  }
+
+  &__copyrights {
+
+  }
 }

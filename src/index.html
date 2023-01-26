@@ -16,11 +16,50 @@
       @@include('blocks/page-header/page-header.html')
 
       <!-- <input type="text" id="input" placeholder="Выберите дату"> -->
-      <main role="main">
+      <main class="main-page">
 
-        <div class="container">
+        <h1 class="visually-hidden">Головна сторінка організації «Community Policing Knowledge Hub»</h1>
 
-        </div>
+        @@include('blocks/search-block/search-block.html')
+
+        @@include('blocks/top-categories/top-categories.html')
+
+        @@include('blocks/latest-materials/latest-materials.html')
+
+        <hr>
+
+        <section class="container  latest-materials  blog-block">
+          <h2 class="latest-materials__title">Блог</h2>
+          <p class="latest-materials__intro">Свіжі та актуальні публікації нашого життя</p>
+
+          <div class="row" role="list">
+            <div class="blog-block__card-col" role="listitem">
+              @@include('blocks/blog-card/blog-card.html', {
+                "title": "Наша національна єдність зміцнилася",
+                "text": "Сьогодні для українців нетиповий День Незалежності. Тридцять один рік тому Україна розірвала свої зв’язки з Радянським Союзом, а тепер боротьба за нашу свободу й цілісність…"
+              })
+            </div>
+            <div class="blog-block__card-col" role="listitem">
+              @@include('blocks/blog-card/blog-card.html', {
+                "title": "Проєкт СUPDP підтримав захід МВС із нагородження дітей",
+                "text": "Юні сміливці долучилися до волонтерського руху й зробили свій внесок у майбутню перемогу України..."
+              })
+            </div>
+            <div class="blog-block__card-col" role="listitem">
+              @@include('blocks/blog-card/blog-card.html', {
+                "title": "7 років поспіль нове покоління поліції України служить, захищає та...",
+                "text": "СЗараз, в умовах повномасштабної війни, додався ще один фронт роботи, та поліцейські гідно дають відсіч ворогу і слідують присязі України. У посиленому режимі поліція продовжує..."
+              })
+            </div>
+          </div>
+
+          <div class="latest-materials__more-wrapper">
+            <a href="#" class="btn  latest-materials__more-link">
+              <span>Читати весь блог</span>
+              <svg width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right-sm"></use></svg>
+            </a>
+          </div>
+        </section>
 
       </main>
 

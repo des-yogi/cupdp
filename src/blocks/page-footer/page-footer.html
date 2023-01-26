@@ -1,11 +1,31 @@
 <!--DEV
-
-Нужно убрать пробел между @-ами:
-
 @ @include('blocks/page-footer/page-footer.html')
-
 -->
 
-<footer class="page-footer" role="contentinfo">
-  page-footer
+<footer class="container  page-footer">
+  <div class="row  page-footer__main">
+
+    <div class="page-footer__logo-col">
+      <a href="index.html" class="logo logo--footer" title="Community Policing Knowledge Hub">
+        <img src="img/cupdp-logo--footer.svg" alt="CUPDP logo" width="237" height="72" loading="lazy" decoding="async">
+      </a>
+    </div>
+
+    <div class="page-footer__slogan-col">
+      <p class="page-footer__slogan">Сайт створено в межах Канадсько-українського проекту розвитку поліції (CUPDP) за фінансової підтримки уряду Канади</p>
+      <div class="page-footer__logo-wrapper">
+        <img src="img/cupdp.svg" alt="CUPDP logo" width="146"  height="32" loading="lazy" decoding="async">
+        <img src="img/canada.png" alt="Canada logo" width="95" height="32" loading="lazy" decoding="async">
+        <img src="img/alinea-logo.svg" alt="Alinea logo" width="90" height="32" loading="lazy" decoding="async">
+      </div>
+    </div>
+
+    <div class="page-footer__socials-col">
+      @@include('../../blocks/social-link/social-link.html')
+    </div>
+
+  </div>
+  <div class="page-footer__copyrights">
+    @@include('../../blocks/copyrights/copyrights.html')
+  </div>
 </footer>

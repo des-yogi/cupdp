@@ -1,0 +1,52 @@
+.copyrights {
+  padding-top: 32px;
+  padding-bottom: 16px;
+
+  @media (min-width: $screen-md) {
+    padding-top: 40px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: $font-size-sm;
+    text-align: center;
+
+    @media (min-width: $screen-md) {
+      align-items: flex-start;
+    }
+
+    @media (min-width: $screen-xl) {
+      flex-direction: initial;
+      align-items: baseline;
+    }
+
+    a {
+      margin-top: 16px;
+      color: inherit;
+
+      @media (min-width: $screen-xl) {
+        margin-top: 0;
+        margin-left: 24px;
+      }
+
+      &:hover,
+      &:focus {
+        color: $link-color--hover;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__dev {
+
+    @media (min-width: $screen-xl) {
+      margin-left: auto !important;
+    }
+  }
+}
