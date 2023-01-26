@@ -1,11 +1,28 @@
 <!--DEV
-
-Нужно убрать пробел между @-ами:
-
 @ @include('blocks/page-header/page-header.html')
-
 -->
 
-<header class="page-header" role="banner">
-  page-header
+<header class="container  page-header">
+  <div class="page-header__logo-wrapper">
+    <a href="index.html" class="logo" title="Community Policing Knowledge Hub">
+      <img src="img/cupdp-logo.svg" alt="CUPDP logo" width="237" height="72">
+    </a>
+  </div>
+  <div class="page-header__menu-wrapper">
+    @@include('../../blocks/main-nav/main-nav.html')
+
+    <div class="page-header__service-menu">
+      @@include('../../blocks/lang-switcher/lang-switcher.html')
+
+      <button class="btn  btn--icononly  page-header__login-btn" type="button">
+        <svg width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#user-profile"></use></svg>
+        <span>Увійти</span>
+      </button>
+    </div>
+
+    <button class="btn  btn--icononly  page-header__burger" type="button">
+      <svg width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#menu"></use></svg>
+      <span class="visually-hidden">Моб. меню</span>
+    </button>
+  </div>
 </header>

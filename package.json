@@ -16,9 +16,9 @@
     "precommit": "lint-staged"
   },
   "browserslist": [
-    "> 0.7% and not dead",
-    "not IE",
-    "last 3 versions"
+    ">= 0.5% and not dead",
+    "not Explorer <= 11",
+    "last 2 major versions"
   ],
   "lint-staged": {
     "*.scss": "stylelint --syntax=scss"

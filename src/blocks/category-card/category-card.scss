@@ -1,0 +1,104 @@
+.category-card {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 100%;
+  padding: 16px;
+  text-decoration: none !important;
+  color: $text-color;
+  background-color: $white;
+  border-radius: $border-radius--24;
+
+  @media (min-width: $screen-xl) {
+    padding: 24px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &:hover,
+  &:focus {
+
+    #{$block-name}__img {
+      background-color: $link-color--hover;
+    }
+
+    #{$block-name}__total {
+
+      &::after {
+        background-image: svg-load('../blocks/sprite-svg/svg/arrow-right-sm.svg', stroke=$link-color--hover);
+      }
+    }
+  }
+
+  &__img {
+    flex: 0 0 66px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 66px;
+    height: 66px;
+    color: $white;
+    background-color: $secondary-color;
+    border-radius: $border-radius;
+    transition: background $transition-time;
+
+    svg {
+      width: 32px;
+      height: 32px;
+      fill: currentColor;
+    }
+  }
+
+  &__text {
+    flex: 1 1;
+    flex-basis: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    margin-left: 24px;
+  }
+
+  &__title {
+    margin-top: 0;
+    color: $text-color;
+  }
+
+  &__total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding-left: 28px;
+    padding-right: 40px;
+    color: $text-color;
+
+    &::before,
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    &::before {
+      left: 0;
+      width: 20px;
+      height: 20px;
+      background-size: 20px;
+      background-image: svg-load('../blocks/sprite-svg/svg/box.svg', stroke=$text-color);
+    }
+
+    &::after {
+      right: 0;
+      width: 24px;
+      height: 24px;
+      background-size: 24px;
+      background-image: svg-load('../blocks/sprite-svg/svg/arrow-right-sm.svg', stroke=$text-color);
+    }
+  }
+}

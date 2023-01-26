@@ -1,0 +1,38 @@
+.latest-materials {
+  padding-top: 72px;
+  padding-bottom: 72px;
+
+  @media (min-width: $screen-md) {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__title,
+  &__intro {
+    text-align: center;
+  }
+
+  &__title {
+
+    span {
+      color: $main-color;
+    }
+  }
+
+  &__intro {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 32px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__more-wrapper {
+    margin-top: calc(40px - 16px);
+    text-align: center;
+  }
+}

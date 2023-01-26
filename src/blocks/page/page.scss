@@ -16,10 +16,9 @@
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -ms-overflow-style: scrollbar;
   -ms-text-size-adjust: 100%; // stylelint-disable-line  property-no-vendor-prefix
-  min-width: 320px;
+  min-width: 360px;
   min-height: 100%;
 
-  //font-size: 15px;
 
   &__inner {
     min-height: 100vh;
@@ -112,7 +111,7 @@ textarea {
   resize: vertical; // Правильное изменение размеров
 }
 
-// Фикс для исправления закругленных углов на iPhone/Safari
+// Фикс для исправления закругленных углов на iOS/Safari
 //textarea,
 //input[type="text"],
 //input[type="search"],
@@ -144,12 +143,14 @@ img {
 }
 
 a {
+  text-decoration: none;
   color: $link-color;
   background-color: transparent;
-  transition: color 0.3s;
+  transition: color $transition-time;
 
   &:hover,
   &:focus {
+    text-decoration: underline;
     color: $link-color--hover;
   }
 
@@ -168,29 +169,6 @@ a {
     } */
   }
 }
-
-// BS4 Хелперы для BS4 табов и т.п.
-/* .fade {
-  transition: opacity 0.15s linear;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .fade {
-    transition: none;
-  }
-}
-
-.fade:not(.show) {
-  opacity: 0;
-}
-
-.collapse {
-  transition: all 0.3s ease-out;
-}
-
-.collapse:not(.show) {
-  display: none;
-} */
 
 .fade {
   @include transition($transition-fade);
@@ -269,17 +247,17 @@ a {
 .container {
   display: block;
   width: 100%;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 8px;
+  padding-right: 8px;
   background: none;
 
   @media (min-width: $screen-md) {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
   @media (min-width: $screen-xl) {
-    $padding-min: 15px; // нужный отступ от краев экрана
+    $padding-min: 40px; // нужный отступ от краев экрана
     $half-screen-xl: $screen-xl / 2 - $padding-min;
     // padding: 1em calc(50% - 600px); //600px - это $screen-xl / 2 - нужный отступ от края экрана
     padding-left: calc(50% - #{$half-screen-xl});
@@ -289,16 +267,16 @@ a {
 
 // Родитель. Указаны промежутки между ячейками: XS|SM|MD|LG|XL|XXL;
 // @include row($grid-gutter-width, 10px, 12px, 16px, 20px, 26px);
-// .row {
-//   @include row(
-//     $xs-grid-gutter:  20px,
-//     $sm-grid-gutter:  20px,
-//     $md-grid-gutter:  $grid-gutter-width,
-//     $lg-grid-gutter:  $grid-gutter-width,
-//     $xl-grid-gutter:  $grid-gutter-width,
-//     $xxl-grid-gutter: $grid-gutter-width
-//   );
-// }
+.row {
+  @include row(
+    $xs-grid-gutter:  $grid-gutter-width,
+    $sm-grid-gutter:  $grid-gutter-width,
+    $md-grid-gutter:  $grid-gutter-width,
+    $lg-grid-gutter:  $grid-gutter-width,
+    $xl-grid-gutter:  $grid-gutter-width,
+    $xxl-grid-gutter: $grid-gutter-width
+  );
+}
 
 /* &__element {
   @include col(); // малые ширины — 12 из 12, промежутки по умолчанию
@@ -309,8 +287,6 @@ a {
   @include col(xxl, 1, $grid-columns, 26px); // XXL (1800 по умолчанию) — 1 из 12, промежутки 26px
 } */
 
-
-// background: svg-load('../blocks/phones-modal/bg-img/phone.svg', fill=$main-color, stroke=rgba(255, 255, 255, 0));
 
 * {
   //Firefox only
@@ -332,7 +308,7 @@ a {
   ::-webkit-scrollbar {
       width: 6px; /* ширина для вертикального скролла */
       height: 6px; /* высота для горизонтального скролла */
-      background-color: $divider-color;
+      background-color: $border-color;
   }
 
   /* ползунок скроллбара */
@@ -344,7 +320,7 @@ a {
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background-color: darken($main-color, 5%);
+    background-color: $link-color--hover;
   }
 }
 
@@ -355,3 +331,10 @@ a {
     display: none;
   }
 }
+
+// @include col(xs, 12);
+// @include col(md, 6);
+// @include col(xl, 4);
+
+// background-image: svg-load('../blocks/phones-modal/bg-img/phone.svg', stroke=$text-color);
+// background-image: svg-load('../blocks/sprite-svg/svg/grid.svg', stroke=$text-color);

@@ -1,0 +1,40 @@
+<!--DEV
+@ @include('blocks/top-categories/top-categories.html')
+-->
+
+<section class="container  top-categories">
+  <h2 class="top-categories__title"><span>Популярні</span> категорії</h2>
+  <p class="top-categories__intro">Матеріали, які найбільше переглядаються користувачами</p>
+  <div class="row" role="list">
+    <div class="top-categories__card-col" role="listitem">
+      @@include('../../blocks/category-card/category-card.html', {
+        "title": "Дорожня безпека"
+      })
+    </div>
+    <div class="top-categories__card-col" role="listitem">
+      @@include('../../blocks/category-card/category-card.html', {
+        "title": "Громадське здоров’я"
+      })
+    </div>
+    <div class="top-categories__card-col" role="listitem">
+      @@include('../../blocks/category-card/category-card.html', {
+        "title": "Протидія ґендерно зумовленому насильству"
+      })
+    </div>
+    <div class="top-categories__card-col" role="listitem">
+      @@include('../../blocks/category-card/category-card.html', {
+        "title": "Робота з дітьми"
+      })
+    </div>
+    <div class="top-categories__card-col" role="listitem">
+      @@include('../../blocks/category-card/category-card.html', {
+        "title": "Інклюзивний напрям у роботі поліції"
+      })
+    </div>
+    <div class="top-categories__card-col" role="listitem">
+      @@include('../../blocks/category-card/category-card.html', {
+        "title": "Неформальне спілкування"
+      })
+    </div>
+  </div>
+</section>
