@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function(){
+/*document.addEventListener('DOMContentLoaded', function(){
   (function(){
     // указатель на текущую страницу
     var pagination = document.querySelector('.pagination');
@@ -15,3 +15,4 @@ document.addEventListener('DOMContentLoaded', function(){
   }());
 });
 
+*/

@@ -4,11 +4,86 @@
 
 <section class="container  search-block">
   <div class="row">
-    <div class="search-block__wrapper-col">
-      <h2 class="visually-hidden">Форма пошуку за базою даних організації</h2>
-      <p class="h1">Усі необхідні вам <span>активи</span> в одному місці</p>
-      <p class="h3">Знаходьте і завантажуйте найкращі високоякісні фотографії, документи та відео</p>
 
+    <div class="search-block__wrapper-col">
+      <div class="search-block__header">
+        <h2 id="searchTitle" class="visually-hidden">Форма пошуку за базою даних організації</h2>
+
+        <p class="h1">Усі необхідні вам <span>активи</span> в одному місці</p>
+        <p class="h3" style="margin-bottom:0;">Знаходьте і завантажуйте найкращі високоякісні фотографії, документи та відео</p>
+      </div>
+
+      <form class="search-block__form"  action="#" method="post" aria-labelledby="searchTitle">
+        <div class="search-block__form-inner">
+
+          <label class="field-text">
+            <span class="field-text__input-wrap">
+              <input class="field-text__input  field-text__input--search" type="search" name="search" value="" placeholder="Пошук">
+              <span class="field-text__help-text error"></span>
+            </span>
+          </label>
+
+          <div class="field-select">
+            <span class="field-select__select-wrap">
+              <label for="catSelect" class="visually-hidden">Вибрати категорію</label>
+              <select id="catSelect" class="field-select__select" name="select-name">
+                <option value="value1">Усі категорії</option>
+                <option value="value2">Значение 2</option>
+                <option value="value3">Значение 3</option>
+                <option value="value4">Значение 4</option>
+              </select>
+              <span class="field-select__help-text error"></span>
+            </span>
+          </div>
+
+          <button class="btn  search-block__submit" type="submit">
+            <span>Пошук</span>
+          </button>
+
+        </div>
+      </form>
+
+      <a href="#" class="search-block__extended  special">
+        Розширений пошук
+      </a>
     </div>
+
+    <div class="search-block__result-col">
+      <ul class="list-nostyled  search-block__total-list">
+
+        <li class="search-block__total-item">
+          <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#file"></use></svg>
+          <p class="search-block__total-text">
+            <strong>3 456</strong>
+            <span>Документів</span>
+          </p>
+        </li>
+
+        <li class="search-block__total-item">
+          <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#media-strip"></use></svg>
+          <p class="search-block__total-text">
+            <strong>3 456</strong>
+            <span>Відеоматеріалів</span>
+          </p>
+        </li>
+
+        <li class="search-block__total-item">
+          <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#image"></use></svg>
+          <p class="search-block__total-text">
+            <strong>3 456</strong>
+            <span>Зображень</span>
+          </p>
+        </li>
+
+        <li class="search-block__total-item">
+          <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#microphone"></use></svg>
+          <p class="search-block__total-text">
+            <strong>3 456</strong>
+            <span>Аудіо</span>
+          </p>
+        </li>
+      </ul>
+    </div>
+
   </div>
 </section>

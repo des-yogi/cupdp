@@ -52,6 +52,8 @@
   &__bottom {
     display: flex;
     align-items: center;
+    font-size: $font-size-sm;
+    font-weight: 500;
   }
 
   &__date,
@@ -85,7 +87,7 @@
     margin-left: 16px;
 
     &::before {
-      background-image: svg-load('../blocks/sprite-svg/svg/calendar.svg', stroke=$text-color);
+      background-image: svg-load('../blocks/sprite-svg/svg/eye-open.svg', stroke=$text-color);
     }
   }
 }

@@ -12,17 +12,18 @@
     @@include('../../blocks/main-nav/main-nav.html')
 
     <div class="page-header__service-menu">
+      <button class="btn  btn--icononly  page-header__login-btn" type="button">
+        <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#user-profile"></use></svg>
+        <span>Увійти</span>
+      </button>
+
       @@include('../../blocks/lang-switcher/lang-switcher.html')
 
-      <button class="btn  btn--icononly  page-header__login-btn" type="button">
-        <svg width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#user-profile"></use></svg>
-        <span>Увійти</span>
+      <button class="btn  btn--icononly  page-header__burger" type="button">
+        <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#menu"></use></svg>
+        <span class="visually-hidden">Моб. меню</span>
       </button>
     </div>
 
-    <button class="btn  btn--icononly  page-header__burger" type="button">
-      <svg width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#menu"></use></svg>
-      <span class="visually-hidden">Моб. меню</span>
-    </button>
   </div>
 </header>

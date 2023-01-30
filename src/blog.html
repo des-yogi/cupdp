@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="uk" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>CUPDP Blog page</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+      @@include('blocks/page-header/page-header.html')
+
+      <div class="container  breadcrumbs__wrapper">
+        @@include('blocks/breadcrumbs/breadcrumbs.html')
+      </div>
+
+      <main class="main-page">
+
+        <div class="container  blog">
+
+          <div class="row  blog__header">
+            <div class="blog__header-col">
+              <h1 class="blog__title">Блог</h1>
+              <p class="h3  blog__intro">Філософія або організаційна стратегія, яка заохочує співробітництво на засадах партнерства поліції та місцевих громад. Її метою є найбільш ефективне попередження та вирішення проблем злочинності, страху перед злочинами, загрози фізичної безпеки та спокою місцевого населення</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="blog__col" role="listitem">
+              @@include('blocks/blog-card/blog-card.html', {
+                "title": "Наша національна єдність зміцнилася",
+                "text": "Сьогодні для українців нетиповий День Незалежності. Тридцять один рік тому Україна розірвала свої зв’язки з Радянським Союзом, а тепер боротьба за нашу свободу й цілісність…"
+              })
+            </div>
+            <div class="blog__col" role="listitem">
+              @@include('blocks/blog-card/blog-card.html', {
+                "title": "Проєкт СUPDP підтримав захід МВС із нагородження дітей",
+                "text": "Юні сміливці долучилися до волонтерського руху й зробили свій внесок у майбутню перемогу України..."
+              })
+            </div>
+            <div class="blog__col" role="listitem">
+              @@include('blocks/blog-card/blog-card.html', {
+                "title": "7 років поспіль нове покоління поліції України служить, захищає та...",
+                "text": "СЗараз, в умовах повномасштабної війни, додався ще один фронт роботи, та поліцейські гідно дають відсіч ворогу і слідують присязі України. У посиленому режимі поліція продовжує..."
+              })
+            </div>
+
+            <div class="blog__col" role="listitem">
+              @@include('blocks/blog-card/blog-card.html', {
+                "title": "Наша національна єдність зміцнилася",
+                "text": "Сьогодні для українців нетиповий День Незалежності. Тридцять один рік тому Україна розірвала свої зв’язки з Радянським Союзом, а тепер боротьба за нашу свободу й цілісність…"
+              })
+            </div>
+            <div class="blog__col" role="listitem">
+              @@include('blocks/blog-card/blog-card.html', {
+                "title": "Проєкт СUPDP підтримав захід МВС із нагородження дітей",
+                "text": "Юні сміливці долучилися до волонтерського руху й зробили свій внесок у майбутню перемогу України..."
+              })
+            </div>
+            <div class="blog__col" role="listitem">
+              @@include('blocks/blog-card/blog-card.html', {
+                "title": "7 років поспіль нове покоління поліції України служить, захищає та...",
+                "text": "СЗараз, в умовах повномасштабної війни, додався ще один фронт роботи, та поліцейські гідно дають відсіч ворогу і слідують присязі України. У посиленому режимі поліція продовжує..."
+              })
+            </div>
+          </div>
+
+          @@include('blocks/pagination/pagination.html')
+
+        </div>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

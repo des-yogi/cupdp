@@ -1,0 +1,34 @@
+.blog {
+  padding-bottom: 72px;
+
+  @media (min-width: $screen-md) {
+    padding-bottom: 96px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__header {
+    margin-bottom: 32px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__header-col {
+    @include col(xs, 12);
+    @include col(md, 10);
+    @include col(xl, 8);
+  }
+
+  &__col {
+    @include col(xs, 12);
+    @include col(md, 6);
+    @include col(xl, 4);
+    margin-bottom: 16px;
+  }
+
+  &__intro {
+    margin-top: 0 !important;
+  }
+}

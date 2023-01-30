@@ -37,8 +37,8 @@
 
       &:hover,
       &:focus {
-        color: $link-color--hover;
-        text-decoration: none;
+        color: inherit;
+        //text-decoration: none;
       }
     }
   }

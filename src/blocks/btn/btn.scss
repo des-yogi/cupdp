@@ -9,7 +9,7 @@
   padding: $field-padding-vertical  $field-padding-horizontal;
   margin: 0;
   text-align: center;
-  font-size: $font-size-sm;
+  font-size: $font-size;
   font-weight: 700;
   font-family: inherit;
   line-height: $line-height;
@@ -67,7 +67,8 @@
   &--outline {}
 
   &--icononly {
-    padding: 7px;
+    padding: 11px;
+    font-size: $font-size-sm;
     color: $text-color;
     background-color: $white;
     border-color: $gray-bg;
@@ -93,24 +94,4 @@
       }
     }
   }
-
-  // &--main {
-  //   color: #fff;
-  //   background-color: $color-main;
-  //   border: 1px solid $color-main;
-
-  //   &:hover,
-  //   &:focus {
-  //     color: #fff;
-  //     background-color: darken($color-main, 10%);
-  //     border-color: darken($color-main, 12%);
-  //   }
-
-  //   &--disabled,
-  //   &:disabled {
-  //     color: #fff;
-  //     background-color: $color-main;
-  //     border-color: $color-main;
-  //   }
-  // }
 }
