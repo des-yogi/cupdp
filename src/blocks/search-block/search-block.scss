@@ -1,6 +1,8 @@
 .search-block {
+  position: relative;
   padding-top: 72px;
   padding-bottom: 72px;
+  overflow: hidden;
 
   @media (min-width: $screen-md) {
     padding-top: 128px;
@@ -8,6 +10,40 @@
   }
 
   $block-name:                &; // #{$block-name}__element
+
+  &::before,
+  &::after {
+    display: block;
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background-color: $link-color--hover;
+    border-radius: 50%;
+    filter: blur(160px);
+  }
+
+  &::before {
+    top: 50px;
+    left: -100px;
+    width: 135px;
+    height: 135px;
+  }
+
+  &::after {
+
+    @media (max-width: $screen-xl - 1) {
+      display: none;
+    }
+
+    @media (min-width: $screen-xl) {
+      display: block;
+      bottom: 96px;
+      right: -100px;
+      width: 155px;
+      height: 155px;
+    }
+  }
+
 
   .h1,
   .h2,
@@ -24,5 +60,113 @@
     @include col(xs, 12);
     @include col-offset(md, 2);
     @include col(md, 8);
+    margin-bottom: 40px;
+  }
+
+  &__result-col {
+    @include col(xs, 12);
+    @include col-offset(md, 1.5);
+    @include col(md, 9);
+    @include col-offset(xl, 3);
+    @include col(xl, 6);
+  }
+
+  &__header {
+    margin-bottom: 40px;
+  }
+
+  &__form {
+    margin-bottom: 24px;
+  }
+
+  &__form-inner {
+
+    @media (min-width: $screen-xl) {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .field-text,
+    .field-select {
+
+      @media (min-width: $screen-xl) {
+        margin-bottom: 0;
+      }
+    }
+
+    .field-text {
+
+      @media (min-width: $screen-xl) {
+        flex: 1 1;
+        flex-basis: 45%;
+      }
+    }
+
+    .field-select {
+
+      @media (min-width: $screen-xl) {
+        flex: 1 1;
+        flex-basis: 30%;
+        margin-left: 16px;
+      }
+    }
+
+    #{$block-name}__submit {
+
+      @media (min-width: $screen-xl) {
+        flex: 0 0;
+        flex-basis: 120px;
+        margin-left: 16px;
+      }
+    }
+  }
+
+  &__total-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__total-item {
+    flex: 0 1;
+    flex-basis: calc(25% - 12px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (max-width: $screen-md - 1) {
+      flex-basis: calc(50% - 12px);
+      margin-bottom: 24px;
+    }
+
+    @media (min-width: $screen-xl) {
+      flex-basis: calc(25% - 18px);
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+      margin-bottom: 12px;
+      stroke-width: 2px;
+      stroke: currentColor;
+    }
+  }
+
+  &__total-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+
+    strong {
+      margin-bottom: 4px;
+    }
+  }
+
+  &__submit {
+
+    @media (max-width: $screen-xl - 1) {
+      width: 100%;
+    }
   }
 }

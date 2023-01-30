@@ -1,16 +1,22 @@
-$line-height:                 1.375em !default;
-$text-color:                  hsl(0, 0%, 10%) !default;
-
 .breadcrumbs {
-  margin-top: 25px;
-  margin-bottom: 25px;
+  overflow-x: auto;
 
   $block-name:                &;
   // #{$block-name}__element
 
+  &__wrapper {
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    @media (min-width: $screen-md) {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+  }
+
   &__list {
-    display: inline-flex;
-    flex-wrap: wrap;
+    display: flex;
+    flex-wrap: nowrap;
     align-items: center;
   }
 
@@ -19,28 +25,61 @@ $text-color:                  hsl(0, 0%, 10%) !default;
     display: inline-block;
     vertical-align: baseline;
     max-width: 100%;
-    margin-right: 0.6em;
-    margin-bottom: 0.5em;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    white-space: nowrap;
 
     @media (min-width: $screen-md) {
       margin-bottom: 0;
     }
 
     &:not(:last-child)::after {
-      content: '|';
+      content: '/';
       display: inline-block;
-      margin-left: 0.8em;
-      font-weight: 700;
-      color: $text-muted;
+      margin-left: 8px;
+      font-weight: 500;
+      color: $text-color;
     }
 
     &:last-child {
+      //overflow-x: auto;
+      //text-overflow: ellipsis;
 
       #{$block-name}__link {
         text-decoration: none;
-        color: $main-color;
+        color: $text-color;
+      }
+    }
+
+    &--home {
+
+      #{$block-name}__link {
+        position: relative;
+        padding-left: 28px;
+
+        &::before {
+          display: block;
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-55%);
+          width: 20px;
+          height: 20px;
+          background-size: 20px;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-image: svg-load('../blocks/sprite-svg/svg/home.svg', stroke=$text-muted);
+          transition: background $transition-time;
+        }
+
+        &:hover,
+        &:focus {
+
+          &::before {
+            background-image: svg-load('../blocks/sprite-svg/svg/home.svg', stroke=$text-color);
+          }
+        }
       }
     }
   }
@@ -55,8 +94,8 @@ $text-color:                  hsl(0, 0%, 10%) !default;
 
     &:hover,
     &:focus {
-      color: $main-color;
-      //text-decoration: none;
+      color: $text-color;
+      text-decoration: none;
     }
   }
 }

@@ -31,6 +31,13 @@
     }
   }
 
+  &__card-col {
+    @include col(xs, 12);
+    @include col(md, 6);
+    @include col(xl, 4);
+    margin-bottom: 16px;
+  }
+
   &__more-wrapper {
     margin-top: calc(40px - 16px);
     text-align: center;

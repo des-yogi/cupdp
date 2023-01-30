@@ -3,7 +3,7 @@
   $block-name:                &; // #{$block-name}__element
 
   display: block;
-  margin-bottom: 32px;
+  margin-bottom: 20px;
 
   &__name {
     @include field-name;
@@ -14,22 +14,23 @@
   }
 
   &__select {
-    display: inline-block;
-    vertical-align: middle;
+    display: inline-flex;
+    align-items: center;
+    //vertical-align: middle;
     width: 100%;
-    padding: $field-padding-vertical $field-padding-horizontal;
+    padding: $field-padding-vertical 40px $field-padding-vertical $field-padding-horizontal;
     font-size: inherit;
     font-weight: inherit;
     font-family: inherit;
     line-height: inherit;
-    border: 1px solid $border-color;
-    border-radius: $border-radius;
     appearance: none;
     color: $title-color;
-    background-color: $white;
-    background-image: svg-load('../blocks/field-select/bg-img/select-down.svg', fill=$border-color);
+    border: 1px solid $gray-bg;
+    border-radius: $border-radius--32;
+    background-color: $gray-bg;
+    background-image: svg-load('../blocks/field-select/bg-img/chevron-down.svg', stroke=$text-color);
     background-repeat: no-repeat;
-    background-position: right 12px center;
+    background-position: right 16px center;
     background-size: 20px;
 
     &[multiple] {
@@ -41,9 +42,9 @@
       display: none;
     }
 
-    &:hover {
+    /* &:hover {
       border-color: $link-color--hover;
-    }
+    } */
 
     &:active,
     &:focus {

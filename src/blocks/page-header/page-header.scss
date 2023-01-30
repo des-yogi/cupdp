@@ -33,18 +33,14 @@
 
   &__service-menu {
     margin-left: 40px;
-
-    @media (max-width: $screen-md - 1) {
-      display: none;
-    }
   }
 
   &__login-btn {
     padding-left: 16px;
     padding-right: 16px;
 
-    @media (max-width: $screen-xl - 1) {
-      margin-left: 8px;
+    @media (max-width: $screen-md - 1) {
+      display: none;
     }
 
     svg {
@@ -53,7 +49,7 @@
   }
 
   &__burger {
-    margin-left: 8px;
+    margin-left: 16px;
 
     @media (min-width: $screen-xl) {
       display: none;

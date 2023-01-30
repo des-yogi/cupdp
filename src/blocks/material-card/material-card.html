@@ -1,14 +1,39 @@
 <!--DEV
-
-Для использования этого файла как шаблона:
-
 @ @include('blocks/material-card/material-card.html')
-
-(Нужно убрать пробел между символами @)
-Подробнее: https://www.npmjs.com/package/gulp-file-include
-
-
-
-<div class="material-card">content</div>
-
 -->
+
+<article class="material-card">
+  <a href="#" class="embed-responsive embed-responsive--4-3  material-card__img  @@noimage" aria-hidden="true" tabindex="-1" title="@@title">
+    <img
+      class="b-lazy"
+      data-srcset="img/blog-img.jpg 350w,
+                   img/blog-img.jpg 480w,
+                   img/blog-img.jpg 645w,
+                   img/blog-img.jpg 800w,
+                   img/blog-img.jpg 900w"
+      sizes="(max-width: 360px) 312px,
+             (max-width: 480px) 440px,
+             (max-width: 768px) 320px,
+             (max-width: 992px) 430px,
+             (max-width: 1200px) 534px,
+             350px"
+      data-src="img/blog-img.jpg"
+      src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+      width="900"
+      height="675"
+      alt='@@title'
+    >
+  </a>
+  <div class="material-card__text-wrapper">
+    <div class="material-card__text">
+      <h3 class="material-card__title"><a href="#">@@title</a></h3>
+    </div>
+    <p class="material-card__bottom">
+      <span class="material-card__docs  @@docType">@@docText</span>
+      <span class="material-card__views">167</span>
+      <span class="material-card__date">
+        <time datetime="2022-12-25">25.12.2022</time>
+      </span>
+    </p>
+  </div>
+</article>
