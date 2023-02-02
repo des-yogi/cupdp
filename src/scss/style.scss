@@ -12,6 +12,7 @@
 @import '../../node_modules/bootstrap/scss/_dropdown';
 @import '../../node_modules/bootstrap/scss/_modal';
 @import '../../node_modules/bootstrap/scss/_spinners';
+@import '../../node_modules/bootstrap/scss/_offcanvas';
 @import '../../node_modules/air-datepicker/air-datepicker.css';
 @import '../../node_modules/swiper/swiper-bundle.min.css';
 @import './src/blocks/breadcrumbs/breadcrumbs.scss';
@@ -53,4 +54,10 @@
 @import './src/blocks/blog/blog.scss';
 @import './src/blocks/blog-article/blog-article.scss';
 @import './src/blocks/material/material.scss';
+@import './src/blocks/filter/filter.scss';
+@import './src/blocks/filter-modal/filter-modal.scss';
+@import './src/blocks/search-form/search-form.scss';
+@import './src/blocks/search-sort/search-sort.scss';
+@import './src/blocks/search-result/search-result.scss';
+@import './src/blocks/result-card/result-card.scss';
 @import './src/scss/print.scss';

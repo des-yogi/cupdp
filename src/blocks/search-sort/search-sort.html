@@ -1,0 +1,47 @@
+<!--DEV
+@ @include('blocks/search-sort/search-sort.html')
+-->
+
+<section class="search-sort">
+  <h3 class="visually-hidden">Інструменти для сортування результатів</h3>
+
+  <form class="search-sort__form" action="" method="post">
+
+    <div class="field-select  search-sort__select">
+      <label for="sortBy" class="search-sort__lbl  search-sort__lbl--sort">Сортувати за:</label>
+      <span class="field-select__select-wrap">
+        <select id="sortBy" class="field-select__select" name="sortby">
+          <option value="value1">Переглядами</option>
+          <option value="value2">Значение 2</option>
+          <option value="value3">Значение 3</option>
+          <option value="value4">Значение 4</option>
+        </select>
+        <small class="field-select__help-text error"></small>
+      </span>
+    </div>
+
+    <div class="field-select  search-sort__select">
+      <label for="showOnPage" class="search-sort__lbl  search-sort__lbl--onpage">Файлів на сторінці:</label>
+      <span class="field-select__select-wrap">
+        <select id="showOnPage" class="field-select__select" name="onpage">
+          <option value="value1">50</option>
+          <option value="value2">30</option>
+          <option value="value3">15</option>
+        </select>
+        <small class="field-select__help-text error"></small>
+      </span>
+    </div>
+
+  </form>
+
+  <div class="search-sort__view-mode">
+    <button id="ctlg" class="btn  btn--icononly  active" type="button" title="Вид: Каталог">
+      <span class="visually-hidden">Вид: Каталог</span>
+      <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#grid"></use></svg>
+    </button>
+    <button id="lst" class="btn  btn--icononly" type="button" title="Вид: Строка">
+      <span class="visually-hidden">Вид: Строка</span>
+      <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#list"></use></svg>
+    </button>
+  </div>
+</section>

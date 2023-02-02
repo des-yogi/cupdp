@@ -62,25 +62,33 @@
     }
   }
 
-  &--small {}
-
-  &--outline {}
-
   &--icononly {
-    padding: 11px;
+    padding: 13px;
     font-size: $font-size-sm;
+    line-height: 1;
     color: $text-color;
     background-color: $white;
     border-color: $gray-bg;
     transition: all $transition-time;
 
     svg {
+      width: 20px;
+      height: 20px;
       margin-left: 0;
       fill: currentColor;
       stroke: currentColor;
       stroke-linecap: round;
       stroke-width: 2px;
       transition: stroke $transition-time;
+
+      & + span:not(.visually-hidden) {
+        margin-left: 16px;
+        padding-right: 4px;
+      }
+    }
+
+    span:not(.visually-hidden) + svg {
+      margin-left: 16px;
     }
 
     &:hover,

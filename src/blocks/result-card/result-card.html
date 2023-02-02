@@ -1,0 +1,54 @@
+<!--DEV
+@ @include('blocks/result-card/result-card.html', {
+  "gridClass": "result-card--",
+  "title": "",
+  "category": ""
+})
+-->
+
+<article class="result-card  @@gridClass">
+  <a href="#" class="embed-responsive  embed-responsive--4-3  result-card__img" tabindex="-1" aria-hidden="true">
+    <img
+      class="b-lazy"
+      data-srcset="img/blog-img.jpg 350w,
+                   img/blog-img.jpg 480w,
+                   img/blog-img.jpg 645w,
+                   img/blog-img.jpg 800w,
+                   img/blog-img.jpg 900w"
+      sizes="(max-width: 360px) 312px,
+             (max-width: 480px) 440px,
+             (max-width: 768px) 320px,
+             (max-width: 992px) 430px,
+             (max-width: 1200px) 534px,
+             350px"
+      data-src="img/blog-img.jpg"
+      src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+      width="900"
+      height="675"
+      alt='@@title'
+    >
+  </a>
+  <div class="result-card__text-wrapper">
+    <div class="result-card__text">
+      <h3 class="result-card__title">
+        <a href="#">@@title</a>
+      </h3>
+      <p class="result-card__text-short">
+        Очільник МВС подякував юним українцям за сміливість та героїзм, які вони проявили під час відсічі збройної агресії рф. Адже кожен із нагороджених зробив свій внесок у майбутню перемогу України.
+      </p>
+    </div>
+    <p class="result-card__descr">
+      <span class="result-card__docs  image">
+        <!-- Классы для других типов документов: video, text-file, audio -->
+        <span class="visually-hidden">Зображення</span>
+      </span>
+      <span class="result-card__views">167</span>
+      <span class="result-card__date">
+        <time datetime="2022-12-25">25.12.2022</time>
+      </span>
+    </p>
+    <p class="result-card__bottom">
+      <span class="result-card__category">@@category</span>
+    </p>
+  </div>
+</article>

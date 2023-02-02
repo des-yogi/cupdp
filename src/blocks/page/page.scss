@@ -399,6 +399,49 @@ a {
   }
 }
 
+fieldset {
+  padding: 0 0 24px 0;
+  margin: 0 0 24px 0;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid $border-color;
+
+  &:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: none;
+  }
+
+  legend {
+
+    &.h4 {
+      margin-top: 0;
+    }
+  }
+}
+
+.content-more-wrapper {
+  display: flex;
+  margin-top: 32px;
+
+  @media (min-width: $screen-md) {
+    margin-top: 40px;
+  }
+
+  .btn {
+    width: 295px;
+    margin: 0 auto;
+  }
+}
+
+.air-datepicker-global-container {
+
+  .air-datepicker {
+    z-index: 1060;
+  }
+}
+
 // @include col(xs, 12);
 // @include col(md, 6);
 // @include col(xl, 4);

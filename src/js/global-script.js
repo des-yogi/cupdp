@@ -53,7 +53,11 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
 }());
 
 (function(){
-  var localeUk = {
+  const page = document.getElementsByTagName('html')[0];
+  const lang = page.getAttribute('lang').toUpperCase();
+  let siteLocale;
+
+  const localeUK = {
     days: ['Неділя', 'Понеділок', 'Вівторок', 'Середа', 'Четвер', 'П’ятниця', 'Субота'],
     daysShort: ['Нед', 'Пнд', 'Вів', 'Срд', 'Чтв', 'Птн', 'Сбт'],
     daysMin: ['Нд', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
@@ -66,7 +70,7 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
     firstDay: 1
   };
 
-  var localeEn = {
+  const localeEN = {
     days: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
     daysShort: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
     daysMin: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
@@ -79,16 +83,42 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
     firstDay: 0
   };
 
-  new AirDatepicker('#input', {
-      range: true,
-      multipleDatesSeparator: ' - ',
-      autoClose: true,
-      locale: localeUk
-      //isMobile: true,
-      //autoClose: true,
-  });
-}());
+  switch(lang) {
+    case 'UK': siteLocale = localeUK;
+    break;
+    case 'EN': siteLocale = localeEN;
+    break;
+    default: siteLocale = localeUK;
+    break;
+  }
 
+  const fields = document.querySelectorAll('.field-text__input--date');
+  const AirDatepickerOps = {
+          range: true,
+          multipleDatesSeparator: ' - ',
+          autoClose: true,
+          locale: siteLocale
+          //isMobile: true,
+        };
+
+  for (let i = 0; i < fields.length; i++) {
+    let dateField = fields[i];
+    new AirDatepicker(dateField, AirDatepickerOps);
+  }
+
+  const filterOffcanvas = document.querySelector('.filter-modal');
+  if (!filterOffcanvas) return;
+
+  new AirDatepicker('#dateModal', {
+        range: true,
+        multipleDatesSeparator: ' - ',
+        autoClose: true,
+        locale: siteLocale,
+        inline: true
+        //isMobile: true,
+      });
+
+}());
 
 (function(){
   const bLazy = new Blazy({

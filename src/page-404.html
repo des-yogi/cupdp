@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="uk" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Error 404</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+      @@include('blocks/page-header/page-header.html')
+
+      <main class="main-page">
+
+        <div class="container  page-404">
+          <div class="row">
+            <div class="page-404__wrapper-col">
+              <div class="page-404__text">
+                <h1 class="page-404__title">Сторінку не знайдено!</h1>
+                <p class="h3  page-404__intro" style="margin-top:0;">
+                  Можливо, ця сторінка була видалена або ви скористалися недійсним посиланням. Щоб продовжити роботу з сайтом, скористайтеся основним меню або перейдіть на головну сторінку.
+                </p>
+                <a href="index.html" class="btn"><span>На головну</span></a>
+              </div>
+
+              <div class="row">
+                <div class="page-404__img-col">
+                  <img src="img/error-404.svg" alt="" width="399" height="371">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+</body>
+</html>

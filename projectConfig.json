@@ -38,7 +38,13 @@
     "blog-block": [],
     "blog": [],
     "blog-article": [],
-    "material": []
+    "material": [],
+    "filter": [],
+    "filter-modal": [],
+    "search-form": [],
+    "search-sort": [],
+    "search-result": [],
+    "result-card": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",
@@ -49,6 +55,7 @@
     "../../node_modules/bootstrap/scss/_dropdown",
     "../../node_modules/bootstrap/scss/_modal",
     "../../node_modules/bootstrap/scss/_spinners",
+    "../../node_modules/bootstrap/scss/_offcanvas",
     "../../node_modules/air-datepicker/air-datepicker.css",
     "../../node_modules/swiper/swiper-bundle.min.css"
   ],
@@ -61,9 +68,8 @@
     "./node_modules/blazy/blazy.min.js",
     "./node_modules/svg4everybody/dist/svg4everybody.js",
     "./node_modules/autosize/dist/autosize.min.js",
+    "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
     "./node_modules/air-datepicker/air-datepicker.js",
-    "./node_modules/@popperjs/core/dist/umd/popper.min.js",
-    "./node_modules/bootstrap/dist/js/bootstrap.min.js",
     "./node_modules/swiper/swiper-bundle.min.js"
   ],
   "addJsAfter": [

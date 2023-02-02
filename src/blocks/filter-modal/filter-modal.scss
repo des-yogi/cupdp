@@ -1,0 +1,17 @@
+.filter-modal {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__header,
+  &__body {
+
+    @media (min-width: $screen-md) {
+      padding: 24px 24px 32px;
+    }
+  }
+
+  &__body {
+    padding-top: 8px !important;
+    padding-bottom: 24px;
+  }
+}

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="uk" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>CUPDP Search Result page</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+      @@include('blocks/page-header/page-header.html')
+
+      <main class="main-page">
+
+        <div class="container  search-result">
+
+          <h1 class="visually-hidden">
+            Сторінка з результатами пошуку за запитом:
+            <span>Взаємодія з молоддю</span>
+          </h1>
+
+          <section class="search-result__top">
+            <h2 class="visually-hidden">Форма пошуку</h2>
+
+            <div class="row">
+
+              <div class="search-result__res-col">
+                <div class="search-result__res">
+                  <span class="visually-hidden">Знайдено всього:</span>
+                  39.389
+                  <span>результатов</span>
+                </div>
+              </div>
+
+              <div class="search-result__form-col">
+                @@include('blocks/search-form/search-form.html')
+              </div>
+
+            </div>
+
+          </section>
+
+          <div class="search-result__body">
+            <div class="row">
+
+              <div class="search-result__dt-filter-col">
+                @@include('blocks/filter/filter.html')
+              </div>
+
+              <div class="search-result__content-col">
+                <section class="search-result__content">
+
+                  <div class="search-result__inner">
+                    <h2 class="h1  search-result__content-title">
+                      <span class="visually-hidden">Список знайденого на запит</span>
+                      <span>Взаємодія з молоддю</span>
+                    </h2>
+
+                    <div class="search-result__content-intro">
+                      <p>Зараз, в умовах повномасштабної війни, додався ще один фронт роботи, та поліцейські гідно дають відсіч ворогу і слідують присязі України. У посиленому режимі поліція продовжує.</p>
+                      <p>Зараз, в умовах повномасштабної війни, додався ще один фронт роботи, та поліцейські гідно дають відсіч ворогу і слідують присязі України. У посиленому режимі поліція продовжує</p>
+                    </div>
+
+                    <button class="btn  btn--icononly  search-result__fltr-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasFilter" aria-controls="offcanvasFilter">
+                      <svg width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#filter"></use></svg>
+                      <span>Фільтр</span>
+                    </button>
+
+                    @@include('blocks/search-sort/search-sort.html')
+                  </div>
+
+                  <div class="row" role="list">
+                    <div class="search-result__grid-col" role="listitem">
+                      @@include('blocks/result-card/result-card.html', {
+                        "gridClass": "",
+                        "title": "Майстерня з виготовлення флікерів",
+                        "category": "Дорожня безпека"
+                      })
+                    </div>
+
+                    <div class="search-result__grid-col" role="listitem">
+                      @@include('blocks/result-card/result-card.html', {
+                        "gridClass": "",
+                        "title": "Travelling as a way of self-discovery and progress",
+                        "category": "Громадське здоров’я"
+                      })
+                    </div>
+
+                    <div class="search-result__grid-col" role="listitem">
+                      @@include('blocks/result-card/result-card.html', {
+                        "gridClass": "",
+                        "title": "How does writing influence your personal brand?",
+                        "category": "Протидія ґендерно зумовленому насильству"
+                      })
+                    </div>
+
+                    <div class="search-result__grid-col" role="listitem">
+                      @@include('blocks/result-card/result-card.html', {
+                        "gridClass": "",
+                        "title": "Майстерня з виготовлення флікерів",
+                        "category": "Дорожня безпека"
+                      })
+                    </div>
+
+                    <div class="search-result__grid-col" role="listitem">
+                      @@include('blocks/result-card/result-card.html', {
+                        "gridClass": "",
+                        "title": "Travelling as a way of self-discovery and progress",
+                        "category": "Громадське здоров’я"
+                      })
+                    </div>
+
+                    <div class="search-result__grid-col" role="listitem">
+                      @@include('blocks/result-card/result-card.html', {
+                        "gridClass": "",
+                        "title": "How does writing influence your personal brand?",
+                        "category": "Протидія ґендерно зумовленому насильству"
+                      })
+                    </div>
+
+                  </div>
+
+                  <div class="content-more-wrapper">
+                    <button class="btn" type="button">
+                      <span>Завантажити ще</span>
+                      <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#down-arrow"></use></svg>
+                    </button>
+                  </div>
+
+                </section>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('blocks/filter-modal/filter-modal.html')
+
+  @@include('_include/page_bottom.html')
+</body>
+</html>
