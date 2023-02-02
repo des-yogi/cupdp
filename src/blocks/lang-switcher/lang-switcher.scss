@@ -14,8 +14,9 @@
     color: $text-color;
 
     & > svg {
-      fill: currentColor;
-      stroke: none !important;
+      //fill: currentColor;
+      stroke-width: 1.7px;
+      stroke: currentColor;
     }
   }
 

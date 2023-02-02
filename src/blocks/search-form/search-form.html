@@ -1,0 +1,31 @@
+<!--DEV
+@ @include('blocks/search-form/search-form.html')
+-->
+
+<form class="search-form" action="" method="post">
+
+  <label class="field-text  search-form__field  search-form__field--input">
+    <span class="field-text__input-wrap">
+      <input class="field-text__input  field-text__input--search" type="search" name="search" value="" placeholder="Пошук">
+      <span class="field-text__help-text error"></span>
+    </span>
+  </label>
+
+  <div class="field-select  search-form__field  search-form__field--select">
+    <span class="field-select__select-wrap">
+      <label for="catSelect" class="visually-hidden">Вибрати категорію</label>
+      <select id="catSelect" class="field-select__select" name="select-name">
+        <option value="value1">Усі категорії</option>
+        <option value="value2">Значение 2</option>
+        <option value="value3">Значение 3</option>
+        <option value="value4">Значение 4</option>
+      </select>
+      <small class="field-select__help-text error"></small>
+    </span>
+  </div>
+
+  <button class="btn  search-form__submit" type="submit">
+    <span>Пошук</span>
+  </button>
+
+</form>

@@ -1,0 +1,123 @@
+<!--DEV
+@ @include('blocks/filter-modal/filter-modal.html')
+-->
+
+<div class="offcanvas offcanvas-start  filter-modal" tabindex="-1" id="offcanvasFilter" aria-labelledby="offcanvasFilterLabel">
+  <div class="offcanvas-header  filter-modal__header">
+    <h5 class="offcanvas-title" id="offcanvasFilterLabel" style="margin-top:0;">Фільтр даних</h5>
+    <button type="button" class="btn  btn--icononly" data-bs-dismiss="offcanvas" aria-label="Закрити">
+      <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#close"></use></svg>
+    </button>
+  </div>
+  <div class="offcanvas-body  filter-modal__body" id="scroll-container">
+
+    <form class="filter__form" action="" method="post">
+      <fieldset>
+        <legend class="h4">Тип матеріалу</legend>
+
+        <div class="field-checkbox">
+          <label class="field-checkbox__name">
+            <input class="field-checkbox__input" type="checkbox" name="" checked>
+            <span class="field-checkbox__name-text">Документи</span>
+          </label>
+        </div>
+
+        <div class="field-checkbox">
+          <label class="field-checkbox__name">
+            <input class="field-checkbox__input" type="checkbox" name="">
+            <span class="field-checkbox__name-text">Зоображення</span>
+          </label>
+        </div>
+
+        <div class="field-checkbox">
+          <label class="field-checkbox__name">
+            <input class="field-checkbox__input" type="checkbox" name="">
+            <span class="field-checkbox__name-text">Відеоматеріали</span>
+          </label>
+        </div>
+
+        <div class="field-checkbox">
+          <label class="field-checkbox__name">
+            <input class="field-checkbox__input" type="checkbox" name="">
+            <span class="field-checkbox__name-text">Аудіо</span>
+          </label>
+        </div>
+
+      </fieldset>
+
+      <fieldset>
+        <legend class="h4">Мова</legend>
+
+        <div class="field-checkbox">
+          <label class="field-checkbox__name">
+            <input class="field-checkbox__input" type="checkbox" name="">
+            <span class="field-checkbox__name-text">Українська</span>
+          </label>
+        </div>
+
+        <div class="field-checkbox">
+          <label class="field-checkbox__name">
+            <input class="field-checkbox__input" type="checkbox" name="">
+            <span class="field-checkbox__name-text">English</span>
+          </label>
+        </div>
+
+      </fieldset>
+
+      <fieldset>
+        <legend class="h4">Дата</legend>
+
+        <!-- <div id="dateModal"></div> -->
+
+        <label class="field-text">
+          <span class="field-text__input-wrap">
+            <input id="dateModal" class="field-text__input  field-text__input--date" type="hidden" inputmode="none" placeholder="Будь-який час">
+            <span class="field-text__help-text"></span>
+          </span>
+        </label>
+
+      </fieldset>
+
+      <fieldset style="border:none;">
+        <legend class="h4">Автор</legend>
+
+        <label class="field-text">
+          <span class="field-text__input-wrap">
+            <input class="field-text__input  field-text__input--author" type="text" placeholder="Введіть назву">
+            <span class="field-text__help-text"></span>
+          </span>
+        </label>
+
+        <div class="field-select">
+          <label for="citySelect" class="h4" style="display:block; margin-top:0;">
+            Місто
+          </label>
+          <span class="field-select__select-wrap">
+            <select id="citySelect" class="field-select__select  field-select__select--city" name="citySelect" multiple size="1">
+              <option value="value1">Київ</option>
+              <option value="value2">Значение 2</option>
+              <option value="value3">Значение 3</option>
+              <option value="value4">Значение 4</option>
+              <option value="value4">Значение 5</option>
+              <option value="value4">Значение 6</option>
+              <option value="value4">Значение 7</option>
+              <option value="value4">Значение 8</option>
+              <option value="value4">Значение 9</option>
+              <option value="value4">Значение 10</option>
+            </select>
+            <small class="field-select__help-text error"></small>
+          </span>
+        </div>
+
+      </fieldset>
+
+      <div class="content-more-wrapper" style="margin-top:0;">
+        <button class="btn" type="submit" style="width:100%;">
+          <span>Застосувати</span>
+          <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right-sm"></use></svg>
+        </button>
+      </div>
+    </form>
+
+  </div>
+</div>

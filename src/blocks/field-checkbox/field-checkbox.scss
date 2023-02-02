@@ -3,7 +3,11 @@
   $block-name:                &; // #{$block-name}__element
 
   display: block;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   &__title {
     display: block;
@@ -25,9 +29,9 @@
   &__name {
     position: relative;
     display: inline-block;
-    padding-left: 32px;
+    padding-left: 40px;
     //margin-right: 0.6em;
-    font-weight: 400;
+    font-weight: 500;
     line-height: $line-height;
     cursor: pointer;
 
@@ -47,10 +51,11 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 22px;
-      height: 22px;
+      width: 24px;
+      height: 24px;
+      background-color: $border-color;
       border: 1px solid $border-color;
-      border-radius: $border-radius / 2;
+      border-radius: $border-radius / 4;
 
       @at-root input:checked ~ & {
         background-color: $border-color;
@@ -64,19 +69,19 @@
     &::after {
       content: '';
       position: absolute;
-      top: 5px;
-      left: 5px;
+      top: 7px;
+      left: 6px;
       width: 12px;
-      height: 8px;
+      height: 7px;
       opacity: 0;
-      border-left: 2px solid $white;
-      border-bottom: 2px solid $white;
+      border-left: 2px solid $text-color;
+      border-bottom: 2px solid $text-color;
       transform: rotate(-45deg);
       transition: opacity $transition-time;
 
       @at-root input:checked ~ & {
         opacity: 1;
-        border-color: $white;
+        border-color: $text-color;
       }
     }
   }

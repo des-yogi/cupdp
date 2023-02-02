@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="uk" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>No results found</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+      @@include('blocks/page-header/page-header.html')
+
+      <main class="main-page">
+
+        <div class="container  search-result">
+
+          <h1 class="visually-hidden">
+            Сторінка з результатами пошуку за запитом:
+            <span>Взаємодія з молоддю</span>
+          </h1>
+
+          <section class="search-result__top">
+            <h2 class="visually-hidden">Форма пошуку</h2>
+
+            <div class="row">
+
+              <div class="search-result__res-col">
+                <div class="search-result__res">
+                  <span class="visually-hidden">Знайдено всього:</span>
+                  39.389
+                  <span>результатов</span>
+                </div>
+              </div>
+
+              <div class="search-result__form-col">
+                @@include('blocks/search-form/search-form.html')
+              </div>
+
+            </div>
+
+          </section>
+
+          <div class="search-result__body">
+            <div class="row">
+
+              <div class="search-result__dt-filter-col">
+                @@include('blocks/filter/filter.html')
+              </div>
+
+              <div class="search-result__content-col">
+                <section class="search-result__content">
+
+                  <div class="search-result__not-found">
+                    <h1>Результатів за вашим запитом не знайдено</h1>
+                    <img src="img/nothing-found.svg" alt="No results found" width="497" height="371">
+                  </div>
+
+                </section>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('blocks/filter-modal/filter-modal.html')
+
+  @@include('_include/page_bottom.html')
+</body>
+</html>
