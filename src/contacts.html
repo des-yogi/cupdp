@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="uk" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>CUPDP Contacts</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+      @@include('blocks/page-header/page-header.html')
+
+      <div class="container  breadcrumbs__wrapper">
+        <div class="row">
+          <div class="col-12-10-8">
+             @@include('blocks/breadcrumbs/breadcrumbs.html')
+          </div>
+        </div>
+      </div>
+
+      <main class="main-page">
+
+        <article class="container  contacts">
+
+          <div class="row  contacts__header">
+            <div class="col-12-10-8">
+              <h1 class="contacts__title">Контакти</h1>
+              <p class="lead">Сталий розвиток громад, освітні інновації, медіа, медіаосвіта, громадянська освіта, медіа-адвокація, урбаністика, безпека, брендинг міст та територій, проектний менеджмент</p>
+            </div>
+          </div>
+
+          <div class="row">
+
+            <div class="contacts__social-col">
+              <section class="social-link  social-link--contacts">
+                <h2 class="h4">Соцмережі</h2>
+
+                <ul class="list-nostyled  social-link__list">
+                  <li class="social-link__item">
+                    <a href="#" class="social-link__link  social-link__link--fb" target="_blank" rel="nofollow noopener">
+                      <img src="img/facebook.svg" alt="" width="24" height="24">
+                      <span>www.facebook.com</span>
+                    </a>
+                  </li>
+                  <li class="social-link__item">
+                    <a href="#" class="social-link__link  social-link__link--tw" target="_blank" rel="nofollow noopener">
+                      <img src="img/twitter.svg" alt="" width="24" height="24">
+                      <span>www.twitter.com</span>
+                    </a>
+                  </li>
+                  <li class="social-link__item">
+                    <a href="#" class="social-link__link  social-link__link--ytb" target="_blank" rel="nofollow noopener">
+                      <img src="img/youtube.svg" alt="" width="24" height="24">
+                      <span>www.youtube.com</span>
+                    </a>
+                  </li>
+                </ul>
+              </section>
+            </div>
+
+            <div class="contacts__form-col">
+              <section class="contacts__form-wrapper">
+                <h2 class="visually-hidden">Форма швидкого зв'язку</h2>
+                <p class="h4" style="margin-top: 0;">Зв'язатися з нами</p>
+
+                @@include('blocks/contact-form/contact-form.html')
+              </section>
+            </div>
+
+          </div>
+
+        </article>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

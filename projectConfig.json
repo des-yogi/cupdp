@@ -44,7 +44,13 @@
     "search-form": [],
     "search-sort": [],
     "search-result": [],
-    "result-card": []
+    "result-card": [],
+    "about": [],
+    "about-slider": [],
+    "partners-slider": [],
+    "contacts": [],
+    "contact-form": [],
+    "partners": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",

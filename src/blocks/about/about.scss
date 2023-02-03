@@ -1,0 +1,27 @@
+.about {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__header {
+    padding-bottom: 72px;
+
+    @media (min-width: $screen-md) {
+      padding-bottom: 96px;
+    }
+  }
+
+  &__lead {
+    margin-top: 0 !important;
+  }
+
+  &__team {
+    padding-top: 72px;
+    padding-bottom: 72px;
+    background-color: $light-bg;
+
+    @media (min-width: $screen-md) {
+      padding-top: 96px;
+      padding-bottom: 96px;
+    }
+  }
+}
