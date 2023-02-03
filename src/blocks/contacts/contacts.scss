@@ -1,0 +1,32 @@
+.contacts {
+  padding-bottom: 72px;
+
+  @media (min-width: $screen-md) {
+    padding-bottom: 96px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__header {
+    margin-bottom: 32px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__social-col,
+  &__form-col {
+    @include col(xs, 12);
+    @include col(md, 6);
+    @include col(xl, 4);
+  }
+
+  &__social-col {
+    @include col-offset(xl, 2);
+
+    @media (max-width: $screen-md - 1) {
+      margin-bottom: 32px;
+    }
+  }
+}

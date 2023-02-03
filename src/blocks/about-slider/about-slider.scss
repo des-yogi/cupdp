@@ -1,0 +1,44 @@
+.about-slider {
+
+  $block-name:                &; // #{$block-name}__element
+
+  .swiper-wrapper {
+    margin: 32px 0;
+
+    @media (min-width: $screen-md) {
+      margin: 40px 0;
+    }
+  }
+
+  &__slide {
+    width: 265px;
+    padding: 16px;
+    background-color: $white;
+    border-radius: $border-radius;
+  }
+
+  &__img {
+
+    img {
+      object-fit: cover;
+      object-position: center;
+      border-radius: $border-radius;
+    }
+  }
+
+  &__text {
+    padding: 16px 0;
+  }
+
+  &__name {
+    font-size: $font-size;
+    line-height: 1.5;
+  }
+
+  &__position {
+    display: block;
+    margin-top: 4px;
+    font-size: $font-size-sm;
+    color: $main-color;
+  }
+}

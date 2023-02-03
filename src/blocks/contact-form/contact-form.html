@@ -1,0 +1,40 @@
+<!--DEV
+@ @include('blocks/contact-form/contact-form.html')
+-->
+
+<form class="contact-form" action="" method="post">
+  <label class="field-text">
+    <span class="field-text__input-wrap">
+      <input class="field-text__input" type="text" name="name" value="" placeholder="Ім'я" required>
+      <span class="field-text__help-text"></span>
+    </span>
+  </label>
+
+  <label class="field-text">
+    <span class="field-text__input-wrap">
+      <input class="field-text__input" type="email" name="email" value="" placeholder="E-mail" required>
+      <span class="field-text__help-text"></span>
+    </span>
+  </label>
+
+  <label class="field-text">
+    <span class="field-text__input-wrap">
+      <textarea class="field-text__input" name="message" placeholder="Повідомлення" rows="4"></textarea>
+      <span class="field-text__help-text"></span>
+    </span>
+  </label>
+
+  <div class="contact-form__agreement">
+    <!-- <div class="field-actions__text">* — обязательные поля</div> -->
+    <button class="btn" type="submit" name="submit" style="width:100%;margin-bottom:24px;">
+      <span>Отправить</span>
+    </button>
+    <div class="field-checkbox">
+      <label class="field-checkbox__name">
+        <input class="field-checkbox__input  agreement-field" type="checkbox" name="" checked>
+        <span class="field-checkbox__name-text">Я згоден на обробку персональних даних відповідно до Політики конфіденційності</span>
+      </label>
+    </div>
+  </div>
+
+</form>

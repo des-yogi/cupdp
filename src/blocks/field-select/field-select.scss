@@ -29,9 +29,9 @@
     line-height: inherit;
     appearance: none;
     color: $title-color;
-    border: 1px solid $gray-bg;
+    border: 1px solid $border-color;
     border-radius: $border-radius--32;
-    background-color: $gray-bg;
+    background-color: $white;
     background-image: svg-load('../blocks/field-select/bg-img/chevron-down.svg', stroke=$text-color);
     background-repeat: no-repeat;
     background-position: right 16px center;
@@ -60,8 +60,8 @@
     &[readonly] {
       cursor: default;
       color: $text-muted;
-      border-color: $text-muted;
-      background-color: $white;
+      border-color: $light-bg;
+      background-color: $light-bg;
     }
 
     &--city {
@@ -74,9 +74,6 @@
       background-image:
         svg-load('../blocks/field-select/bg-img/chevron-down.svg', stroke=$text-color),
         svg-load('../blocks/sprite-svg/svg/marker.svg', stroke=$text-color);
-
-        &[multiple] {
-        }
     }
   }
 

@@ -298,38 +298,41 @@ a {
 
 
 * {
-  //Firefox only
-  /* «цвет ползунка» «цвет полосы скроллбара» */
-  scrollbar-color: $divider-color;
-  scrollbar-width: thin;  /* толщина */
 
-  //for webkit browsers (Chrome, Opera, Safary, Edge ets.)
-  //Here is a complete list of all the new pseudo-elements. All of these pseudo-elements must be prefixed with -webkit-:
-  // scrollbar
-  // scrollbar-button
-  // scrollbar-track
-  // scrollbar-track-piece
-  // scrollbar-thumb
-  // scrollbar-corner
-  // resize
+  @media (min-width: $screen-lg) {
+    //Firefox only
+    /* «цвет ползунка» «цвет полосы скроллбара» */
+    scrollbar-color: $border-color;
+    scrollbar-width: thin;  /* толщина */
 
-  /* полоса прокрутки (скроллбар) */
-  ::-webkit-scrollbar {
-      width: 6px; /* ширина для вертикального скролла */
-      height: 6px; /* высота для горизонтального скролла */
-      background-color: $border-color;
-  }
+    //for webkit browsers (Chrome, Opera, Safary, Edge ets.)
+    //Here is a complete list of all the new pseudo-elements. All of these pseudo-elements must be prefixed with -webkit-:
+    // scrollbar
+    // scrollbar-button
+    // scrollbar-track
+    // scrollbar-track-piece
+    // scrollbar-thumb
+    // scrollbar-corner
+    // resize
 
-  /* ползунок скроллбара */
-  ::-webkit-scrollbar-thumb {
-    background-color: $main-color;
-    border-radius: 8px;
-    box-shadow: none;
-    //box-shadow: inset 1px 1px 10px #f3faf7;
-  }
+    /* полоса прокрутки (скроллбар) */
+    ::-webkit-scrollbar {
+        width: 6px; /* ширина для вертикального скролла */
+        height: 6px; /* высота для горизонтального скролла */
+        background-color: $border-color;
+    }
 
-  ::-webkit-scrollbar-thumb:hover {
-    background-color: $link-color--hover;
+    /* ползунок скроллбара */
+    ::-webkit-scrollbar-thumb {
+      background-color: $main-color;
+      border-radius: 8px;
+      box-shadow: none;
+      //box-shadow: inset 1px 1px 10px #f3faf7;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: $link-color--hover;
+    }
   }
 }
 
@@ -441,6 +444,120 @@ fieldset {
     z-index: 1060;
   }
 }
+
+.col-12-10-8 {
+  @include col(xs, 12);
+  @include col(md, 10);
+  @include col-offset(xl, 2);
+  @include col(xl, 8);
+}
+
+.lead {
+  font-size: 20px;
+  font-weight: 500;
+
+  strong {
+    font-weight: inherit;
+    color: $main-color;
+  }
+}
+
+.text-content {
+  padding-bottom: 72px;
+
+  @media (min-width: $screen-md) {
+    padding-bottom: 96px;
+  }
+}
+
+// Swiper Controls
+.swiper-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  //margin-top: 40px;
+
+  & > * {
+    position: static;
+  }
+
+  .swiper-pagination {
+    width: auto;
+    margin: 0 40px;
+  }
+
+  .swiper-pagination-bullet {
+    width: 18px;
+    height: 3px;
+    border-radius: 3px !important;
+    background-color: $secondary-color;
+    opacity: 0.25;
+  }
+
+  .swiper-pagination-bullet-active {
+    width: 32px;
+    opacity: 1;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 48px;
+    height: 48px;
+    margin-top: 0;
+    border: none;
+    user-select: none;
+    cursor: pointer;
+    background-color: $secondary-color;
+    border-radius: 50%;
+    transition: all $transition-time;
+
+    &::after {
+      display: block;
+      width: 24px;
+      height: 24px;
+      content: "";
+      background-size: 24px;
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: all $transition-time;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $link-color--hover;
+    }
+  }
+
+  .swiper-button-prev {
+
+    &::after {
+      background-image: svg-load('../blocks/sprite-svg/svg/chevron-left.svg', stroke=$white);
+    }
+  }
+
+  .swiper-button-next {
+    margin-left: 8px;
+
+    &::after {
+      background-image: svg-load('../blocks/sprite-svg/svg/chevron-right.svg', stroke=$white);
+    }
+  }
+
+  .swiper-button-disabled {
+    background-color: rgba($secondary-color, 0.1);
+
+    &.swiper-button-prev::after {
+      background-image: svg-load('../blocks/sprite-svg/svg/chevron-left.svg', stroke=$text-muted);
+    }
+
+    &.swiper-button-next::after {
+      background-image: svg-load('../blocks/sprite-svg/svg/chevron-right.svg', stroke=$text-muted);
+    }
+  }
+}
+
+
 
 // @include col(xs, 12);
 // @include col(md, 6);

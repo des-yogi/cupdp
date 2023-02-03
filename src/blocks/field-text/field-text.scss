@@ -28,8 +28,8 @@
     font-size: 16px;
     font-family: inherit;
     line-height: $line-height;
-    background-color: $gray-bg;
-    border: 1px solid $gray-bg;
+    background-color: $white;
+    border: 1px solid $border-color;
     border-radius: $border-radius--32;
     appearance: textfield;
 
@@ -40,7 +40,9 @@
     &[disabled],
     &[readonly] {
       cursor: default;
-      background-color: $gray-lighter;
+      color: $text-muted;
+      border-color: $light-bg;
+      background-color: $light-bg;
     }
 
     &[required] {
@@ -89,6 +91,7 @@
     }
 
    &[type='search'] {
+    background-color: $gray-bg;
       background-image: svg-load('../blocks/sprite-svg/svg/search.svg', stroke=$text-color);
     }
 
