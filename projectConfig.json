@@ -50,7 +50,12 @@
     "partners-slider": [],
     "contacts": [],
     "contact-form": [],
-    "partners": []
+    "partners": [],
+    "mob-menu": [],
+    "search-collapsing": [],
+    "reg-modal": [],
+    "login-modal": [],
+    "remind-password-modal": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",
@@ -71,7 +76,7 @@
   "singleCompiled": [],
   "addJsBefore": [
     "./node_modules/focus-visible/dist/focus-visible.min.js",
-    "./node_modules/blazy/blazy.min.js",
+    "./node_modules/vanilla-lazyload/dist/lazyload.min.js",
     "./node_modules/svg4everybody/dist/svg4everybody.js",
     "./node_modules/autosize/dist/autosize.min.js",
     "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",

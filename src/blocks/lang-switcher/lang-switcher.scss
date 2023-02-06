@@ -21,7 +21,8 @@
   }
 
   &__menu {
-    min-width: auto;
+    min-width: 70px;
+    background-color: $body-bg;
     border: 2px solid $border-color;
     border-radius: $border-radius--32;
     overflow: hidden;

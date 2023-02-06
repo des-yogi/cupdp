@@ -121,7 +121,10 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
 }());
 
 (function(){
-  const bLazy = new Blazy({
-    selector: '.b-lazy' // all images
+  // const bLazy = new Blazy({
+  //   selector: '.b-lazy' // all images
+  // });
+  const aLazyLoad = new LazyLoad({
+    elements_selector: ".b-lazy"
   });
 }());
