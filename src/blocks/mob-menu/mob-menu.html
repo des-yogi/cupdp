@@ -1,0 +1,48 @@
+<!--DEV
+@ @include('blocks/mob-menu/mob-menu.html')
+-->
+
+<div class="offcanvas offcanvas-top  mob-menu" tabindex="-1" id="mobMenu" aria-labelledby="mobMenuLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="mobMenuLabel" style="margin-top:0;">
+      <span class="visually-hidden">Мобільне меню</span>
+      <span class="logo" aria-hidden="true">
+        <img src="img/cupdp-logo.svg" alt="" width="237" height="72">
+      </span>
+    </h5>
+    <button type="button" class="btn  btn--icononly" data-bs-dismiss="offcanvas" aria-label="Close">
+      <span class="visually-hidden">Закрити меню</span>
+      <svg width="20" height="20" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#close"></use></svg>
+    </button>
+  </div>
+  <div class="offcanvas-body  mob-menu__body">
+    <div class="mob-menu__top">
+      <button class="btn  btn--icononly  mob-menu__login-btn" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">
+        <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#user-profile"></use></svg>
+        <span>Увійти</span>
+      </button>
+
+      @@include('../../blocks/lang-switcher/lang-switcher.html')
+    </div>
+
+    <nav class="mob-menu__nav">
+      <ul class="list-nostyled  mob-menu__list">
+        <li class="mob-menu__item  active">
+          <a class="mob-menu__link">Про проект</a>
+        </li>
+        <li class="mob-menu__item">
+          <a href="#" class="mob-menu__link">Календар подій</a>
+        </li>
+        <li class="mob-menu__item">
+          <a href="#" class="mob-menu__link">Блог</a>
+        </li>
+        <li class="mob-menu__item">
+          <a href="#" class="mob-menu__link">Партнери</a>
+        </li>
+        <li class="mob-menu__item">
+          <a href="#" class="mob-menu__link">Контакти</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>

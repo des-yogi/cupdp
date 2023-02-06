@@ -198,6 +198,12 @@ a {
   height: 0;
   overflow: hidden;
   @include transition($transition-collapse);
+
+  &.collapse-horizontal {
+    width: 0;
+    height: auto;
+    @include transition($transition-collapse-width);
+  }
 }
 
 
@@ -557,6 +563,88 @@ fieldset {
   }
 }
 
+.modal-content {
+  border-radius: $border-radius;
+}
+
+.modal-header {
+  align-items: center;
+  padding: 40px 16px 24px;
+  border-bottom: none;
+
+  @media (min-width: $screen-md) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+.modal-body {
+  padding: 0 16px 24px;
+
+  @media (min-width: $screen-md) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+.modal-footer {
+  justify-content: center;
+  padding: 0 16px 40px;
+  font-size: 14px;
+  font-weight: 500;
+  border-top: none;
+
+  @media (min-width: $screen-md) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+.modal-warning {
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+  margin-bottom: 24px;
+  font-size: $font-size;
+  font-weight: 500;
+  color: $white;
+  border-radius: $border-radius;
+  background-color: $color-danger;
+
+  svg {
+    stroke: currentColor;
+    stroke-width: 2px;
+    margin-right: 16px;
+  }
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 24px 0;
+
+  &::after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    height: 1px;
+    background-color: $gray-lightest;
+  }
+
+  span {
+    position: relative;
+    z-index: 1;
+    padding: 0 16px;
+    font-weight: 500;
+    background-color: $body-bg;
+  }
+}
 
 
 // @include col(xs, 12);

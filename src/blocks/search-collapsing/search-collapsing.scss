@@ -1,0 +1,30 @@
+.search-collapsing {
+
+  $block-name:                &; // #{$block-name}__element
+
+  /* position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+
+  &__content {
+    height: 56px;
+    width: 100%;
+    background-color: $white;
+    pointer-events: auto;
+    will-change: contents;
+  }
+
+  &__form {
+    display: flex;
+    align-items: center;
+    height: 56px;
+
+    .field-text {
+      width: 100%;
+    }
+  } */
+}
+

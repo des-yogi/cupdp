@@ -1,0 +1,87 @@
+<!--DEV
+@ @include('blocks/reg-modal/reg-modal.html')
+-->
+
+<!-- Reg Modal -->
+<div class="modal fade  reg-modal" id="regModal" tabindex="-1" aria-labelledby="regModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <h5 class="modal-title visually-hidden" id="regModalLabel">Форма регистрации</h5>
+      <div class="modal-header">
+        <p class="h3" style="margin: 0;">Завантажте цей матеріал,<br> створивши акаунт</p>
+        <button type="button" class="btn  btn--icononly" data-bs-dismiss="modal" aria-label="Close">
+          <span class="visually-hidden">Закрити модальне вікно</span>
+          <svg width="20" height="20" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#close"></use></svg>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div class="login-modal__btn-wrapper">
+          <a href="#" class="login-modal__btn  login-modal__btn--fb">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M24,12.08A12,12,0,1,0,10.12,23.93V15.55h-3V12.08h3V9.44c0-3,1.8-4.67,4.54-4.67A18.52,18.52,0,0,1,17.34,5V8H15.83a1.72,1.72,0,0,0-1.94,1.48,1.7,1.7,0,0,0,0,.39v2.21H17.2l-.53,3.47H13.88v8.38A12,12,0,0,0,24,12.08Z"/></svg>
+            <span>Continue with Facebook</span>
+          </a>
+          <a href="#" class="login-modal__btn  login-modal__btn--google">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M24,12.27a13.87,13.87,0,0,0-.22-2.45H12.24v4.64h6.59a5.48,5.48,0,0,1-2.44,3.62l4,3h0A11.6,11.6,0,0,0,24,12.27Z" fill="#4285f4"/><path d="M16.39,18.08h0a7.49,7.49,0,0,1-4.15,1.15,7.29,7.29,0,0,1-6.85-5L1.3,17.39h0A12.28,12.28,0,0,0,12.24,24a11.81,11.81,0,0,0,8.11-2.91h0Z" fill="#34a853"/><path d="M5.39,14.28h0a7,7,0,0,1,0-4.56h0L1.3,6.61h0a11.82,11.82,0,0,0,0,10.78h0Z" fill="#fbbc05"/><path d="M5.39,9.72a7.29,7.29,0,0,1,6.85-5,6.71,6.71,0,0,1,4.69,1.8l3.51-3.44A11.9,11.9,0,0,0,12.24,0,12.28,12.28,0,0,0,1.3,6.61h0L5.39,9.72Z" fill="#ea4335"/></svg>
+            <span>Continue with Google</span>
+          </a>
+        </div>
+
+        <span class="divider"><span>або</span></span>
+
+        <div class="modal-warning">
+          <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#alert-triangle"></use></svg>
+          <span>Аккаунт з цим E-mail вже існує</span>
+        </div>
+
+        <form class="login-modal__form" action="#" method="post">
+
+          <label class="field-text">
+            <span class="field-text__input-wrap">
+              <input class="field-text__input" type="text" name="surname" value="" placeholder="Прізвище" required>
+              <span class="field-text__help-text"></span>
+            </span>
+          </label>
+
+          <label class="field-text">
+            <span class="field-text__input-wrap">
+              <input class="field-text__input" type="text" name="name" value="" placeholder="Ім'я" required>
+              <span class="field-text__help-text"></span>
+            </span>
+          </label>
+
+          <label class="field-text">
+            <span class="field-text__input-wrap">
+              <input class="field-text__input" type="text" name="email" value="" placeholder="E-mail" required>
+              <span class="field-text__help-text"></span>
+            </span>
+          </label>
+
+          <label class="field-text">
+            <span class="field-text__input-wrap">
+              <input class="field-text__input" type="password" name="password" value="" placeholder="Пароль" required>
+              <span class="field-text__help-text"></span>
+            </span>
+          </label>
+
+          <label class="field-text">
+            <span class="field-text__input-wrap">
+              <input class="field-text__input" type="password" name="passwordRepeat" value="" placeholder="Введіть пароль ще раз" required>
+              <span class="field-text__help-text"></span>
+            </span>
+          </label>
+
+          <button class="btn" type="submit" style="width:100%;">
+            <span>Зареєструватися</span>
+            <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right-sm"></use></svg>
+          </button>
+        </form>
+      </div>
+
+      <div class="modal-footer">
+        <span>Вже маєте акаунт?</span>
+        <a href="#loginModal" data-bs-toggle="modal" role="button" class="special">Увійти</a>
+      </div>
+    </div>
+  </div>
+</div>

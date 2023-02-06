@@ -76,10 +76,10 @@
     "@popperjs/core": "^2.11.6",
     "air-datepicker": "^3.3.4",
     "autosize": "^5.0.1",
-    "blazy": "^1.8.2",
     "bootstrap": "^5.2.3",
     "focus-visible": "^5.2.0",
     "svg4everybody": "^2.1.9",
-    "swiper": "^8.4.5"
+    "swiper": "^8.4.5",
+    "vanilla-lazyload": "^17.8.3"
   }
 }

@@ -1,0 +1,65 @@
+.login-modal {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__btn-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: $field-padding-vertical $field-padding-horizontal;
+    margin: 0;
+    text-align: center;
+    font-size: $font-size;
+    font-weight: 700;
+    font-family: inherit;
+    line-height: $line-height;
+    text-decoration: none !important;
+    text-transform: none;
+    white-space: nowrap;
+    border: 1px solid transparent;
+    border-radius: $border-radius--32;
+    user-select: none;
+    cursor: pointer;
+    transition: all $transition-time;
+
+    svg {
+      width: 20px;
+      height: 20px;
+      margin-right: 16px;
+    }
+
+    &--fb {
+      margin-bottom: 24px;
+      color: $white !important;
+      background-color: #1877F2;
+      border-color: #1877F2;
+
+      &:hover,
+      &:focus {
+        background-color: darken(#1877F2, 10%);
+        border-color: darken(#1877F2, 10%);
+      }
+    }
+
+    &--google {
+      color: inherit;
+      background-color: $body-bg;
+      border-color: $border-color;
+
+      &:hover,
+      &:focus {
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.084), 0 2px 3px rgba(0, 0, 0, 0.168);
+      }
+    }
+
+  }
+
+  &__form {
+
+  }
+}

@@ -7,22 +7,43 @@
     <a href="index.html" class="logo" title="Community Policing Knowledge Hub">
       <img src="img/cupdp-logo.svg" alt="CUPDP logo" width="237" height="72">
     </a>
+
+    <!-- <div class="search-collapsing" style="min-height: 56px;">
+      <div class="collapse collapse-horizontal  search-collapsing__content" id="collapseSearch">
+        <form class="search-collapsing__form" action="#" method="post">
+          <label class="field-text">
+            <span class="field-text__input-wrap">
+              <input class="field-text__input" type="search" name="search" value="" placeholder="Пошук">
+            </span>
+          </label>
+        </form>
+      </div>
+    </div> -->
+
   </div>
   <div class="page-header__menu-wrapper">
     @@include('../../blocks/main-nav/main-nav.html')
 
+    <a href="#" class="btn  btn--icononly  page-header__search-link" title="Пошук">
+      <!-- Для шаблона главной страницы ссылку поиска - отключить! -->
+      <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#search"></use></svg>
+      <span class="visually-hidden">Пошук</span>
+    </a>
+
     <div class="page-header__service-menu">
-      <button class="btn  btn--icononly  page-header__login-btn" type="button">
+      <button class="btn  btn--icononly  page-header__login-btn" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">
         <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#user-profile"></use></svg>
         <span>Увійти</span>
       </button>
 
       @@include('../../blocks/lang-switcher/lang-switcher.html')
 
-      <button class="btn  btn--icononly  page-header__burger" type="button">
+      <button class="btn  btn--icononly  page-header__burger" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobMenu" aria-controls="mobMenu">
         <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#menu"></use></svg>
         <span class="visually-hidden">Моб. меню</span>
       </button>
+
+      @@include('../../blocks/mob-menu/mob-menu.html')
     </div>
 
   </div>

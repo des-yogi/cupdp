@@ -13,10 +13,13 @@
   $block-name:                &; // #{$block-name}__element
 
   &__logo-wrapper {
-    flex: 0 0;
+    flex: 1 0;
     flex-basis: auto;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+
+    position: relative;
   }
 
   &__menu-wrapper,
@@ -27,12 +30,19 @@
   }
 
   &__menu-wrapper {
-    flex: 1 1;
+    flex: 0 0;
     flex-basis: auto;
   }
 
   &__service-menu {
-    margin-left: 40px;
+    margin-left: 16px;
+
+    & > .lang-switcher {
+
+        @media (max-width: $screen-md - 1) {
+          display: none;
+        }
+      }
   }
 
   &__login-btn {
@@ -45,10 +55,20 @@
   }
 
   &__burger {
-    margin-left: 16px;
+
+    @media (min-width: $screen-md) {
+      margin-left: 16px;
+    }
 
     @media (min-width: $screen-xl) {
       display: none;
+    }
+  }
+
+  &__search-link {
+
+    @media (min-width: $screen-xl) {
+      margin-left: 40px;
     }
   }
 }
