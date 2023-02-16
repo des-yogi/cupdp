@@ -13,3 +13,4 @@
 * https://des-yogi.github.io/cupdp/contacts
 * https://des-yogi.github.io/cupdp/page-404
 * https://des-yogi.github.io/cupdp/page-503
+* https://des-yogi.github.io/cupdp/email/cupdp-email
