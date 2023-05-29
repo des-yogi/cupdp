@@ -1,9 +1,4 @@
 .partners {
-  // /* padding-bottom: 72px;
-
-  // @media (min-width: $screen-md) {
-  //   padding-bottom: 96px;
-  // } */
 
   $block-name:                &; // #{$block-name}__element
 
@@ -31,6 +26,14 @@
 
     @media (min-width: $screen-md) {
       height: 700px;
+    }
+  }
+
+  &--page {
+    padding-bottom: 72px;
+
+    @media (min-width: $screen-md) {
+      padding-bottom: 96px;
     }
   }
 }

@@ -59,555 +59,44 @@
             </div>
           </div> -->
         </div>
-        <div class="page-header__menu-wrapper">
-          <nav id="main-nav" class="main-nav">
-            <ul class="main-nav__list">
-              <li class="main-nav__item  active">
-                <a class="main-nav__link">
-                  Про проект
-                </a>
-              </li>
-              <li class="main-nav__item">
-                <a href="#" class="main-nav__link">
-                  Календар подій
-                </a>
-              </li>
-              <li class="main-nav__item">
-                <a href="#" class="main-nav__link">
-                  Блог
-                </a>
-              </li>
-              <li class="main-nav__item">
-                <a href="#" class="main-nav__link">
-                  Партнери
-                </a>
-              </li>
-              <li class="main-nav__item">
-                <a href="#" class="main-nav__link">
-                  Контакти
-                </a>
-              </li>
-            </ul>
-          </nav>
-          <a href="#" class="btn  btn--icononly  page-header__search-link" title="Пошук">
+        <div class="page-header__menu-wrapper">          <nav id="main-nav" class="main-nav">            <ul class="main-nav__list">              <li class="main-nav__item  active">                <a class="main-nav__link">                  Про проект                </a>              </li>              <li class="main-nav__item">                <a href="#" class="main-nav__link">                  Календар подій                </a>              </li>              <li class="main-nav__item">                <a href="#" class="main-nav__link">                  Блог                </a>              </li>              <li class="main-nav__item">                <a href="#" class="main-nav__link">                  Партнери                </a>              </li>              <li class="main-nav__item">                <a href="#" class="main-nav__link">                  Контакти                </a>              </li>            </ul>          </nav>          <a href="#" class="btn  btn--icononly  page-header__search-link" title="Пошук">
             <!-- Для шаблона главной страницы ссылку поиска - отключить! -->
             <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#search"/></svg>
             <span class="visually-hidden">Пошук</span>
           </a>
           <div class="page-header__service-menu">
-            <button class="btn  btn--icononly  page-header__login-btn" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">
-              <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#user-profile"/></svg>
-              <span>Увійти</span>
-            </button>
-            <div class="dropdown-center  lang-switcher">
-              <button class="btn  btn--icononly  lang-switcher__btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="0,8" title="Мова сайту">
-                <span class="visually-hidden">Вибір мови сайту</span>
-                <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#globe"/></svg>
+            <!-- Если пользователь зашел в аккаунт -->
+            <div class="dropdown-center  page-header__user">
+              <button class="btn  btn--icononly  page-header__login-btn  page-header__login-btn--logged" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="0,8">
+                <span class="page-header__user-avatar" role="presentation">
+                  <img src="img/user-avatar.jpg" width="32" height="32" alt>
+                </span>
+                <span>User Name</span>
               </button>
-              <ul class="dropdown-menu dropdown-menu-end  lang-switcher__menu">
-                <li class="lang-switcher__item  active"><a class="dropdown-item">UK</a></li>
-                <li class="lang-switcher__item"><a class="dropdown-item" href="#">EN</a></li>
-                <li class="lang-switcher__item"><a class="dropdown-item" href="#">RU</a></li>
+              <ul class="dropdown-menu  page-header__user-menu">
+                <li><a class="dropdown-item  page-header__user-link" href="#">В адмінку</a></li>
+                <li><a class="dropdown-item  page-header__user-link  page-header__user-link--logoff" href="#">Вихід</a></li>
               </ul>
             </div>
-            <button class="btn  btn--icononly  page-header__burger" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobMenu" aria-controls="mobMenu">
+            <!-- <button class="btn  btn--icononly  page-header__login-btn" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">
+              <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#user-profile"></use></svg>
+              <span>Увійти</span>
+            </button> -->            <div class="dropdown-center  lang-switcher">              <button class="btn  btn--icononly  lang-switcher__btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="0,8" title="Мова сайту">                <span class="visually-hidden">Вибір мови сайту</span>                <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#globe"/></svg>              </button>              <ul class="dropdown-menu dropdown-menu-end  lang-switcher__menu">                <li class="lang-switcher__item  active"><a class="dropdown-item">UK</a></li>                <li class="lang-switcher__item"><a class="dropdown-item" href="#">EN</a></li>                <li class="lang-switcher__item"><a class="dropdown-item" href="#">RU</a></li>              </ul>            </div>            <button class="btn  btn--icononly  page-header__burger" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobMenu" aria-controls="mobMenu">
               <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#menu"/></svg>
               <span class="visually-hidden">Моб. меню</span>
-            </button>
-            <div class="offcanvas offcanvas-top  mob-menu" tabindex="-1" id="mobMenu" aria-labelledby="mobMenuLabel">
-              <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="mobMenuLabel" style="margin-top:0;">
-                  <span class="visually-hidden">Мобільне меню</span>
-                  <span class="logo" aria-hidden="true">
-                    <img src="img/cupdp-logo.svg" alt width="237" height="72">
-                  </span>
-                </h5>
-                <button type="button" class="btn  btn--icononly" data-bs-dismiss="offcanvas" aria-label="Close">
-                  <span class="visually-hidden">Закрити меню</span>
-                  <svg width="20" height="20" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#close"/></svg>
-                </button>
-              </div>
-              <div class="offcanvas-body  mob-menu__body">
-                <div class="mob-menu__top">
-                  <button class="btn  btn--icononly  mob-menu__login-btn" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">
-                    <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#user-profile"/></svg>
-                    <span>Увійти</span>
-                  </button>
-                  <div class="dropdown-center  lang-switcher">
-                    <button class="btn  btn--icononly  lang-switcher__btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="0,8" title="Мова сайту">
-                      <span class="visually-hidden">Вибір мови сайту</span>
-                      <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#globe"/></svg>
-                    </button>
-                    <ul class="dropdown-menu dropdown-menu-end  lang-switcher__menu">
-                      <li class="lang-switcher__item  active"><a class="dropdown-item">UK</a></li>
-                      <li class="lang-switcher__item"><a class="dropdown-item" href="#">EN</a></li>
-                      <li class="lang-switcher__item"><a class="dropdown-item" href="#">RU</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <nav class="mob-menu__nav">
-                  <ul class="list-nostyled  mob-menu__list">
-                    <li class="mob-menu__item  active">
-                      <a class="mob-menu__link">Про проект</a>
-                    </li>
-                    <li class="mob-menu__item">
-                      <a href="#" class="mob-menu__link">Календар подій</a>
-                    </li>
-                    <li class="mob-menu__item">
-                      <a href="#" class="mob-menu__link">Блог</a>
-                    </li>
-                    <li class="mob-menu__item">
-                      <a href="#" class="mob-menu__link">Партнери</a>
-                    </li>
-                    <li class="mob-menu__item">
-                      <a href="#" class="mob-menu__link">Контакти</a>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
-            </div>
-          </div>
+            </button>            <div class="offcanvas offcanvas-top  mob-menu" tabindex="-1" id="mobMenu" aria-labelledby="mobMenuLabel">              <div class="offcanvas-header">                <h5 class="offcanvas-title" id="mobMenuLabel" style="margin-top:0;">                  <span class="visually-hidden">Мобільне меню</span>                  <span class="logo" aria-hidden="true">                    <img src="img/cupdp-logo.svg" alt width="237" height="72">                  </span>                </h5>                <button type="button" class="btn  btn--icononly" data-bs-dismiss="offcanvas" aria-label="Close">                  <span class="visually-hidden">Закрити меню</span>                  <svg width="20" height="20" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#close"/></svg>                </button>              </div>              <div class="offcanvas-body  mob-menu__body">                <div class="mob-menu__top">                  <button class="btn  btn--icononly  mob-menu__login-btn" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">                    <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#user-profile"/></svg>                    <span>Увійти</span>                  </button>                  <!--DEV                  @ @include('blocks/lang-switcher/lang-switcher.html')                  -->                  <div class="dropdown-center  lang-switcher">                    <button class="btn  btn--icononly  lang-switcher__btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="0,8" title="Мова сайту">                      <span class="visually-hidden">Вибір мови сайту</span>                      <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#globe"/></svg>                    </button>                    <ul class="dropdown-menu dropdown-menu-end  lang-switcher__menu">                      <li class="lang-switcher__item  active"><a class="dropdown-item">UK</a></li>                      <li class="lang-switcher__item"><a class="dropdown-item" href="#">EN</a></li>                      <li class="lang-switcher__item"><a class="dropdown-item" href="#">RU</a></li>                    </ul>                  </div>                </div>                <nav class="mob-menu__nav">                  <ul class="list-nostyled  mob-menu__list">                    <li class="mob-menu__item  active">                      <a class="mob-menu__link">Про проект</a>                    </li>                    <li class="mob-menu__item">                      <a href="#" class="mob-menu__link">Календар подій</a>                    </li>                    <li class="mob-menu__item">                      <a href="#" class="mob-menu__link">Блог</a>                    </li>                    <li class="mob-menu__item">                      <a href="#" class="mob-menu__link">Партнери</a>                    </li>                    <li class="mob-menu__item">                      <a href="#" class="mob-menu__link">Контакти</a>                    </li>                  </ul>                </nav>              </div>            </div>          </div>
         </div>
       </header>
       <!-- <input type="text" id="input" placeholder="Выберите дату"> -->
       <main class="main-page">
-        <h1 class="visually-hidden">Головна сторінка організації «Community Policing Knowledge Hub»</h1>        <section class="container  search-block">          <div class="row">            <div class="search-block__wrapper-col">              <div class="search-block__header">                <h2 id="searchTitle" class="visually-hidden">Форма пошуку за базою даних організації</h2>                <p class="h1">Усі необхідні вам <span>активи</span> в одному місці</p>                <p class="h3" style="margin-bottom:0;">Знаходьте і завантажуйте найкращі високоякісні фотографії, документи та відео</p>              </div>              <form class="search-block__form" action="#" method="post" aria-labelledby="searchTitle">                <div class="search-block__form-inner">                  <label class="field-text">                    <span class="field-text__input-wrap">                      <input class="field-text__input  field-text__input--search" type="search" name="search" value placeholder="Пошук">                      <span class="field-text__help-text error"></span>                    </span>                  </label>                  <div class="field-select">                    <span class="field-select__select-wrap">                      <label for="catSelect" class="visually-hidden">Вибрати категорію</label>                      <select id="catSelect" class="field-select__select" name="select-name">                        <option value="value1">Усі категорії</option>                        <option value="value2">Значение 2</option>                        <option value="value3">Значение 3</option>                        <option value="value4">Значение 4</option>                      </select>                      <span class="field-select__help-text error"></span>                    </span>                  </div>                  <button class="btn  search-block__submit" type="submit">                    <span>Пошук</span>                  </button>                </div>              </form>              <a href="#" class="search-block__extended  special">                Розширений пошук              </a>            </div>            <div class="search-block__result-col">              <ul class="list-nostyled  search-block__total-list">                <li class="search-block__total-item">                  <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#file"/></svg>                  <p class="search-block__total-text">                    <strong>3 456</strong>                    <span>Документів</span>                  </p>                </li>                <li class="search-block__total-item">                  <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#media-strip"/></svg>                  <p class="search-block__total-text">                    <strong>3 456</strong>                    <span>Відеоматеріалів</span>                  </p>                </li>                <li class="search-block__total-item">                  <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#image"/></svg>                  <p class="search-block__total-text">                    <strong>3 456</strong>                    <span>Зображень</span>                  </p>                </li>                <li class="search-block__total-item">                  <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#microphone"/></svg>                  <p class="search-block__total-text">                    <strong>3 456</strong>                    <span>Аудіо</span>                  </p>                </li>              </ul>            </div>          </div>        </section>        <!--DEV        @ @include('blocks/top-categories/top-categories.html')        -->        <section class="container  top-categories">          <h2 class="top-categories__title"><span>Популярні</span> категорії</h2>          <p class="top-categories__intro">Матеріали, які найбільше переглядаються користувачами</p>          <div class="row" role="list">            <div class="top-categories__card-col" role="listitem">              <!--DEV              @ @include('blocks/category-card/category-card.html', {                "title": ""              })              -->              <a href="#" class="category-card">                <div class="category-card__img">                  <svg width="32" height="32"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#image"/></svg>                </div>                <div class="category-card__text">                  <h3 class="category-card__title">Дорожня безпека</h3>                  <span class="category-card__total">956 Матеріалів</span>                </div>              </a>            </div>            <div class="top-categories__card-col" role="listitem">              <!--DEV              @ @include('blocks/category-card/category-card.html', {                "title": ""              })              -->              <a href="#" class="category-card">                <div class="category-card__img">                  <svg width="32" height="32"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#image"/></svg>                </div>                <div class="category-card__text">                  <h3 class="category-card__title">Громадське здоров’я</h3>                  <span class="category-card__total">956 Матеріалів</span>                </div>              </a>            </div>            <div class="top-categories__card-col" role="listitem">              <!--DEV              @ @include('blocks/category-card/category-card.html', {                "title": ""              })              -->              <a href="#" class="category-card">                <div class="category-card__img">                  <svg width="32" height="32"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#image"/></svg>                </div>                <div class="category-card__text">                  <h3 class="category-card__title">Протидія ґендерно зумовленому насильству</h3>                  <span class="category-card__total">956 Матеріалів</span>                </div>              </a>            </div>            <div class="top-categories__card-col" role="listitem">              <!--DEV              @ @include('blocks/category-card/category-card.html', {                "title": ""              })              -->              <a href="#" class="category-card">                <div class="category-card__img">                  <svg width="32" height="32"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#image"/></svg>                </div>                <div class="category-card__text">                  <h3 class="category-card__title">Робота з дітьми</h3>                  <span class="category-card__total">956 Матеріалів</span>                </div>              </a>            </div>            <div class="top-categories__card-col" role="listitem">              <!--DEV              @ @include('blocks/category-card/category-card.html', {                "title": ""              })              -->              <a href="#" class="category-card">                <div class="category-card__img">                  <svg width="32" height="32"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#image"/></svg>                </div>                <div class="category-card__text">                  <h3 class="category-card__title">Інклюзивний напрям у роботі поліції</h3>                  <span class="category-card__total">956 Матеріалів</span>                </div>              </a>            </div>            <div class="top-categories__card-col" role="listitem">              <!--DEV              @ @include('blocks/category-card/category-card.html', {                "title": ""              })              -->              <a href="#" class="category-card">                <div class="category-card__img">                  <svg width="32" height="32"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#image"/></svg>                </div>                <div class="category-card__text">                  <h3 class="category-card__title">Неформальне спілкування</h3>                  <span class="category-card__total">956 Матеріалів</span>                </div>              </a>            </div>          </div>        </section>        <!--DEV        @ @include('blocks/latest-materials/latest-materials.html')        -->        <section class="container  latest-materials">          <h2 class="latest-materials__title">Останні добавлені <span>матеріали</span></h2>          <p class="latest-materials__intro">Ми постійно оновлюємо нашу базу матеріалів</p>          <div class="row" role="list">            <div class="latest-materials__card-col" role="listitem">              <!--DEV
-              @ @include('blocks/material-card/material-card.html')
-              -->
-              <article class="material-card">
-                <a href="#" class="embed-responsive embed-responsive--4-3  material-card__img  @@noimage" aria-hidden="true" tabindex="-1" title="Майстерня з виготовлення флікерів">
-                  <img class="b-lazy" data-srcset="img/blog-img.jpg 350w,
-                                 img/blog-img.jpg 480w,
-                                 img/blog-img.jpg 645w,
-                                 img/blog-img.jpg 800w,
-                                 img/blog-img.jpg 900w" data-sizes="(max-width: 360px) 312px,
-                           (max-width: 480px) 440px,
-                           (max-width: 768px) 320px,
-                           (max-width: 992px) 430px,
-                           (max-width: 1200px) 534px,
-                           350px" data-src="img/blog-img.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="900" height="675" alt="Майстерня з виготовлення флікерів">
-                </a>
-                <div class="material-card__text-wrapper">
-                  <div class="material-card__text">
-                    <h3 class="material-card__title"><a href="#">Майстерня з виготовлення флікерів</a></h3>
-                  </div>
-                  <p class="material-card__bottom">
-                    <span class="material-card__docs  video">Відеоматеріал</span>
-                    <span class="material-card__views">167</span>
-                    <span class="material-card__date">
-                      <time datetime="2022-12-25">25.12.2022</time>
-                    </span>
-                  </p>
-                </div>
-              </article>
-            </div>            <div class="latest-materials__card-col" role="listitem">              <!--DEV
-              @ @include('blocks/material-card/material-card.html')
-              -->
-              <article class="material-card">
-                <a href="#" class="embed-responsive embed-responsive--4-3  material-card__img  @@noimage" aria-hidden="true" tabindex="-1" title="Документ ОККО">
-                  <img class="b-lazy" data-srcset="img/blog-img.jpg 350w,
-                                 img/blog-img.jpg 480w,
-                                 img/blog-img.jpg 645w,
-                                 img/blog-img.jpg 800w,
-                                 img/blog-img.jpg 900w" data-sizes="(max-width: 360px) 312px,
-                           (max-width: 480px) 440px,
-                           (max-width: 768px) 320px,
-                           (max-width: 992px) 430px,
-                           (max-width: 1200px) 534px,
-                           350px" data-src="img/blog-img.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="900" height="675" alt="Документ ОККО">
-                </a>
-                <div class="material-card__text-wrapper">
-                  <div class="material-card__text">
-                    <h3 class="material-card__title"><a href="#">Документ ОККО</a></h3>
-                  </div>
-                  <p class="material-card__bottom">
-                    <span class="material-card__docs  image">Зображення</span>
-                    <span class="material-card__views">167</span>
-                    <span class="material-card__date">
-                      <time datetime="2022-12-25">25.12.2022</time>
-                    </span>
-                  </p>
-                </div>
-              </article>
-            </div>            <div class="latest-materials__card-col" role="listitem">              <!--DEV
-              @ @include('blocks/material-card/material-card.html')
-              -->
-              <article class="material-card">
-                <a href="#" class="embed-responsive embed-responsive--4-3  material-card__img  @@noimage" aria-hidden="true" tabindex="-1" title="Фінансова та бюджетна звітність за 9 місяців 2022 року">
-                  <img class="b-lazy" data-srcset="img/blog-img.jpg 350w,
-                                 img/blog-img.jpg 480w,
-                                 img/blog-img.jpg 645w,
-                                 img/blog-img.jpg 800w,
-                                 img/blog-img.jpg 900w" data-sizes="(max-width: 360px) 312px,
-                           (max-width: 480px) 440px,
-                           (max-width: 768px) 320px,
-                           (max-width: 992px) 430px,
-                           (max-width: 1200px) 534px,
-                           350px" data-src="img/blog-img.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="900" height="675" alt="Фінансова та бюджетна звітність за 9 місяців 2022 року">
-                </a>
-                <div class="material-card__text-wrapper">
-                  <div class="material-card__text">
-                    <h3 class="material-card__title"><a href="#">Фінансова та бюджетна звітність за 9 місяців 2022 року</a></h3>
-                  </div>
-                  <p class="material-card__bottom">
-                    <span class="material-card__docs  text-file">Документ</span>
-                    <span class="material-card__views">167</span>
-                    <span class="material-card__date">
-                      <time datetime="2022-12-25">25.12.2022</time>
-                    </span>
-                  </p>
-                </div>
-              </article>
-            </div>            <div class="latest-materials__card-col" role="listitem">              <!--DEV
-              @ @include('blocks/material-card/material-card.html')
-              -->
-              <article class="material-card">
-                <a href="#" class="embed-responsive embed-responsive--4-3  material-card__img  @@noimage" aria-hidden="true" tabindex="-1" title="16.03 презентація видання «Взаємодія поліції та громади»">
-                  <img class="b-lazy" data-srcset="img/blog-img.jpg 350w,
-                                 img/blog-img.jpg 480w,
-                                 img/blog-img.jpg 645w,
-                                 img/blog-img.jpg 800w,
-                                 img/blog-img.jpg 900w" data-sizes="(max-width: 360px) 312px,
-                           (max-width: 480px) 440px,
-                           (max-width: 768px) 320px,
-                           (max-width: 992px) 430px,
-                           (max-width: 1200px) 534px,
-                           350px" data-src="img/blog-img.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="900" height="675" alt="16.03 презентація видання «Взаємодія поліції та громади»">
-                </a>
-                <div class="material-card__text-wrapper">
-                  <div class="material-card__text">
-                    <h3 class="material-card__title"><a href="#">16.03 презентація видання «Взаємодія поліції та громади»</a></h3>
-                  </div>
-                  <p class="material-card__bottom">
-                    <span class="material-card__docs  image">Зображення</span>
-                    <span class="material-card__views">167</span>
-                    <span class="material-card__date">
-                      <time datetime="2022-12-25">25.12.2022</time>
-                    </span>
-                  </p>
-                </div>
-              </article>
-            </div>            <div class="latest-materials__card-col" role="listitem">              <!--DEV
-              @ @include('blocks/material-card/material-card.html')
-              -->
-              <article class="material-card">
-                <a href="#" class="embed-responsive embed-responsive--4-3  material-card__img  @@noimage" aria-hidden="true" tabindex="-1" title="Майстерня з виготовлення флікерів">
-                  <img class="b-lazy" data-srcset="img/blog-img.jpg 350w,
-                                 img/blog-img.jpg 480w,
-                                 img/blog-img.jpg 645w,
-                                 img/blog-img.jpg 800w,
-                                 img/blog-img.jpg 900w" data-sizes="(max-width: 360px) 312px,
-                           (max-width: 480px) 440px,
-                           (max-width: 768px) 320px,
-                           (max-width: 992px) 430px,
-                           (max-width: 1200px) 534px,
-                           350px" data-src="img/blog-img.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="900" height="675" alt="Майстерня з виготовлення флікерів">
-                </a>
-                <div class="material-card__text-wrapper">
-                  <div class="material-card__text">
-                    <h3 class="material-card__title"><a href="#">Майстерня з виготовлення флікерів</a></h3>
-                  </div>
-                  <p class="material-card__bottom">
-                    <span class="material-card__docs  video">Відеоматеріал</span>
-                    <span class="material-card__views">167</span>
-                    <span class="material-card__date">
-                      <time datetime="2022-12-25">25.12.2022</time>
-                    </span>
-                  </p>
-                </div>
-              </article>
-            </div>            <div class="latest-materials__card-col" role="listitem">              <!--DEV
-              @ @include('blocks/material-card/material-card.html')
-              -->
-              <article class="material-card">
-                <a href="#" class="embed-responsive embed-responsive--4-3  material-card__img  @@noimage" aria-hidden="true" tabindex="-1" title="Travelling as a way of self-discovery and progress">
-                  <img class="b-lazy" data-srcset="img/blog-img.jpg 350w,
-                                 img/blog-img.jpg 480w,
-                                 img/blog-img.jpg 645w,
-                                 img/blog-img.jpg 800w,
-                                 img/blog-img.jpg 900w" data-sizes="(max-width: 360px) 312px,
-                           (max-width: 480px) 440px,
-                           (max-width: 768px) 320px,
-                           (max-width: 992px) 430px,
-                           (max-width: 1200px) 534px,
-                           350px" data-src="img/blog-img.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="900" height="675" alt="Travelling as a way of self-discovery and progress">
-                </a>
-                <div class="material-card__text-wrapper">
-                  <div class="material-card__text">
-                    <h3 class="material-card__title"><a href="#">Travelling as a way of self-discovery and progress</a></h3>
-                  </div>
-                  <p class="material-card__bottom">
-                    <span class="material-card__docs  audio">Аудіо</span>
-                    <span class="material-card__views">167</span>
-                    <span class="material-card__date">
-                      <time datetime="2022-12-25">25.12.2022</time>
-                    </span>
-                  </p>
-                </div>
-              </article>
-            </div>            <div class="latest-materials__card-col" role="listitem">              <!--DEV
-              @ @include('blocks/material-card/material-card.html')
-              -->
-              <article class="material-card">
-                <a href="#" class="embed-responsive embed-responsive--4-3  material-card__img  img-hidden" aria-hidden="true" tabindex="-1" title="16.03 презентація видання «Взаємодія поліції та громади»">
-                  <img class="b-lazy" data-srcset="img/blog-img.jpg 350w,
-                                 img/blog-img.jpg 480w,
-                                 img/blog-img.jpg 645w,
-                                 img/blog-img.jpg 800w,
-                                 img/blog-img.jpg 900w" data-sizes="(max-width: 360px) 312px,
-                           (max-width: 480px) 440px,
-                           (max-width: 768px) 320px,
-                           (max-width: 992px) 430px,
-                           (max-width: 1200px) 534px,
-                           350px" data-src="img/blog-img.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="900" height="675" alt="16.03 презентація видання «Взаємодія поліції та громади»">
-                </a>
-                <div class="material-card__text-wrapper">
-                  <div class="material-card__text">
-                    <h3 class="material-card__title"><a href="#">16.03 презентація видання «Взаємодія поліції та громади»</a></h3>
-                  </div>
-                  <p class="material-card__bottom">
-                    <span class="material-card__docs  image">Зображення</span>
-                    <span class="material-card__views">167</span>
-                    <span class="material-card__date">
-                      <time datetime="2022-12-25">25.12.2022</time>
-                    </span>
-                  </p>
-                </div>
-              </article>
-            </div>            <div class="latest-materials__card-col" role="listitem">              <!--DEV
-              @ @include('blocks/material-card/material-card.html')
-              -->
-              <article class="material-card">
-                <a href="#" class="embed-responsive embed-responsive--4-3  material-card__img  img-hidden" aria-hidden="true" tabindex="-1" title="Майстерня з виготовлення флікерів">
-                  <img class="b-lazy" data-srcset="img/blog-img.jpg 350w,
-                                 img/blog-img.jpg 480w,
-                                 img/blog-img.jpg 645w,
-                                 img/blog-img.jpg 800w,
-                                 img/blog-img.jpg 900w" data-sizes="(max-width: 360px) 312px,
-                           (max-width: 480px) 440px,
-                           (max-width: 768px) 320px,
-                           (max-width: 992px) 430px,
-                           (max-width: 1200px) 534px,
-                           350px" data-src="img/blog-img.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="900" height="675" alt="Майстерня з виготовлення флікерів">
-                </a>
-                <div class="material-card__text-wrapper">
-                  <div class="material-card__text">
-                    <h3 class="material-card__title"><a href="#">Майстерня з виготовлення флікерів</a></h3>
-                  </div>
-                  <p class="material-card__bottom">
-                    <span class="material-card__docs  video">Відеоматеріал</span>
-                    <span class="material-card__views">167</span>
-                    <span class="material-card__date">
-                      <time datetime="2022-12-25">25.12.2022</time>
-                    </span>
-                  </p>
-                </div>
-              </article>
-            </div>            <div class="latest-materials__card-col" role="listitem">              <!--DEV
-              @ @include('blocks/material-card/material-card.html')
-              -->
-              <article class="material-card">
-                <a href="#" class="embed-responsive embed-responsive--4-3  material-card__img  img-hidden" aria-hidden="true" tabindex="-1" title="Travelling as a way of self-discovery and progress">
-                  <img class="b-lazy" data-srcset="img/blog-img.jpg 350w,
-                                 img/blog-img.jpg 480w,
-                                 img/blog-img.jpg 645w,
-                                 img/blog-img.jpg 800w,
-                                 img/blog-img.jpg 900w" data-sizes="(max-width: 360px) 312px,
-                           (max-width: 480px) 440px,
-                           (max-width: 768px) 320px,
-                           (max-width: 992px) 430px,
-                           (max-width: 1200px) 534px,
-                           350px" data-src="img/blog-img.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="900" height="675" alt="Travelling as a way of self-discovery and progress">
-                </a>
-                <div class="material-card__text-wrapper">
-                  <div class="material-card__text">
-                    <h3 class="material-card__title"><a href="#">Travelling as a way of self-discovery and progress</a></h3>
-                  </div>
-                  <p class="material-card__bottom">
-                    <span class="material-card__docs  audio">Аудіо</span>
-                    <span class="material-card__views">167</span>
-                    <span class="material-card__date">
-                      <time datetime="2022-12-25">25.12.2022</time>
-                    </span>
-                  </p>
-                </div>
-              </article>
-            </div>            <div class="latest-materials__card-col" role="listitem">              <!--DEV
-              @ @include('blocks/material-card/material-card.html')
-              -->
-              <article class="material-card">
-                <a href="#" class="embed-responsive embed-responsive--4-3  material-card__img  img-hidden" aria-hidden="true" tabindex="-1" title="16.03 презентація видання «Взаємодія поліції та громади»">
-                  <img class="b-lazy" data-srcset="img/blog-img.jpg 350w,
-                                 img/blog-img.jpg 480w,
-                                 img/blog-img.jpg 645w,
-                                 img/blog-img.jpg 800w,
-                                 img/blog-img.jpg 900w" data-sizes="(max-width: 360px) 312px,
-                           (max-width: 480px) 440px,
-                           (max-width: 768px) 320px,
-                           (max-width: 992px) 430px,
-                           (max-width: 1200px) 534px,
-                           350px" data-src="img/blog-img.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="900" height="675" alt="16.03 презентація видання «Взаємодія поліції та громади»">
-                </a>
-                <div class="material-card__text-wrapper">
-                  <div class="material-card__text">
-                    <h3 class="material-card__title"><a href="#">16.03 презентація видання «Взаємодія поліції та громади»</a></h3>
-                  </div>
-                  <p class="material-card__bottom">
-                    <span class="material-card__docs  image">Зображення</span>
-                    <span class="material-card__views">167</span>
-                    <span class="material-card__date">
-                      <time datetime="2022-12-25">25.12.2022</time>
-                    </span>
-                  </p>
-                </div>
-              </article>
-            </div>            <div class="latest-materials__card-col" role="listitem">              <!--DEV
-              @ @include('blocks/material-card/material-card.html')
-              -->
-              <article class="material-card">
-                <a href="#" class="embed-responsive embed-responsive--4-3  material-card__img  img-hidden" aria-hidden="true" tabindex="-1" title="Майстерня з виготовлення флікерів">
-                  <img class="b-lazy" data-srcset="img/blog-img.jpg 350w,
-                                 img/blog-img.jpg 480w,
-                                 img/blog-img.jpg 645w,
-                                 img/blog-img.jpg 800w,
-                                 img/blog-img.jpg 900w" data-sizes="(max-width: 360px) 312px,
-                           (max-width: 480px) 440px,
-                           (max-width: 768px) 320px,
-                           (max-width: 992px) 430px,
-                           (max-width: 1200px) 534px,
-                           350px" data-src="img/blog-img.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="900" height="675" alt="Майстерня з виготовлення флікерів">
-                </a>
-                <div class="material-card__text-wrapper">
-                  <div class="material-card__text">
-                    <h3 class="material-card__title"><a href="#">Майстерня з виготовлення флікерів</a></h3>
-                  </div>
-                  <p class="material-card__bottom">
-                    <span class="material-card__docs  video">Відеоматеріал</span>
-                    <span class="material-card__views">167</span>
-                    <span class="material-card__date">
-                      <time datetime="2022-12-25">25.12.2022</time>
-                    </span>
-                  </p>
-                </div>
-              </article>
-            </div>            <div class="latest-materials__card-col" role="listitem">              <!--DEV
-              @ @include('blocks/material-card/material-card.html')
-              -->
-              <article class="material-card">
-                <a href="#" class="embed-responsive embed-responsive--4-3  material-card__img  img-hidden" aria-hidden="true" tabindex="-1" title="Travelling as a way of self-discovery and progress">
-                  <img class="b-lazy" data-srcset="img/blog-img.jpg 350w,
-                                 img/blog-img.jpg 480w,
-                                 img/blog-img.jpg 645w,
-                                 img/blog-img.jpg 800w,
-                                 img/blog-img.jpg 900w" data-sizes="(max-width: 360px) 312px,
-                           (max-width: 480px) 440px,
-                           (max-width: 768px) 320px,
-                           (max-width: 992px) 430px,
-                           (max-width: 1200px) 534px,
-                           350px" data-src="img/blog-img.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="900" height="675" alt="Travelling as a way of self-discovery and progress">
-                </a>
-                <div class="material-card__text-wrapper">
-                  <div class="material-card__text">
-                    <h3 class="material-card__title"><a href="#">Travelling as a way of self-discovery and progress</a></h3>
-                  </div>
-                  <p class="material-card__bottom">
-                    <span class="material-card__docs  audio">Аудіо</span>
-                    <span class="material-card__views">167</span>
-                    <span class="material-card__date">
-                      <time datetime="2022-12-25">25.12.2022</time>
-                    </span>
-                  </p>
-                </div>
-              </article>
-            </div>          </div>          <div class="latest-materials__more-wrapper">            <a href="#" class="btn  latest-materials__more-link">              <span>Показати усі матеріали</span>              <svg width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right-sm"/></svg>            </a>          </div>        </section>        <hr>
+        <h1 class="visually-hidden">Головна сторінка організації «Community Policing Knowledge Hub»</h1>        <section class="container  search-block">          <div class="row">            <div class="search-block__wrapper-col">              <div class="search-block__header">                <h2 id="searchTitle" class="visually-hidden">Форма пошуку за базою даних організації</h2>                <p class="h1">Усі необхідні вам <span>активи</span> в одному місці</p>                <p class="h3" style="margin-bottom:0;">Знаходьте і завантажуйте найкращі високоякісні фотографії, документи та відео</p>              </div>              <form class="search-block__form" action="#" method="post" aria-labelledby="searchTitle">                <div class="search-block__form-inner">                  <label class="field-text">                    <span class="field-text__input-wrap">                      <input class="field-text__input  field-text__input--search" type="search" name="search" value placeholder="Пошук">                      <span class="field-text__help-text error"></span>                    </span>                  </label>                  <div class="field-select">                    <span class="field-select__select-wrap">                      <label for="catSelect" class="visually-hidden">Вибрати категорію</label>                      <select id="catSelect" class="field-select__select" name="select-name">                        <option value="value1">Усі категорії</option>                        <option value="value2">Значение 2</option>                        <option value="value3">Значение 3</option>                        <option value="value4">Значение 4</option>                      </select>                      <span class="field-select__help-text error"></span>                    </span>                  </div>                  <button class="btn  search-block__submit" type="submit">                    <span>Пошук</span>                  </button>                </div>              </form>              <a href="#" class="search-block__extended  special">                Розширений пошук              </a>            </div>            <div class="search-block__result-col">              <ul class="list-nostyled  search-block__total-list">                <li class="search-block__total-item">                  <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#file"/></svg>                  <p class="search-block__total-text">                    <strong>3 456</strong>                    <span>Документів</span>                  </p>                </li>                <li class="search-block__total-item">                  <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#media-strip"/></svg>                  <p class="search-block__total-text">                    <strong>3 456</strong>                    <span>Відеоматеріалів</span>                  </p>                </li>                <li class="search-block__total-item">                  <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#image"/></svg>                  <p class="search-block__total-text">                    <strong>3 456</strong>                    <span>Зображень</span>                  </p>                </li>                <li class="search-block__total-item">                  <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#microphone"/></svg>                  <p class="search-block__total-text">                    <strong>3 456</strong>                    <span>Аудіо</span>                  </p>                </li>              </ul>            </div>          </div>        </section>        <!--DEV        @ @include('blocks/top-categories/top-categories.html')        -->        <section class="container  top-categories">          <h2 class="top-categories__title"><span>Популярні</span> категорії</h2>          <p class="top-categories__intro">Матеріали, які найбільше переглядаються користувачами</p>          <div class="row" role="list">            <div class="top-categories__card-col" role="listitem">              <!--DEV              @ @include('blocks/category-card/category-card.html', {                "title": ""              })              -->              <a href="#" class="category-card">                <div class="category-card__img">                  <svg width="32" height="32"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#image"/></svg>                </div>                <div class="category-card__text">                  <h3 class="category-card__title">Дорожня безпека</h3>                  <span class="category-card__total">956 Матеріалів</span>                </div>              </a>            </div>            <div class="top-categories__card-col" role="listitem">              <!--DEV              @ @include('blocks/category-card/category-card.html', {                "title": ""              })              -->              <a href="#" class="category-card">                <div class="category-card__img">                  <svg width="32" height="32"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#image"/></svg>                </div>                <div class="category-card__text">                  <h3 class="category-card__title">Громадське здоров’я</h3>                  <span class="category-card__total">956 Матеріалів</span>                </div>              </a>            </div>            <div class="top-categories__card-col" role="listitem">              <!--DEV              @ @include('blocks/category-card/category-card.html', {                "title": ""              })              -->              <a href="#" class="category-card">                <div class="category-card__img">                  <svg width="32" height="32"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#image"/></svg>                </div>                <div class="category-card__text">                  <h3 class="category-card__title">Протидія ґендерно зумовленому насильству</h3>                  <span class="category-card__total">956 Матеріалів</span>                </div>              </a>            </div>            <div class="top-categories__card-col" role="listitem">              <!--DEV              @ @include('blocks/category-card/category-card.html', {                "title": ""              })              -->              <a href="#" class="category-card">                <div class="category-card__img">                  <svg width="32" height="32"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#image"/></svg>                </div>                <div class="category-card__text">                  <h3 class="category-card__title">Робота з дітьми</h3>                  <span class="category-card__total">956 Матеріалів</span>                </div>              </a>            </div>            <div class="top-categories__card-col" role="listitem">              <!--DEV              @ @include('blocks/category-card/category-card.html', {                "title": ""              })              -->              <a href="#" class="category-card">                <div class="category-card__img">                  <svg width="32" height="32"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#image"/></svg>                </div>                <div class="category-card__text">                  <h3 class="category-card__title">Інклюзивний напрям у роботі поліції</h3>                  <span class="category-card__total">956 Матеріалів</span>                </div>              </a>            </div>            <div class="top-categories__card-col" role="listitem">              <!--DEV              @ @include('blocks/category-card/category-card.html', {                "title": ""              })              -->              <a href="#" class="category-card">                <div class="category-card__img">                  <svg width="32" height="32"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#image"/></svg>                </div>                <div class="category-card__text">                  <h3 class="category-card__title">Неформальне спілкування</h3>                  <span class="category-card__total">956 Матеріалів</span>                </div>              </a>            </div>          </div>        </section>        <!--DEV        @ @include('blocks/latest-materials/latest-materials.html')        -->        <section class="container  latest-materials">          <h2 class="latest-materials__title">Останні добавлені <span>матеріали</span></h2>          <p class="latest-materials__intro">Ми постійно оновлюємо нашу базу матеріалів</p>          <div class="row" role="list">            <div class="latest-materials__card-col" role="listitem">              <!--DEV              @ @include('blocks/material-card/material-card.html')              -->              <article class="material-card">                <a href="#" class="embed-responsive embed-responsive--4-3  material-card__img  @@noimage" aria-hidden="true" tabindex="-1" title="Майстерня з виготовлення флікерів">                  <img class="b-lazy" data-srcset="img/blog-img.jpg 350w,                                 img/blog-img.jpg 480w,                                 img/blog-img.jpg 645w,                                 img/blog-img.jpg 800w,                                 img/blog-img.jpg 900w" data-sizes="(max-width: 360px) 312px,                           (max-width: 480px) 440px,                           (max-width: 768px) 320px,                           (max-width: 992px) 430px,                           (max-width: 1200px) 534px,                           350px" data-src="img/blog-img.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="900" height="675" alt="Майстерня з виготовлення флікерів">                </a>                <div class="material-card__text-wrapper">                  <div class="material-card__text">                    <h3 class="material-card__title"><a href="#">Майстерня з виготовлення флікерів</a></h3>                  </div>                  <p class="material-card__bottom">                    <span class="material-card__docs  video">Відеоматеріал</span>                    <span class="material-card__views">167</span>                    <span class="material-card__date">                      <time datetime="2022-12-25">25.12.2022</time>                    </span>                  </p>                </div>              </article>            </div>            <div class="latest-materials__card-col" role="listitem">              <!--DEV              @ @include('blocks/material-card/material-card.html')              -->              <article class="material-card">                <a href="#" class="embed-responsive embed-responsive--4-3  material-card__img  @@noimage" aria-hidden="true" tabindex="-1" title="Документ ОККО">                  <img class="b-lazy" data-srcset="img/blog-img.jpg 350w,                                 img/blog-img.jpg 480w,                                 img/blog-img.jpg 645w,                                 img/blog-img.jpg 800w,                                 img/blog-img.jpg 900w" data-sizes="(max-width: 360px) 312px,                           (max-width: 480px) 440px,                           (max-width: 768px) 320px,                           (max-width: 992px) 430px,                           (max-width: 1200px) 534px,                           350px" data-src="img/blog-img.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="900" height="675" alt="Документ ОККО">                </a>                <div class="material-card__text-wrapper">                  <div class="material-card__text">                    <h3 class="material-card__title"><a href="#">Документ ОККО</a></h3>                  </div>                  <p class="material-card__bottom">                    <span class="material-card__docs  image">Зображення</span>                    <span class="material-card__views">167</span>                    <span class="material-card__date">                      <time datetime="2022-12-25">25.12.2022</time>                    </span>                  </p>                </div>              </article>            </div>            <div class="latest-materials__card-col" role="listitem">              <!--DEV              @ @include('blocks/material-card/material-card.html')              -->              <article class="material-card">                <a href="#" class="embed-responsive embed-responsive--4-3  material-card__img  @@noimage" aria-hidden="true" tabindex="-1" title="Фінансова та бюджетна звітність за 9 місяців 2022 року">                  <img class="b-lazy" data-srcset="img/blog-img.jpg 350w,                                 img/blog-img.jpg 480w,                                 img/blog-img.jpg 645w,                                 img/blog-img.jpg 800w,                                 img/blog-img.jpg 900w" data-sizes="(max-width: 360px) 312px,                           (max-width: 480px) 440px,                           (max-width: 768px) 320px,                           (max-width: 992px) 430px,                           (max-width: 1200px) 534px,                           350px" data-src="img/blog-img.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="900" height="675" alt="Фінансова та бюджетна звітність за 9 місяців 2022 року">                </a>                <div class="material-card__text-wrapper">                  <div class="material-card__text">                    <h3 class="material-card__title"><a href="#">Фінансова та бюджетна звітність за 9 місяців 2022 року</a></h3>                  </div>                  <p class="material-card__bottom">                    <span class="material-card__docs  text-file">Документ</span>                    <span class="material-card__views">167</span>                    <span class="material-card__date">                      <time datetime="2022-12-25">25.12.2022</time>                    </span>                  </p>                </div>              </article>            </div>            <div class="latest-materials__card-col" role="listitem">              <!--DEV              @ @include('blocks/material-card/material-card.html')              -->              <article class="material-card">                <a href="#" class="embed-responsive embed-responsive--4-3  material-card__img  @@noimage" aria-hidden="true" tabindex="-1" title="16.03 презентація видання «Взаємодія поліції та громади»">                  <img class="b-lazy" data-srcset="img/blog-img.jpg 350w,                                 img/blog-img.jpg 480w,                                 img/blog-img.jpg 645w,                                 img/blog-img.jpg 800w,                                 img/blog-img.jpg 900w" data-sizes="(max-width: 360px) 312px,                           (max-width: 480px) 440px,                           (max-width: 768px) 320px,                           (max-width: 992px) 430px,                           (max-width: 1200px) 534px,                           350px" data-src="img/blog-img.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="900" height="675" alt="16.03 презентація видання «Взаємодія поліції та громади»">                </a>                <div class="material-card__text-wrapper">                  <div class="material-card__text">                    <h3 class="material-card__title"><a href="#">16.03 презентація видання «Взаємодія поліції та громади»</a></h3>                  </div>                  <p class="material-card__bottom">                    <span class="material-card__docs  image">Зображення</span>                    <span class="material-card__views">167</span>                    <span class="material-card__date">                      <time datetime="2022-12-25">25.12.2022</time>                    </span>                  </p>                </div>              </article>            </div>            <div class="latest-materials__card-col" role="listitem">              <!--DEV              @ @include('blocks/material-card/material-card.html')              -->              <article class="material-card">                <a href="#" class="embed-responsive embed-responsive--4-3  material-card__img  @@noimage" aria-hidden="true" tabindex="-1" title="Майстерня з виготовлення флікерів">                  <img class="b-lazy" data-srcset="img/blog-img.jpg 350w,                                 img/blog-img.jpg 480w,                                 img/blog-img.jpg 645w,                                 img/blog-img.jpg 800w,                                 img/blog-img.jpg 900w" data-sizes="(max-width: 360px) 312px,                           (max-width: 480px) 440px,                           (max-width: 768px) 320px,                           (max-width: 992px) 430px,                           (max-width: 1200px) 534px,                           350px" data-src="img/blog-img.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="900" height="675" alt="Майстерня з виготовлення флікерів">                </a>                <div class="material-card__text-wrapper">                  <div class="material-card__text">                    <h3 class="material-card__title"><a href="#">Майстерня з виготовлення флікерів</a></h3>                  </div>                  <p class="material-card__bottom">                    <span class="material-card__docs  video">Відеоматеріал</span>                    <span class="material-card__views">167</span>                    <span class="material-card__date">                      <time datetime="2022-12-25">25.12.2022</time>                    </span>                  </p>                </div>              </article>            </div>            <div class="latest-materials__card-col" role="listitem">              <!--DEV              @ @include('blocks/material-card/material-card.html')              -->              <article class="material-card">                <a href="#" class="embed-responsive embed-responsive--4-3  material-card__img  @@noimage" aria-hidden="true" tabindex="-1" title="Travelling as a way of self-discovery and progress">                  <img class="b-lazy" data-srcset="img/blog-img.jpg 350w,                                 img/blog-img.jpg 480w,                                 img/blog-img.jpg 645w,                                 img/blog-img.jpg 800w,                                 img/blog-img.jpg 900w" data-sizes="(max-width: 360px) 312px,                           (max-width: 480px) 440px,                           (max-width: 768px) 320px,                           (max-width: 992px) 430px,                           (max-width: 1200px) 534px,                           350px" data-src="img/blog-img.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="900" height="675" alt="Travelling as a way of self-discovery and progress">                </a>                <div class="material-card__text-wrapper">                  <div class="material-card__text">                    <h3 class="material-card__title"><a href="#">Travelling as a way of self-discovery and progress</a></h3>                  </div>                  <p class="material-card__bottom">                    <span class="material-card__docs  audio">Аудіо</span>                    <span class="material-card__views">167</span>                    <span class="material-card__date">                      <time datetime="2022-12-25">25.12.2022</time>                    </span>                  </p>                </div>              </article>            </div>            <div class="latest-materials__card-col" role="listitem">              <!--DEV              @ @include('blocks/material-card/material-card.html')              -->              <article class="material-card">                <a href="#" class="embed-responsive embed-responsive--4-3  material-card__img  img-hidden" aria-hidden="true" tabindex="-1" title="16.03 презентація видання «Взаємодія поліції та громади»">                  <img class="b-lazy" data-srcset="img/blog-img.jpg 350w,                                 img/blog-img.jpg 480w,                                 img/blog-img.jpg 645w,                                 img/blog-img.jpg 800w,                                 img/blog-img.jpg 900w" data-sizes="(max-width: 360px) 312px,                           (max-width: 480px) 440px,                           (max-width: 768px) 320px,                           (max-width: 992px) 430px,                           (max-width: 1200px) 534px,                           350px" data-src="img/blog-img.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="900" height="675" alt="16.03 презентація видання «Взаємодія поліції та громади»">                </a>                <div class="material-card__text-wrapper">                  <div class="material-card__text">                    <h3 class="material-card__title"><a href="#">16.03 презентація видання «Взаємодія поліції та громади»</a></h3>                  </div>                  <p class="material-card__bottom">                    <span class="material-card__docs  image">Зображення</span>                    <span class="material-card__views">167</span>                    <span class="material-card__date">                      <time datetime="2022-12-25">25.12.2022</time>                    </span>                  </p>                </div>              </article>            </div>            <div class="latest-materials__card-col" role="listitem">              <!--DEV              @ @include('blocks/material-card/material-card.html')              -->              <article class="material-card">                <a href="#" class="embed-responsive embed-responsive--4-3  material-card__img  img-hidden" aria-hidden="true" tabindex="-1" title="Майстерня з виготовлення флікерів">                  <img class="b-lazy" data-srcset="img/blog-img.jpg 350w,                                 img/blog-img.jpg 480w,                                 img/blog-img.jpg 645w,                                 img/blog-img.jpg 800w,                                 img/blog-img.jpg 900w" data-sizes="(max-width: 360px) 312px,                           (max-width: 480px) 440px,                           (max-width: 768px) 320px,                           (max-width: 992px) 430px,                           (max-width: 1200px) 534px,                           350px" data-src="img/blog-img.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="900" height="675" alt="Майстерня з виготовлення флікерів">                </a>                <div class="material-card__text-wrapper">                  <div class="material-card__text">                    <h3 class="material-card__title"><a href="#">Майстерня з виготовлення флікерів</a></h3>                  </div>                  <p class="material-card__bottom">                    <span class="material-card__docs  video">Відеоматеріал</span>                    <span class="material-card__views">167</span>                    <span class="material-card__date">                      <time datetime="2022-12-25">25.12.2022</time>                    </span>                  </p>                </div>              </article>            </div>            <div class="latest-materials__card-col" role="listitem">              <!--DEV              @ @include('blocks/material-card/material-card.html')              -->              <article class="material-card">                <a href="#" class="embed-responsive embed-responsive--4-3  material-card__img  img-hidden" aria-hidden="true" tabindex="-1" title="Travelling as a way of self-discovery and progress">                  <img class="b-lazy" data-srcset="img/blog-img.jpg 350w,                                 img/blog-img.jpg 480w,                                 img/blog-img.jpg 645w,                                 img/blog-img.jpg 800w,                                 img/blog-img.jpg 900w" data-sizes="(max-width: 360px) 312px,                           (max-width: 480px) 440px,                           (max-width: 768px) 320px,                           (max-width: 992px) 430px,                           (max-width: 1200px) 534px,                           350px" data-src="img/blog-img.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="900" height="675" alt="Travelling as a way of self-discovery and progress">                </a>                <div class="material-card__text-wrapper">                  <div class="material-card__text">                    <h3 class="material-card__title"><a href="#">Travelling as a way of self-discovery and progress</a></h3>                  </div>                  <p class="material-card__bottom">                    <span class="material-card__docs  audio">Аудіо</span>                    <span class="material-card__views">167</span>                    <span class="material-card__date">                      <time datetime="2022-12-25">25.12.2022</time>                    </span>                  </p>                </div>              </article>            </div>            <div class="latest-materials__card-col" role="listitem">              <!--DEV              @ @include('blocks/material-card/material-card.html')              -->              <article class="material-card">                <a href="#" class="embed-responsive embed-responsive--4-3  material-card__img  img-hidden" aria-hidden="true" tabindex="-1" title="16.03 презентація видання «Взаємодія поліції та громади»">                  <img class="b-lazy" data-srcset="img/blog-img.jpg 350w,                                 img/blog-img.jpg 480w,                                 img/blog-img.jpg 645w,                                 img/blog-img.jpg 800w,                                 img/blog-img.jpg 900w" data-sizes="(max-width: 360px) 312px,                           (max-width: 480px) 440px,                           (max-width: 768px) 320px,                           (max-width: 992px) 430px,                           (max-width: 1200px) 534px,                           350px" data-src="img/blog-img.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="900" height="675" alt="16.03 презентація видання «Взаємодія поліції та громади»">                </a>                <div class="material-card__text-wrapper">                  <div class="material-card__text">                    <h3 class="material-card__title"><a href="#">16.03 презентація видання «Взаємодія поліції та громади»</a></h3>                  </div>                  <p class="material-card__bottom">                    <span class="material-card__docs  image">Зображення</span>                    <span class="material-card__views">167</span>                    <span class="material-card__date">                      <time datetime="2022-12-25">25.12.2022</time>                    </span>                  </p>                </div>              </article>            </div>            <div class="latest-materials__card-col" role="listitem">              <!--DEV              @ @include('blocks/material-card/material-card.html')              -->              <article class="material-card">                <a href="#" class="embed-responsive embed-responsive--4-3  material-card__img  img-hidden" aria-hidden="true" tabindex="-1" title="Майстерня з виготовлення флікерів">                  <img class="b-lazy" data-srcset="img/blog-img.jpg 350w,                                 img/blog-img.jpg 480w,                                 img/blog-img.jpg 645w,                                 img/blog-img.jpg 800w,                                 img/blog-img.jpg 900w" data-sizes="(max-width: 360px) 312px,                           (max-width: 480px) 440px,                           (max-width: 768px) 320px,                           (max-width: 992px) 430px,                           (max-width: 1200px) 534px,                           350px" data-src="img/blog-img.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="900" height="675" alt="Майстерня з виготовлення флікерів">                </a>                <div class="material-card__text-wrapper">                  <div class="material-card__text">                    <h3 class="material-card__title"><a href="#">Майстерня з виготовлення флікерів</a></h3>                  </div>                  <p class="material-card__bottom">                    <span class="material-card__docs  video">Відеоматеріал</span>                    <span class="material-card__views">167</span>                    <span class="material-card__date">                      <time datetime="2022-12-25">25.12.2022</time>                    </span>                  </p>                </div>              </article>            </div>            <div class="latest-materials__card-col" role="listitem">              <!--DEV              @ @include('blocks/material-card/material-card.html')              -->              <article class="material-card">                <a href="#" class="embed-responsive embed-responsive--4-3  material-card__img  img-hidden" aria-hidden="true" tabindex="-1" title="Travelling as a way of self-discovery and progress">                  <img class="b-lazy" data-srcset="img/blog-img.jpg 350w,                                 img/blog-img.jpg 480w,                                 img/blog-img.jpg 645w,                                 img/blog-img.jpg 800w,                                 img/blog-img.jpg 900w" data-sizes="(max-width: 360px) 312px,                           (max-width: 480px) 440px,                           (max-width: 768px) 320px,                           (max-width: 992px) 430px,                           (max-width: 1200px) 534px,                           350px" data-src="img/blog-img.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="900" height="675" alt="Travelling as a way of self-discovery and progress">                </a>                <div class="material-card__text-wrapper">                  <div class="material-card__text">                    <h3 class="material-card__title"><a href="#">Travelling as a way of self-discovery and progress</a></h3>                  </div>                  <p class="material-card__bottom">                    <span class="material-card__docs  audio">Аудіо</span>                    <span class="material-card__views">167</span>                    <span class="material-card__date">                      <time datetime="2022-12-25">25.12.2022</time>                    </span>                  </p>                </div>              </article>            </div>          </div>          <div class="latest-materials__more-wrapper">            <a href="#" class="btn  latest-materials__more-link">              <span>Показати усі матеріали</span>              <svg width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right-sm"/></svg>            </a>          </div>        </section>        <hr>
         <section class="container  latest-materials  blog-block">
           <h2 class="latest-materials__title">Блог</h2>
           <p class="latest-materials__intro">Свіжі та актуальні публікації нашого життя</p>
           <div class="row" role="list">
-            <div class="blog-block__card-col" role="listitem">
-              <article class="blog-card">
-                <a href="#" class="embed-responsive embed-responsive--4-3  blog-card__img" aria-hidden="true" tabindex="-1">
-                  <img class="b-lazy" data-srcset="img/blog-img.jpg 350w,
-                            img/blog-img.jpg 480w,
-                            img/blog-img.jpg 645w,
-                            img/blog-img.jpg 800w,
-                            img/blog-img.jpg 900w" data-sizes="(max-width: 360px) 312px,
-                           (max-width: 480px) 440px,
-                           (max-width: 768px) 320px,
-                           (max-width: 992px) 430px,
-                           (max-width: 1200px) 534px,
-                           350px" data-src="img/blog-img.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="900" height="675" alt="Наша національна єдність зміцнилася">
-                </a>
-                <div class="blog-card__text-wrapper">
-                  <div class="blog-card__text">
-                    <h3 class="blog-card__title"><a href="#">Наша національна єдність зміцнилася</a></h3>
-                    <p class="blog-card__intro">Сьогодні для українців нетиповий День Незалежності. Тридцять один рік тому Україна розірвала свої зв’язки з Радянським Союзом, а тепер боротьба за нашу свободу й цілісність…</p>
-                  </div>
-                  <p class="blog-card__bottom">
-                    <span class="blog-card__date">
-                      <time datetime="2022-12-25">25 Грудня, 2022</time>
-                    </span>
-                    <span class="blog-card__views">167</span>
-                  </p>
-                </div>
-              </article>
-            </div>
-            <div class="blog-block__card-col" role="listitem">
-              <article class="blog-card">
-                <a href="#" class="embed-responsive embed-responsive--4-3  blog-card__img" aria-hidden="true" tabindex="-1">
-                  <img class="b-lazy" data-srcset="img/blog-img.jpg 350w,
-                            img/blog-img.jpg 480w,
-                            img/blog-img.jpg 645w,
-                            img/blog-img.jpg 800w,
-                            img/blog-img.jpg 900w" data-sizes="(max-width: 360px) 312px,
-                           (max-width: 480px) 440px,
-                           (max-width: 768px) 320px,
-                           (max-width: 992px) 430px,
-                           (max-width: 1200px) 534px,
-                           350px" data-src="img/blog-img.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="900" height="675" alt="Проєкт СUPDP підтримав захід МВС із нагородження дітей">
-                </a>
-                <div class="blog-card__text-wrapper">
-                  <div class="blog-card__text">
-                    <h3 class="blog-card__title"><a href="#">Проєкт СUPDP підтримав захід МВС із нагородження дітей</a></h3>
-                    <p class="blog-card__intro">Юні сміливці долучилися до волонтерського руху й зробили свій внесок у майбутню перемогу України...</p>
-                  </div>
-                  <p class="blog-card__bottom">
-                    <span class="blog-card__date">
-                      <time datetime="2022-12-25">25 Грудня, 2022</time>
-                    </span>
-                    <span class="blog-card__views">167</span>
-                  </p>
-                </div>
-              </article>
-            </div>
-            <div class="blog-block__card-col" role="listitem">
-              <article class="blog-card">
-                <a href="#" class="embed-responsive embed-responsive--4-3  blog-card__img" aria-hidden="true" tabindex="-1">
-                  <img class="b-lazy" data-srcset="img/blog-img.jpg 350w,
-                            img/blog-img.jpg 480w,
-                            img/blog-img.jpg 645w,
-                            img/blog-img.jpg 800w,
-                            img/blog-img.jpg 900w" data-sizes="(max-width: 360px) 312px,
-                           (max-width: 480px) 440px,
-                           (max-width: 768px) 320px,
-                           (max-width: 992px) 430px,
-                           (max-width: 1200px) 534px,
-                           350px" data-src="img/blog-img.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="900" height="675" alt="7 років поспіль нове покоління поліції України служить, захищає та...">
-                </a>
-                <div class="blog-card__text-wrapper">
-                  <div class="blog-card__text">
-                    <h3 class="blog-card__title"><a href="#">7 років поспіль нове покоління поліції України служить, захищає та...</a></h3>
-                    <p class="blog-card__intro">СЗараз, в умовах повномасштабної війни, додався ще один фронт роботи, та поліцейські гідно дають відсіч ворогу і слідують присязі України. У посиленому режимі поліція продовжує...</p>
-                  </div>
-                  <p class="blog-card__bottom">
-                    <span class="blog-card__date">
-                      <time datetime="2022-12-25">25 Грудня, 2022</time>
-                    </span>
-                    <span class="blog-card__views">167</span>
-                  </p>
-                </div>
-              </article>
-            </div>
+            <div class="blog-block__card-col" role="listitem">              <article class="blog-card">                <a href="#" class="embed-responsive embed-responsive--4-3  blog-card__img" aria-hidden="true" tabindex="-1">                  <img class="b-lazy" data-srcset="img/blog-img.jpg 350w,                            img/blog-img.jpg 480w,                            img/blog-img.jpg 645w,                            img/blog-img.jpg 800w,                            img/blog-img.jpg 900w" data-sizes="(max-width: 360px) 312px,                           (max-width: 480px) 440px,                           (max-width: 768px) 320px,                           (max-width: 992px) 430px,                           (max-width: 1200px) 534px,                           350px" data-src="img/blog-img.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="900" height="675" alt="Наша національна єдність зміцнилася">                </a>                <div class="blog-card__text-wrapper">                  <div class="blog-card__text">                    <h3 class="blog-card__title"><a href="#">Наша національна єдність зміцнилася</a></h3>                    <p class="blog-card__intro">Сьогодні для українців нетиповий День Незалежності. Тридцять один рік тому Україна розірвала свої зв’язки з Радянським Союзом, а тепер боротьба за нашу свободу й цілісність…</p>                  </div>                  <p class="blog-card__bottom">                    <span class="blog-card__date">                      <time datetime="2022-12-25">25 Грудня, 2022</time>                    </span>                    <span class="blog-card__views">167</span>                  </p>                </div>              </article>            </div>
+            <div class="blog-block__card-col" role="listitem">              <article class="blog-card">                <a href="#" class="embed-responsive embed-responsive--4-3  blog-card__img" aria-hidden="true" tabindex="-1">                  <img class="b-lazy" data-srcset="img/blog-img.jpg 350w,                            img/blog-img.jpg 480w,                            img/blog-img.jpg 645w,                            img/blog-img.jpg 800w,                            img/blog-img.jpg 900w" data-sizes="(max-width: 360px) 312px,                           (max-width: 480px) 440px,                           (max-width: 768px) 320px,                           (max-width: 992px) 430px,                           (max-width: 1200px) 534px,                           350px" data-src="img/blog-img.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="900" height="675" alt="Проєкт СUPDP підтримав захід МВС із нагородження дітей">                </a>                <div class="blog-card__text-wrapper">                  <div class="blog-card__text">                    <h3 class="blog-card__title"><a href="#">Проєкт СUPDP підтримав захід МВС із нагородження дітей</a></h3>                    <p class="blog-card__intro">Юні сміливці долучилися до волонтерського руху й зробили свій внесок у майбутню перемогу України...</p>                  </div>                  <p class="blog-card__bottom">                    <span class="blog-card__date">                      <time datetime="2022-12-25">25 Грудня, 2022</time>                    </span>                    <span class="blog-card__views">167</span>                  </p>                </div>              </article>            </div>
+            <div class="blog-block__card-col" role="listitem">              <article class="blog-card">                <a href="#" class="embed-responsive embed-responsive--4-3  blog-card__img" aria-hidden="true" tabindex="-1">                  <img class="b-lazy" data-srcset="img/blog-img.jpg 350w,                            img/blog-img.jpg 480w,                            img/blog-img.jpg 645w,                            img/blog-img.jpg 800w,                            img/blog-img.jpg 900w" data-sizes="(max-width: 360px) 312px,                           (max-width: 480px) 440px,                           (max-width: 768px) 320px,                           (max-width: 992px) 430px,                           (max-width: 1200px) 534px,                           350px" data-src="img/blog-img.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="900" height="675" alt="7 років поспіль нове покоління поліції України служить, захищає та...">                </a>                <div class="blog-card__text-wrapper">                  <div class="blog-card__text">                    <h3 class="blog-card__title"><a href="#">7 років поспіль нове покоління поліції України служить, захищає та...</a></h3>                    <p class="blog-card__intro">СЗараз, в умовах повномасштабної війни, додався ще один фронт роботи, та поліцейські гідно дають відсіч ворогу і слідують присязі України. У посиленому режимі поліція продовжує...</p>                  </div>                  <p class="blog-card__bottom">                    <span class="blog-card__date">                      <time datetime="2022-12-25">25 Грудня, 2022</time>                    </span>                    <span class="blog-card__views">167</span>                  </p>                </div>              </article>            </div>
           </div>
           <div class="latest-materials__more-wrapper">
             <a href="#" class="btn  latest-materials__more-link">
@@ -618,190 +107,9 @@
         </section>
       </main>
     </div>
-    <div class="page__footer-wrapper">
-      <footer class="container  page-footer">
-        <div class="row  page-footer__main">
-          <div class="page-footer__logo-col">
-            <a href="index.html" class="logo logo--footer" title="Community Policing Knowledge Hub">
-              <img src="img/cupdp-logo--footer.svg" alt="CUPDP logo" width="237" height="72" loading="lazy" decoding="async">
-            </a>
-          </div>
-          <div class="page-footer__slogan-col">
-            <p class="page-footer__slogan">Сайт створено в межах Канадсько-українського проекту розвитку поліції (CUPDP) за фінансової підтримки уряду Канади</p>
-            <div class="page-footer__logo-wrapper">
-              <img src="img/cupdp.svg" alt="CUPDP logo" width="146" height="32" loading="lazy" decoding="async">
-              <img src="img/canada-wordmark.svg" alt="Canada logo" width="95" height="23" loading="lazy" decoding="async">
-              <img src="img/alinea-logo.svg" alt="Alinea logo" width="90" height="32" loading="lazy" decoding="async">
-            </div>
-          </div>
-          <div class="page-footer__socials-col">            <section class="social-link">              <h3 class="h4  social-link__title">Соцмережі</h3>              <ul class="list-nostyled  social-link__list">                <li class="social-link__item">                  <a href="#" class="social-link__link  social-link__link--fb" target="_blank" rel="nofollow noopener">                    <img src="img/facebook.svg" alt width="24" height="24">                    <span>www.facebook.com</span>                  </a>                </li>                <li class="social-link__item">                  <a href="#" class="social-link__link  social-link__link--tw" target="_blank" rel="nofollow noopener">                    <img src="img/twitter.svg" alt width="24" height="24">                    <span>www.twitter.com</span>                  </a>                </li>                <li class="social-link__item">                  <a href="#" class="social-link__link  social-link__link--ytb" target="_blank" rel="nofollow noopener">                    <img src="img/youtube.svg" alt width="24" height="24">                    <span>www.youtube.com</span>                  </a>                </li>              </ul>            </section>          </div>
-        </div>
-        <div class="page-footer__copyrights">          <section class="copyrights">            <h3 class="visually-hidden">Авторські права та інша правова інформація для користувачів</h3>            <p class="copyrights__inner">              <span>©&thinsp;2022&ensp;Community Knowledge Hub. Всі права захищені.</span>              <a href="#">Умови використання</a>              <a href="#">Обробка персональних даних</a>              <a href="https://itdoors.com.ua/" class="copyrights__dev" target="_blank" rel="nofollow noopener">Розробка&ensp;©&thinsp;IT-Doors Outsourcing</a>            </p>          </section>        </div>
-      </footer>
-    </div>
+    <div class="page__footer-wrapper">      <footer class="container  page-footer">        <div class="row  page-footer__main">          <div class="page-footer__logo-col">            <a href="index.html" class="logo logo--footer" title="Community Policing Knowledge Hub">              <img src="img/cupdp-logo--footer.svg" alt="CUPDP logo" width="237" height="72" loading="lazy" decoding="async">            </a>          </div>          <div class="page-footer__slogan-col">            <p class="page-footer__slogan">Сайт створено в межах Канадсько-українського проекту розвитку поліції (CUPDP) за фінансової підтримки уряду Канади</p>            <div class="page-footer__logo-wrapper">              <img src="img/cupdp.svg" alt="CUPDP logo" width="146" height="32" loading="lazy" decoding="async">              <img src="img/canada-wordmark.svg" alt="Canada logo" width="95" height="23" loading="lazy" decoding="async">              <img src="img/alinea-logo.svg" alt="Alinea logo" width="90" height="32" loading="lazy" decoding="async">            </div>          </div>          <div class="page-footer__socials-col">            <!--DEV            @ @include('blocks/social-link/social-link.html')            -->            <section class="social-link">              <h3 class="h4  social-link__title">Соцмережі</h3>              <ul class="list-nostyled  social-link__list">                <li class="social-link__item">                  <a href="#" class="social-link__link  social-link__link--fb" target="_blank" rel="nofollow noopener">                    <img src="img/facebook.svg" alt width="24" height="24">                    <span>www.facebook.com</span>                  </a>                </li>                <li class="social-link__item">                  <a href="#" class="social-link__link  social-link__link--tw" target="_blank" rel="nofollow noopener">                    <img src="img/twitter.svg" alt width="24" height="24">                    <span>www.twitter.com</span>                  </a>                </li>                <li class="social-link__item">                  <a href="#" class="social-link__link  social-link__link--ytb" target="_blank" rel="nofollow noopener">                    <img src="img/youtube.svg" alt width="24" height="24">                    <span>www.youtube.com</span>                  </a>                </li>              </ul>            </section>          </div>        </div>        <div class="page-footer__copyrights">          <!--DEV          @ @include('blocks/copyrights/copyrights.html')          -->          <section class="copyrights">            <h3 class="visually-hidden">Авторські права та інша правова інформація для користувачів</h3>            <p class="copyrights__inner">              <span>©&thinsp;2022&ensp;Community Knowledge Hub. Всі права захищені.</span>              <a href="#">Умови використання</a>              <a href="#">Обробка персональних даних</a>              <a href="https://itdoors.com.ua/" class="copyrights__dev" target="_blank" rel="nofollow noopener">Розробка&ensp;©&thinsp;IT-Doors Outsourcing</a>            </p>          </section>        </div>      </footer>    </div>
   </div>
-  <!-- Модалки -->
-  <!-- Reg Modal -->
-  <div class="modal fade  reg-modal" id="regModal" tabindex="-1" aria-labelledby="regModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-      <div class="modal-content">
-        <h5 class="modal-title visually-hidden" id="regModalLabel">Форма регистрации</h5>
-        <div class="modal-header">
-          <p class="h3" style="margin: 0;">Завантажте цей матеріал,<br> створивши акаунт</p>
-          <button type="button" class="btn  btn--icononly" data-bs-dismiss="modal" aria-label="Close">
-            <span class="visually-hidden">Закрити модальне вікно</span>
-            <svg width="20" height="20" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#close"/></svg>
-          </button>
-        </div>
-        <div class="modal-body">
-          <div class="login-modal__btn-wrapper">
-            <a href="#" class="login-modal__btn  login-modal__btn--fb">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 24 24" aria-hidden="true"><path d="M24,12.08A12,12,0,1,0,10.12,23.93V15.55h-3V12.08h3V9.44c0-3,1.8-4.67,4.54-4.67A18.52,18.52,0,0,1,17.34,5V8H15.83a1.72,1.72,0,0,0-1.94,1.48,1.7,1.7,0,0,0,0,.39v2.21H17.2l-.53,3.47H13.88v8.38A12,12,0,0,0,24,12.08Z"/></svg>
-              <span>Continue with Facebook</span>
-            </a>
-            <a href="#" class="login-modal__btn  login-modal__btn--google">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 24 24" aria-hidden="true"><path d="M24,12.27a13.87,13.87,0,0,0-.22-2.45H12.24v4.64h6.59a5.48,5.48,0,0,1-2.44,3.62l4,3h0A11.6,11.6,0,0,0,24,12.27Z" fill="#4285f4"/><path d="M16.39,18.08h0a7.49,7.49,0,0,1-4.15,1.15,7.29,7.29,0,0,1-6.85-5L1.3,17.39h0A12.28,12.28,0,0,0,12.24,24a11.81,11.81,0,0,0,8.11-2.91h0Z" fill="#34a853"/><path d="M5.39,14.28h0a7,7,0,0,1,0-4.56h0L1.3,6.61h0a11.82,11.82,0,0,0,0,10.78h0Z" fill="#fbbc05"/><path d="M5.39,9.72a7.29,7.29,0,0,1,6.85-5,6.71,6.71,0,0,1,4.69,1.8l3.51-3.44A11.9,11.9,0,0,0,12.24,0,12.28,12.28,0,0,0,1.3,6.61h0L5.39,9.72Z" fill="#ea4335"/></svg>
-              <span>Continue with Google</span>
-            </a>
-          </div>
-          <span class="divider"><span>або</span></span>
-          <div class="modal-warning">
-            <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#alert-triangle"/></svg>
-            <span>Аккаунт з цим E-mail вже існує</span>
-          </div>
-          <form class="login-modal__form" action="#" method="post">
-            <label class="field-text">
-              <span class="field-text__input-wrap">
-                <input class="field-text__input" type="text" name="surname" value placeholder="Прізвище" required>
-                <span class="field-text__help-text"></span>
-              </span>
-            </label>
-            <label class="field-text">
-              <span class="field-text__input-wrap">
-                <input class="field-text__input" type="text" name="name" value placeholder="Ім'я" required>
-                <span class="field-text__help-text"></span>
-              </span>
-            </label>
-            <label class="field-text">
-              <span class="field-text__input-wrap">
-                <input class="field-text__input" type="text" name="email" value placeholder="E-mail" required>
-                <span class="field-text__help-text"></span>
-              </span>
-            </label>
-            <label class="field-text">
-              <span class="field-text__input-wrap">
-                <input class="field-text__input" type="password" name="password" value placeholder="Пароль" required>
-                <span class="field-text__help-text"></span>
-              </span>
-            </label>
-            <label class="field-text">
-              <span class="field-text__input-wrap">
-                <input class="field-text__input" type="password" name="passwordRepeat" value placeholder="Введіть пароль ще раз" required>
-                <span class="field-text__help-text"></span>
-              </span>
-            </label>
-            <button class="btn" type="submit" style="width:100%;">
-              <span>Зареєструватися</span>
-              <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right-sm"/></svg>
-            </button>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <span>Вже маєте акаунт?</span>
-          <a href="#loginModal" data-bs-toggle="modal" role="button" class="special">Увійти</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Login Modal -->
-  <div class="modal fade  login-modal" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <h5 class="modal-title visually-hidden" id="loginModalLabel">Форма входа</h5>
-        <div class="modal-header">
-          <p class="h3" style="margin: 0;">Увійдіть в акаунт щоб <br>завантажити цей матеріал</p>
-          <button type="button" class="btn  btn--icononly" data-bs-dismiss="modal" aria-label="Close">
-            <span class="visually-hidden">Закрити модальне вікно</span>
-            <svg width="20" height="20" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#close"/></svg>
-          </button>
-        </div>
-        <div class="modal-body">
-          <div class="login-modal__btn-wrapper">
-            <a href="#" class="login-modal__btn  login-modal__btn--fb">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 24 24" aria-hidden="true"><path d="M24,12.08A12,12,0,1,0,10.12,23.93V15.55h-3V12.08h3V9.44c0-3,1.8-4.67,4.54-4.67A18.52,18.52,0,0,1,17.34,5V8H15.83a1.72,1.72,0,0,0-1.94,1.48,1.7,1.7,0,0,0,0,.39v2.21H17.2l-.53,3.47H13.88v8.38A12,12,0,0,0,24,12.08Z"/></svg>
-              <span>Continue with Facebook</span>
-            </a>
-            <a href="#" class="login-modal__btn  login-modal__btn--google">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 24 24" aria-hidden="true"><path d="M24,12.27a13.87,13.87,0,0,0-.22-2.45H12.24v4.64h6.59a5.48,5.48,0,0,1-2.44,3.62l4,3h0A11.6,11.6,0,0,0,24,12.27Z" fill="#4285f4"/><path d="M16.39,18.08h0a7.49,7.49,0,0,1-4.15,1.15,7.29,7.29,0,0,1-6.85-5L1.3,17.39h0A12.28,12.28,0,0,0,12.24,24a11.81,11.81,0,0,0,8.11-2.91h0Z" fill="#34a853"/><path d="M5.39,14.28h0a7,7,0,0,1,0-4.56h0L1.3,6.61h0a11.82,11.82,0,0,0,0,10.78h0Z" fill="#fbbc05"/><path d="M5.39,9.72a7.29,7.29,0,0,1,6.85-5,6.71,6.71,0,0,1,4.69,1.8l3.51-3.44A11.9,11.9,0,0,0,12.24,0,12.28,12.28,0,0,0,1.3,6.61h0L5.39,9.72Z" fill="#ea4335"/></svg>
-              <span>Continue with Google</span>
-            </a>
-          </div>
-          <span class="divider"><span>або</span></span>
-          <form class="login-modal__form" action="#" method="post">
-            <label class="field-text">
-              <span class="field-text__input-wrap">
-                <input class="field-text__input" type="text" name="email" value placeholder="E-mail">
-                <span class="field-text__help-text"></span>
-              </span>
-            </label>
-            <label class="field-text">
-              <span class="field-text__input-wrap">
-                <input class="field-text__input" type="password" name="password" value placeholder="Пароль">
-                <span class="field-text__help-text"></span>
-              </span>
-            </label>
-            <div style="text-align:right;">
-              <a href="#remindPassModal" data-bs-toggle="modal" role="button" class="special" style="font-size:14px;font-weight:500;">Забули пароль?</a>
-            </div>
-            <button class="btn" type="submit" style="width:100%;margin-top:24px;">
-              <span>Увійти</span>
-              <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right-sm"/></svg>
-            </button>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <span>Не зареєстровані?</span>
-          <a href="#regModal" data-bs-toggle="modal" role="button" class="special">Зареєструватися</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Remind Pass Modal -->
-  <div class="modal fade  reg-modal remind-password-modal" id="remindPassModal" tabindex="-1" aria-labelledby="remindPassModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-      <div class="modal-content">
-        <h5 class="modal-title visually-hidden" id="remindPassModalLabel">Нагадати пароль</h5>
-        <div class="modal-header">
-          <p class="h3" style="margin: 0;">Забули пароль?</p>
-          <button type="button" class="btn  btn--icononly" data-bs-dismiss="modal" aria-label="Close">
-            <span class="visually-hidden">Закрити модальне вікно</span>
-            <svg width="20" height="20" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#close"/></svg>
-          </button>
-        </div>
-        <div class="modal-body">
-          <div style="margin-bottom:24px;">
-            <p>Введіть адресу електронної пошти, яку ви використовували під час реєстрації, і ми надішлемо вам інструкції щодо скидання пароля.</p>
-            <p>З метою безпеки ми НЕ зберігаємо ваш пароль. Тому будьте впевнені, що ми ніколи не надішлемо ваш пароль електронною поштою.</p>
-          </div>
-          <form id="remindPassForm" class="login-modal__form" action="#" method="post">
-            <label class="field-text">
-              <span class="field-text__input-wrap">
-                <input class="field-text__input" type="text" name="email" value placeholder="E-mail">
-                <span class="field-text__help-text"></span>
-              </span>
-            </label>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button form="remindPassForm" class="btn" type="submit" style="width:100%;">
-            <span>Надіслати</span>
-            <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right-sm"/></svg>
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Модалки -->
+  <!-- Модалки -->  <!-- Reg Modal -->  <div class="modal fade  reg-modal" id="regModal" tabindex="-1" aria-labelledby="regModalLabel" aria-hidden="true">    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">      <div class="modal-content">        <h5 class="modal-title visually-hidden" id="regModalLabel">Форма регистрации</h5>        <div class="modal-header">          <p class="h3" style="margin: 0;">Завантажте цей матеріал,<br> створивши акаунт</p>          <button type="button" class="btn  btn--icononly" data-bs-dismiss="modal" aria-label="Close">            <span class="visually-hidden">Закрити модальне вікно</span>            <svg width="20" height="20" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#close"/></svg>          </button>        </div>        <div class="modal-body">          <div class="login-modal__btn-wrapper">            <a href="#" class="login-modal__btn  login-modal__btn--fb">              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 24 24" aria-hidden="true"><path d="M24,12.08A12,12,0,1,0,10.12,23.93V15.55h-3V12.08h3V9.44c0-3,1.8-4.67,4.54-4.67A18.52,18.52,0,0,1,17.34,5V8H15.83a1.72,1.72,0,0,0-1.94,1.48,1.7,1.7,0,0,0,0,.39v2.21H17.2l-.53,3.47H13.88v8.38A12,12,0,0,0,24,12.08Z"/></svg>              <span>Continue with Facebook</span>            </a>            <a href="#" class="login-modal__btn  login-modal__btn--google">              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 24 24" aria-hidden="true"><path d="M24,12.27a13.87,13.87,0,0,0-.22-2.45H12.24v4.64h6.59a5.48,5.48,0,0,1-2.44,3.62l4,3h0A11.6,11.6,0,0,0,24,12.27Z" fill="#4285f4"/><path d="M16.39,18.08h0a7.49,7.49,0,0,1-4.15,1.15,7.29,7.29,0,0,1-6.85-5L1.3,17.39h0A12.28,12.28,0,0,0,12.24,24a11.81,11.81,0,0,0,8.11-2.91h0Z" fill="#34a853"/><path d="M5.39,14.28h0a7,7,0,0,1,0-4.56h0L1.3,6.61h0a11.82,11.82,0,0,0,0,10.78h0Z" fill="#fbbc05"/><path d="M5.39,9.72a7.29,7.29,0,0,1,6.85-5,6.71,6.71,0,0,1,4.69,1.8l3.51-3.44A11.9,11.9,0,0,0,12.24,0,12.28,12.28,0,0,0,1.3,6.61h0L5.39,9.72Z" fill="#ea4335"/></svg>              <span>Continue with Google</span>            </a>          </div>          <span class="divider"><span>або</span></span>          <div class="modal-warning">            <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#alert-triangle"/></svg>            <span>Аккаунт з цим E-mail вже існує</span>          </div>          <form class="login-modal__form" action="#" method="post">            <label class="field-text">              <span class="field-text__input-wrap">                <input class="field-text__input" type="text" name="surname" value placeholder="Прізвище" required>                <span class="field-text__help-text"></span>              </span>            </label>            <label class="field-text">              <span class="field-text__input-wrap">                <input class="field-text__input" type="text" name="name" value placeholder="Ім'я" required>                <span class="field-text__help-text"></span>              </span>            </label>            <label class="field-text">              <span class="field-text__input-wrap">                <input class="field-text__input" type="text" name="email" value placeholder="E-mail" required>                <span class="field-text__help-text"></span>              </span>            </label>            <label class="field-text">              <span class="field-text__input-wrap">                <input class="field-text__input" type="password" name="password" value placeholder="Пароль" required>                <span class="field-text__help-text"></span>              </span>            </label>            <label class="field-text">              <span class="field-text__input-wrap">                <input class="field-text__input" type="password" name="passwordRepeat" value placeholder="Введіть пароль ще раз" required>                <span class="field-text__help-text"></span>              </span>            </label>            <button class="btn" type="submit" style="width:100%;">              <span>Зареєструватися</span>              <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right-sm"/></svg>            </button>          </form>        </div>        <div class="modal-footer">          <span>Вже маєте акаунт?</span>          <a href="#loginModal" data-bs-toggle="modal" role="button" class="special">Увійти</a>        </div>      </div>    </div>  </div>  <!--DEV  @ @include('blocks/login-modal/login-modal.html')  -->  <!-- Login Modal -->  <div class="modal fade  login-modal" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">    <div class="modal-dialog modal-dialog-centered">      <div class="modal-content">        <h5 class="modal-title visually-hidden" id="loginModalLabel">Форма входа</h5>        <div class="modal-header">          <p class="h3" style="margin: 0;">Увійдіть в акаунт щоб <br>завантажити цей матеріал</p>          <button type="button" class="btn  btn--icononly" data-bs-dismiss="modal" aria-label="Close">            <span class="visually-hidden">Закрити модальне вікно</span>            <svg width="20" height="20" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#close"/></svg>          </button>        </div>        <div class="modal-body">          <div class="login-modal__btn-wrapper">            <a href="#" class="login-modal__btn  login-modal__btn--fb">              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 24 24" aria-hidden="true"><path d="M24,12.08A12,12,0,1,0,10.12,23.93V15.55h-3V12.08h3V9.44c0-3,1.8-4.67,4.54-4.67A18.52,18.52,0,0,1,17.34,5V8H15.83a1.72,1.72,0,0,0-1.94,1.48,1.7,1.7,0,0,0,0,.39v2.21H17.2l-.53,3.47H13.88v8.38A12,12,0,0,0,24,12.08Z"/></svg>              <span>Continue with Facebook</span>            </a>            <a href="#" class="login-modal__btn  login-modal__btn--google">              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 24 24" aria-hidden="true"><path d="M24,12.27a13.87,13.87,0,0,0-.22-2.45H12.24v4.64h6.59a5.48,5.48,0,0,1-2.44,3.62l4,3h0A11.6,11.6,0,0,0,24,12.27Z" fill="#4285f4"/><path d="M16.39,18.08h0a7.49,7.49,0,0,1-4.15,1.15,7.29,7.29,0,0,1-6.85-5L1.3,17.39h0A12.28,12.28,0,0,0,12.24,24a11.81,11.81,0,0,0,8.11-2.91h0Z" fill="#34a853"/><path d="M5.39,14.28h0a7,7,0,0,1,0-4.56h0L1.3,6.61h0a11.82,11.82,0,0,0,0,10.78h0Z" fill="#fbbc05"/><path d="M5.39,9.72a7.29,7.29,0,0,1,6.85-5,6.71,6.71,0,0,1,4.69,1.8l3.51-3.44A11.9,11.9,0,0,0,12.24,0,12.28,12.28,0,0,0,1.3,6.61h0L5.39,9.72Z" fill="#ea4335"/></svg>              <span>Continue with Google</span>            </a>          </div>          <span class="divider"><span>або</span></span>          <form class="login-modal__form" action="#" method="post">            <label class="field-text">              <span class="field-text__input-wrap">                <input class="field-text__input" type="text" name="email" value placeholder="E-mail">                <span class="field-text__help-text"></span>              </span>            </label>            <label class="field-text">              <span class="field-text__input-wrap">                <input class="field-text__input" type="password" name="password" value placeholder="Пароль">                <span class="field-text__help-text"></span>              </span>            </label>            <div style="text-align:right;">              <a href="#remindPassModal" data-bs-toggle="modal" role="button" class="special" style="font-size:14px;font-weight:500;">Забули пароль?</a>            </div>            <button class="btn" type="submit" style="width:100%;margin-top:24px;">              <span>Увійти</span>              <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right-sm"/></svg>            </button>          </form>        </div>        <div class="modal-footer">          <span>Не зареєстровані?</span>          <a href="#regModal" data-bs-toggle="modal" role="button" class="special">Зареєструватися</a>        </div>      </div>    </div>  </div>  <!--DEV  @ @include('blocks/remind-password-modal/remind-password-modal.html')  -->  <!-- Remind Pass Modal -->  <div class="modal fade  reg-modal remind-password-modal" id="remindPassModal" tabindex="-1" aria-labelledby="remindPassModalLabel" aria-hidden="true">    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">      <div class="modal-content">        <h5 class="modal-title visually-hidden" id="remindPassModalLabel">Нагадати пароль</h5>        <div class="modal-header">          <p class="h3" style="margin: 0;">Забули пароль?</p>          <button type="button" class="btn  btn--icononly" data-bs-dismiss="modal" aria-label="Close">            <span class="visually-hidden">Закрити модальне вікно</span>            <svg width="20" height="20" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#close"/></svg>          </button>        </div>        <div class="modal-body">          <div style="margin-bottom:24px;">            <p>Введіть адресу електронної пошти, яку ви використовували під час реєстрації, і ми надішлемо вам інструкції щодо скидання пароля.</p>            <p>З метою безпеки ми НЕ зберігаємо ваш пароль. Тому будьте впевнені, що ми ніколи не надішлемо ваш пароль електронною поштою.</p>          </div>          <form id="remindPassForm" class="login-modal__form" action="#" method="post">            <label class="field-text">              <span class="field-text__input-wrap">                <input class="field-text__input" type="text" name="email" value placeholder="E-mail">                <span class="field-text__help-text"></span>              </span>            </label>          </form>        </div>        <div class="modal-footer">          <button form="remindPassForm" class="btn" type="submit" style="width:100%;">            <span>Надіслати</span>            <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right-sm"/></svg>          </button>        </div>      </div>    </div>  </div>  <!-- Модалки -->
   <!-- <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script> -->
   <script src="js/script.min.js"></script>
 </body>

@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<html class="no-js  page" lang="uk" prefix="og: https://ogp.me/ns#">
-<head>
-  <meta charset="utf-8">
-  <title>No results found</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!DOCTYPE html><html class="no-js  page" lang="uk" prefix="og: https://ogp.me/ns#"><head>  <meta charset="utf-8">  <title>No results found</title>  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="MobileOptimized" content="320">
   <meta name="format-detection" content="telephone=no">
   <meta name="format-detection" content="date=no">
@@ -37,11 +32,9 @@
 <link rel="shortcut icon" href="/img/favicon.ico">
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-config" content="/img/browserconfig.xml">
-<meta name="theme-color" content="#ffffff"></head>
-<body>
-<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
-  <div class="page__inner">
-    <div class="page__content">
+<meta name="theme-color" content="#ffffff"></head><body><noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>  <div class="page__inner">    <div class="page__content">      <!--DEV
+      @ @include('blocks/page-header/page-header.html')
+      -->
       <header class="container  page-header">
         <div class="page-header__logo-wrapper">
           <a href="index.html" class="logo" title="Community Policing Knowledge Hub">
@@ -59,362 +52,34 @@
             </div>
           </div> -->
         </div>
-        <div class="page-header__menu-wrapper">
-          <nav id="main-nav" class="main-nav">
-            <ul class="main-nav__list">
-              <li class="main-nav__item  active">
-                <a class="main-nav__link">
-                  Про проект
-                </a>
-              </li>
-              <li class="main-nav__item">
-                <a href="#" class="main-nav__link">
-                  Календар подій
-                </a>
-              </li>
-              <li class="main-nav__item">
-                <a href="#" class="main-nav__link">
-                  Блог
-                </a>
-              </li>
-              <li class="main-nav__item">
-                <a href="#" class="main-nav__link">
-                  Партнери
-                </a>
-              </li>
-              <li class="main-nav__item">
-                <a href="#" class="main-nav__link">
-                  Контакти
-                </a>
-              </li>
-            </ul>
-          </nav>
-          <a href="#" class="btn  btn--icononly  page-header__search-link" title="Пошук">
+        <div class="page-header__menu-wrapper">          <nav id="main-nav" class="main-nav">            <ul class="main-nav__list">              <li class="main-nav__item  active">                <a class="main-nav__link">                  Про проект                </a>              </li>              <li class="main-nav__item">                <a href="#" class="main-nav__link">                  Календар подій                </a>              </li>              <li class="main-nav__item">                <a href="#" class="main-nav__link">                  Блог                </a>              </li>              <li class="main-nav__item">                <a href="#" class="main-nav__link">                  Партнери                </a>              </li>              <li class="main-nav__item">                <a href="#" class="main-nav__link">                  Контакти                </a>              </li>            </ul>          </nav>          <a href="#" class="btn  btn--icononly  page-header__search-link" title="Пошук">
             <!-- Для шаблона главной страницы ссылку поиска - отключить! -->
             <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#search"/></svg>
             <span class="visually-hidden">Пошук</span>
           </a>
           <div class="page-header__service-menu">
-            <button class="btn  btn--icononly  page-header__login-btn" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">
-              <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#user-profile"/></svg>
-              <span>Увійти</span>
-            </button>
-            <div class="dropdown-center  lang-switcher">
-              <button class="btn  btn--icononly  lang-switcher__btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="0,8" title="Мова сайту">
-                <span class="visually-hidden">Вибір мови сайту</span>
-                <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#globe"/></svg>
+            <!-- Если пользователь зашел в аккаунт -->
+            <div class="dropdown-center  page-header__user">
+              <button class="btn  btn--icononly  page-header__login-btn  page-header__login-btn--logged" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="0,8">
+                <span class="page-header__user-avatar" role="presentation">
+                  <img src="img/user-avatar.jpg" width="32" height="32" alt>
+                </span>
+                <span>User Name</span>
               </button>
-              <ul class="dropdown-menu dropdown-menu-end  lang-switcher__menu">
-                <li class="lang-switcher__item  active"><a class="dropdown-item">UK</a></li>
-                <li class="lang-switcher__item"><a class="dropdown-item" href="#">EN</a></li>
-                <li class="lang-switcher__item"><a class="dropdown-item" href="#">RU</a></li>
+              <ul class="dropdown-menu  page-header__user-menu">
+                <li><a class="dropdown-item  page-header__user-link" href="#">В адмінку</a></li>
+                <li><a class="dropdown-item  page-header__user-link  page-header__user-link--logoff" href="#">Вихід</a></li>
               </ul>
             </div>
-            <button class="btn  btn--icononly  page-header__burger" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobMenu" aria-controls="mobMenu">
+            <!-- <button class="btn  btn--icononly  page-header__login-btn" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">
+              <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#user-profile"></use></svg>
+              <span>Увійти</span>
+            </button> -->            <div class="dropdown-center  lang-switcher">              <button class="btn  btn--icononly  lang-switcher__btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="0,8" title="Мова сайту">                <span class="visually-hidden">Вибір мови сайту</span>                <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#globe"/></svg>              </button>              <ul class="dropdown-menu dropdown-menu-end  lang-switcher__menu">                <li class="lang-switcher__item  active"><a class="dropdown-item">UK</a></li>                <li class="lang-switcher__item"><a class="dropdown-item" href="#">EN</a></li>                <li class="lang-switcher__item"><a class="dropdown-item" href="#">RU</a></li>              </ul>            </div>            <button class="btn  btn--icononly  page-header__burger" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobMenu" aria-controls="mobMenu">
               <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#menu"/></svg>
               <span class="visually-hidden">Моб. меню</span>
-            </button>
-            <div class="offcanvas offcanvas-top  mob-menu" tabindex="-1" id="mobMenu" aria-labelledby="mobMenuLabel">
-              <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="mobMenuLabel" style="margin-top:0;">
-                  <span class="visually-hidden">Мобільне меню</span>
-                  <span class="logo" aria-hidden="true">
-                    <img src="img/cupdp-logo.svg" alt width="237" height="72">
-                  </span>
-                </h5>
-                <button type="button" class="btn  btn--icononly" data-bs-dismiss="offcanvas" aria-label="Close">
-                  <span class="visually-hidden">Закрити меню</span>
-                  <svg width="20" height="20" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#close"/></svg>
-                </button>
-              </div>
-              <div class="offcanvas-body  mob-menu__body">
-                <div class="mob-menu__top">
-                  <button class="btn  btn--icononly  mob-menu__login-btn" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">
-                    <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#user-profile"/></svg>
-                    <span>Увійти</span>
-                  </button>
-                  <div class="dropdown-center  lang-switcher">
-                    <button class="btn  btn--icononly  lang-switcher__btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="0,8" title="Мова сайту">
-                      <span class="visually-hidden">Вибір мови сайту</span>
-                      <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#globe"/></svg>
-                    </button>
-                    <ul class="dropdown-menu dropdown-menu-end  lang-switcher__menu">
-                      <li class="lang-switcher__item  active"><a class="dropdown-item">UK</a></li>
-                      <li class="lang-switcher__item"><a class="dropdown-item" href="#">EN</a></li>
-                      <li class="lang-switcher__item"><a class="dropdown-item" href="#">RU</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <nav class="mob-menu__nav">
-                  <ul class="list-nostyled  mob-menu__list">
-                    <li class="mob-menu__item  active">
-                      <a class="mob-menu__link">Про проект</a>
-                    </li>
-                    <li class="mob-menu__item">
-                      <a href="#" class="mob-menu__link">Календар подій</a>
-                    </li>
-                    <li class="mob-menu__item">
-                      <a href="#" class="mob-menu__link">Блог</a>
-                    </li>
-                    <li class="mob-menu__item">
-                      <a href="#" class="mob-menu__link">Партнери</a>
-                    </li>
-                    <li class="mob-menu__item">
-                      <a href="#" class="mob-menu__link">Контакти</a>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
-            </div>
-          </div>
+            </button>            <div class="offcanvas offcanvas-top  mob-menu" tabindex="-1" id="mobMenu" aria-labelledby="mobMenuLabel">              <div class="offcanvas-header">                <h5 class="offcanvas-title" id="mobMenuLabel" style="margin-top:0;">                  <span class="visually-hidden">Мобільне меню</span>                  <span class="logo" aria-hidden="true">                    <img src="img/cupdp-logo.svg" alt width="237" height="72">                  </span>                </h5>                <button type="button" class="btn  btn--icononly" data-bs-dismiss="offcanvas" aria-label="Close">                  <span class="visually-hidden">Закрити меню</span>                  <svg width="20" height="20" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#close"/></svg>                </button>              </div>              <div class="offcanvas-body  mob-menu__body">                <div class="mob-menu__top">                  <button class="btn  btn--icononly  mob-menu__login-btn" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">                    <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#user-profile"/></svg>                    <span>Увійти</span>                  </button>                  <!--DEV                  @ @include('blocks/lang-switcher/lang-switcher.html')                  -->                  <div class="dropdown-center  lang-switcher">                    <button class="btn  btn--icononly  lang-switcher__btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="0,8" title="Мова сайту">                      <span class="visually-hidden">Вибір мови сайту</span>                      <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#globe"/></svg>                    </button>                    <ul class="dropdown-menu dropdown-menu-end  lang-switcher__menu">                      <li class="lang-switcher__item  active"><a class="dropdown-item">UK</a></li>                      <li class="lang-switcher__item"><a class="dropdown-item" href="#">EN</a></li>                      <li class="lang-switcher__item"><a class="dropdown-item" href="#">RU</a></li>                    </ul>                  </div>                </div>                <nav class="mob-menu__nav">                  <ul class="list-nostyled  mob-menu__list">                    <li class="mob-menu__item  active">                      <a class="mob-menu__link">Про проект</a>                    </li>                    <li class="mob-menu__item">                      <a href="#" class="mob-menu__link">Календар подій</a>                    </li>                    <li class="mob-menu__item">                      <a href="#" class="mob-menu__link">Блог</a>                    </li>                    <li class="mob-menu__item">                      <a href="#" class="mob-menu__link">Партнери</a>                    </li>                    <li class="mob-menu__item">                      <a href="#" class="mob-menu__link">Контакти</a>                    </li>                  </ul>                </nav>              </div>            </div>          </div>
         </div>
       </header>
-      <main class="main-page">
-        <div class="container  search-result">
-          <h1 class="visually-hidden">
-            Сторінка з результатами пошуку за запитом:
-            <span>Взаємодія з молоддю</span>
-          </h1>
-          <section class="search-result__top">
-            <h2 class="visually-hidden">Форма пошуку</h2>
-            <div class="row">
-              <div class="search-result__res-col">
-                <div class="search-result__res">
-                  <span class="visually-hidden">Знайдено всього:</span>
-                  39.389
-                  <span>результатов</span>
-                </div>
-              </div>
-              <div class="search-result__form-col">                <form class="search-form" action method="post">                  <label class="field-text  search-form__field  search-form__field--input">                    <span class="field-text__input-wrap">                      <input class="field-text__input  field-text__input--search" type="search" name="search" value placeholder="Пошук">                      <span class="field-text__help-text error"></span>                    </span>                  </label>                  <div class="field-select  search-form__field  search-form__field--select">                    <span class="field-select__select-wrap">                      <label for="catSelect" class="visually-hidden">Вибрати категорію</label>                      <select id="catSelect" class="field-select__select" name="select-name">                        <option value="value1">Усі категорії</option>                        <option value="value2">Значение 2</option>                        <option value="value3">Значение 3</option>                        <option value="value4">Значение 4</option>                      </select>                      <small class="field-select__help-text error"></small>                    </span>                  </div>                  <button class="btn  search-form__submit" type="submit">                    <span>Пошук</span>                  </button>                </form>              </div>
-            </div>
-          </section>
-          <div class="search-result__body">
-            <div class="row">
-              <div class="search-result__dt-filter-col">
-                <section class="filter">
-                  <h2 class="visually-hidden">Фільтрування знайдених результатів</h2>
-                  <form class="filter__form" action method="post">
-                    <fieldset>
-                      <legend class="h4">Тип матеріалу</legend>
-                      <div class="field-checkbox">
-                        <label class="field-checkbox__name">
-                          <input class="field-checkbox__input" type="checkbox" name="any" value checked>
-                          <span class="field-checkbox__name-text">Документи</span>
-                        </label>
-                      </div>
-                      <div class="field-checkbox">
-                        <label class="field-checkbox__name">
-                          <input class="field-checkbox__input" type="checkbox" name="any" value>
-                          <span class="field-checkbox__name-text">Зоображення</span>
-                        </label>
-                      </div>
-                      <div class="field-checkbox">
-                        <label class="field-checkbox__name">
-                          <input class="field-checkbox__input" type="checkbox" name="any" value>
-                          <span class="field-checkbox__name-text">Відеоматеріали</span>
-                        </label>
-                      </div>
-                      <div class="field-checkbox">
-                        <label class="field-checkbox__name">
-                          <input class="field-checkbox__input" type="checkbox" name="any" value>
-                          <span class="field-checkbox__name-text">Аудіо</span>
-                        </label>
-                      </div>
-                    </fieldset>
-                    <fieldset>
-                      <legend class="h4">Мова</legend>
-                      <div class="field-checkbox">
-                        <label class="field-checkbox__name">
-                          <input class="field-checkbox__input" type="checkbox" name="any" value>
-                          <span class="field-checkbox__name-text">Українська</span>
-                        </label>
-                      </div>
-                      <div class="field-checkbox">
-                        <label class="field-checkbox__name">
-                          <input class="field-checkbox__input" type="checkbox" name="any" value>
-                          <span class="field-checkbox__name-text">English</span>
-                        </label>
-                      </div>
-                    </fieldset>
-                    <fieldset>
-                      <legend class="h4">Дата</legend>
-                      <label class="field-text">
-                        <span class="field-text__input-wrap">
-                          <input class="field-text__input  field-text__input--date" type="text" placeholder="Будь-який час">
-                          <span class="field-text__help-text"></span>
-                        </span>
-                      </label>
-                <!--       <label class="field-text">
-                        <span class="field-text__input-wrap">
-                          <input class="field-text__input  field-text__input--date" type="text" placeholder="Будь-який час">
-                          <span class="field-text__help-text"></span>
-                        </span>
-                      </label>
-                      <label class="field-text">
-                        <span class="field-text__input-wrap">
-                          <input class="field-text__input  field-text__input--date" type="text" placeholder="Будь-який час">
-                          <span class="field-text__help-text"></span>
-                        </span>
-                      </label> -->
-                    </fieldset>
-                    <fieldset>
-                      <legend class="h4">Автор</legend>
-                      <label class="field-text">
-                        <span class="field-text__input-wrap">
-                          <input class="field-text__input  field-text__input--author" type="text" name="any" value placeholder="Введіть назву">
-                          <span class="field-text__help-text"></span>
-                        </span>
-                      </label>
-                      <div class="field-select">
-                        <span class="field-select__select-wrap">
-                          <select class="field-select__select  field-select__select--city" name="city">
-                            <option value="value1">Київ</option>
-                            <option value="value2">Значение 2</option>
-                            <option value="value3">Значение 3</option>
-                            <option value="value4">Значение 4</option>
-                          </select>
-                          <small class="field-select__help-text error"></small>
-                        </span>
-                      </div>
-                    </fieldset>
-                  </form>
-                </section>
-              </div>
-              <div class="search-result__content-col">
-                <section class="search-result__content">
-                  <div class="search-result__not-found">
-                    <h2 class="h1">Результатів за вашим запитом не знайдено</h2>
-                    <img src="img/nothing-found.svg" alt="No results found" width="497" height="371">
-                  </div>
-                </section>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-    </div>
-    <div class="page__footer-wrapper">
-      <footer class="container  page-footer">
-        <div class="row  page-footer__main">
-          <div class="page-footer__logo-col">
-            <a href="index.html" class="logo logo--footer" title="Community Policing Knowledge Hub">
-              <img src="img/cupdp-logo--footer.svg" alt="CUPDP logo" width="237" height="72" loading="lazy" decoding="async">
-            </a>
-          </div>
-          <div class="page-footer__slogan-col">
-            <p class="page-footer__slogan">Сайт створено в межах Канадсько-українського проекту розвитку поліції (CUPDP) за фінансової підтримки уряду Канади</p>
-            <div class="page-footer__logo-wrapper">
-              <img src="img/cupdp.svg" alt="CUPDP logo" width="146" height="32" loading="lazy" decoding="async">
-              <img src="img/canada-wordmark.svg" alt="Canada logo" width="95" height="23" loading="lazy" decoding="async">
-              <img src="img/alinea-logo.svg" alt="Alinea logo" width="90" height="32" loading="lazy" decoding="async">
-            </div>
-          </div>
-          <div class="page-footer__socials-col">            <section class="social-link">              <h3 class="h4  social-link__title">Соцмережі</h3>              <ul class="list-nostyled  social-link__list">                <li class="social-link__item">                  <a href="#" class="social-link__link  social-link__link--fb" target="_blank" rel="nofollow noopener">                    <img src="img/facebook.svg" alt width="24" height="24">                    <span>www.facebook.com</span>                  </a>                </li>                <li class="social-link__item">                  <a href="#" class="social-link__link  social-link__link--tw" target="_blank" rel="nofollow noopener">                    <img src="img/twitter.svg" alt width="24" height="24">                    <span>www.twitter.com</span>                  </a>                </li>                <li class="social-link__item">                  <a href="#" class="social-link__link  social-link__link--ytb" target="_blank" rel="nofollow noopener">                    <img src="img/youtube.svg" alt width="24" height="24">                    <span>www.youtube.com</span>                  </a>                </li>              </ul>            </section>          </div>
-        </div>
-        <div class="page-footer__copyrights">          <section class="copyrights">            <h3 class="visually-hidden">Авторські права та інша правова інформація для користувачів</h3>            <p class="copyrights__inner">              <span>©&thinsp;2022&ensp;Community Knowledge Hub. Всі права захищені.</span>              <a href="#">Умови використання</a>              <a href="#">Обробка персональних даних</a>              <a href="https://itdoors.com.ua/" class="copyrights__dev" target="_blank" rel="nofollow noopener">Розробка&ensp;©&thinsp;IT-Doors Outsourcing</a>            </p>          </section>        </div>
-      </footer>
-    </div>
-  </div>
-  <div class="offcanvas offcanvas-start  filter-modal" tabindex="-1" id="offcanvasFilter" aria-labelledby="offcanvasFilterLabel">
-    <div class="offcanvas-header  filter-modal__header">
-      <h5 class="offcanvas-title" id="offcanvasFilterLabel" style="margin-top:0;">Фільтр даних</h5>
-      <button type="button" class="btn  btn--icononly" data-bs-dismiss="offcanvas" aria-label="Закрити">
-        <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#close"/></svg>
-      </button>
-    </div>
-    <div class="offcanvas-body  filter-modal__body" id="scroll-container">
-      <form class="filter__form" action method="post">
-        <fieldset>
-          <legend class="h4">Тип матеріалу</legend>
-          <div class="field-checkbox">
-            <label class="field-checkbox__name">
-              <input class="field-checkbox__input" type="checkbox" name="any" value checked>
-              <span class="field-checkbox__name-text">Документи</span>
-            </label>
-          </div>
-          <div class="field-checkbox">
-            <label class="field-checkbox__name">
-              <input class="field-checkbox__input" type="checkbox" name="any" value>
-              <span class="field-checkbox__name-text">Зоображення</span>
-            </label>
-          </div>
-          <div class="field-checkbox">
-            <label class="field-checkbox__name">
-              <input class="field-checkbox__input" type="checkbox" name="any" value>
-              <span class="field-checkbox__name-text">Відеоматеріали</span>
-            </label>
-          </div>
-          <div class="field-checkbox">
-            <label class="field-checkbox__name">
-              <input class="field-checkbox__input" type="checkbox" name="any" value>
-              <span class="field-checkbox__name-text">Аудіо</span>
-            </label>
-          </div>
-        </fieldset>
-        <fieldset>
-          <legend class="h4">Мова</legend>
-          <div class="field-checkbox">
-            <label class="field-checkbox__name">
-              <input class="field-checkbox__input" type="checkbox" name="any" value>
-              <span class="field-checkbox__name-text">Українська</span>
-            </label>
-          </div>
-          <div class="field-checkbox">
-            <label class="field-checkbox__name">
-              <input class="field-checkbox__input" type="checkbox" name="any" value>
-              <span class="field-checkbox__name-text">English</span>
-            </label>
-          </div>
-        </fieldset>
-        <fieldset>
-          <legend class="h4">Дата</legend>
-          <!-- <div id="dateModal"></div> -->
-          <label class="field-text">
-            <span class="field-text__input-wrap">
-              <input id="dateModal" class="field-text__input  field-text__input--date" type="hidden">
-              <span class="field-text__help-text"></span>
-            </span>
-          </label>
-        </fieldset>
-        <fieldset style="border:none;">
-          <legend class="h4">Автор</legend>
-          <label class="field-text">
-            <span class="field-text__input-wrap">
-              <input class="field-text__input  field-text__input--author" type="text" name="any" value placeholder="Введіть назву">
-              <span class="field-text__help-text"></span>
-            </span>
-          </label>
-          <div class="field-select">
-            <label for="citySelect" class="h4" style="display:block; margin-top:0;">
-              Місто
-            </label>
-            <span class="field-select__select-wrap">
-              <select id="citySelect" class="field-select__select  field-select__select--city" name="citySelect" multiple size="1">
-                <option value="value1">Київ</option>
-                <option value="value2">Значение 2</option>
-                <option value="value3">Значение 3</option>
-                <option value="value4">Значение 4</option>
-                <option value="value4">Значение 5</option>
-                <option value="value4">Значение 6</option>
-                <option value="value4">Значение 7</option>
-                <option value="value4">Значение 8</option>
-                <option value="value4">Значение 9</option>
-                <option value="value4">Значение 10</option>
-              </select>
-              <small class="field-select__help-text error"></small>
-            </span>
-          </div>
-        </fieldset>
-        <div class="content-more-wrapper" style="margin-top:0;">
-          <button class="btn" type="submit" style="width:100%;">
-            <span>Застосувати</span>
-            <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right-sm"/></svg>
-          </button>
-        </div>
-      </form>
-    </div>
-  </div>
-  <!-- <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script> -->
+      <main class="main-page">        <div class="container  search-result">          <h1 class="visually-hidden">            Сторінка з результатами пошуку за запитом:            <span>Взаємодія з молоддю</span>          </h1>          <section class="search-result__top">            <h2 class="visually-hidden">Форма пошуку</h2>            <div class="row">              <div class="search-result__res-col">                <div class="search-result__res">                  <span class="visually-hidden">Знайдено всього:</span>                  39.389                  <span>результатов</span>                </div>              </div>              <div class="search-result__form-col">                <!--DEV                @ @include('blocks/search-form/search-form.html')                -->                <form class="search-form" action method="post">                  <label class="field-text  search-form__field  search-form__field--input">                    <span class="field-text__input-wrap">                      <input class="field-text__input  field-text__input--search" type="search" name="search" value placeholder="Пошук">                      <span class="field-text__help-text error"></span>                    </span>                  </label>                  <div class="field-select  search-form__field  search-form__field--select">                    <span class="field-select__select-wrap">                      <label for="catSelect" class="visually-hidden">Вибрати категорію</label>                      <select id="catSelect" class="field-select__select" name="select-name">                        <option value="value1">Усі категорії</option>                        <option value="value2">Значение 2</option>                        <option value="value3">Значение 3</option>                        <option value="value4">Значение 4</option>                      </select>                      <small class="field-select__help-text error"></small>                    </span>                  </div>                  <button class="btn  search-form__submit" type="submit">                    <span>Пошук</span>                  </button>                </form>              </div>            </div>          </section>          <div class="search-result__body">            <div class="row">              <div class="search-result__dt-filter-col">                <!--DEV                @ @include('blocks/filter/filter.html')                -->                <section class="filter">                  <h2 class="visually-hidden">Фільтрування знайдених результатів</h2>                  <form class="filter__form" action method="post">                    <fieldset>                      <legend class="h4">Тип матеріалу</legend>                      <div class="field-checkbox">                        <label class="field-checkbox__name">                          <input class="field-checkbox__input" type="checkbox" name="any" value checked>                          <span class="field-checkbox__name-text">Документи</span>                        </label>                      </div>                      <div class="field-checkbox">                        <label class="field-checkbox__name">                          <input class="field-checkbox__input" type="checkbox" name="any" value>                          <span class="field-checkbox__name-text">Зоображення</span>                        </label>                      </div>                      <div class="field-checkbox">                        <label class="field-checkbox__name">                          <input class="field-checkbox__input" type="checkbox" name="any" value>                          <span class="field-checkbox__name-text">Відеоматеріали</span>                        </label>                      </div>                      <div class="field-checkbox">                        <label class="field-checkbox__name">                          <input class="field-checkbox__input" type="checkbox" name="any" value>                          <span class="field-checkbox__name-text">Аудіо</span>                        </label>                      </div>                    </fieldset>                    <fieldset>                      <legend class="h4">Мова</legend>                      <div class="field-checkbox">                        <label class="field-checkbox__name">                          <input class="field-checkbox__input" type="checkbox" name="any" value>                          <span class="field-checkbox__name-text">Українська</span>                        </label>                      </div>                      <div class="field-checkbox">                        <label class="field-checkbox__name">                          <input class="field-checkbox__input" type="checkbox" name="any" value>                          <span class="field-checkbox__name-text">English</span>                        </label>                      </div>                    </fieldset>                    <fieldset>                      <legend class="h4">Дата</legend>                      <label class="field-text">                        <span class="field-text__input-wrap">                          <input class="field-text__input  field-text__input--date" type="text" placeholder="Будь-який час">                          <span class="field-text__help-text"></span>                        </span>                      </label>                <!--       <label class="field-text">                        <span class="field-text__input-wrap">                          <input class="field-text__input  field-text__input--date" type="text" placeholder="Будь-який час">                          <span class="field-text__help-text"></span>                        </span>                      </label>                      <label class="field-text">                        <span class="field-text__input-wrap">                          <input class="field-text__input  field-text__input--date" type="text" placeholder="Будь-який час">                          <span class="field-text__help-text"></span>                        </span>                      </label> -->                    </fieldset>                    <fieldset>                      <legend class="h4">Автор</legend>                      <label class="field-text">                        <span class="field-text__input-wrap">                          <input class="field-text__input  field-text__input--author" type="text" name="any" value placeholder="Введіть назву">                          <span class="field-text__help-text"></span>                        </span>                      </label>                      <div class="field-select">                        <span class="field-select__select-wrap">                          <select class="field-select__select  field-select__select--city" name="city">                            <option value="value1">Київ</option>                            <option value="value2">Значение 2</option>                            <option value="value3">Значение 3</option>                            <option value="value4">Значение 4</option>                          </select>                          <small class="field-select__help-text error"></small>                        </span>                      </div>                    </fieldset>                  </form>                </section>              </div>              <div class="search-result__content-col">                <section class="search-result__content">                  <div class="search-result__not-found">                    <h2 class="h1">Результатів за вашим запитом не знайдено</h2>                    <img src="img/nothing-found.svg" alt="No results found" width="497" height="371">                  </div>                </section>              </div>            </div>          </div>        </div>      </main>    </div>    <div class="page__footer-wrapper">      <!--DEV      @ @include('blocks/page-footer/page-footer.html')      -->      <footer class="container  page-footer">        <div class="row  page-footer__main">          <div class="page-footer__logo-col">            <a href="index.html" class="logo logo--footer" title="Community Policing Knowledge Hub">              <img src="img/cupdp-logo--footer.svg" alt="CUPDP logo" width="237" height="72" loading="lazy" decoding="async">            </a>          </div>          <div class="page-footer__slogan-col">            <p class="page-footer__slogan">Сайт створено в межах Канадсько-українського проекту розвитку поліції (CUPDP) за фінансової підтримки уряду Канади</p>            <div class="page-footer__logo-wrapper">              <img src="img/cupdp.svg" alt="CUPDP logo" width="146" height="32" loading="lazy" decoding="async">              <img src="img/canada-wordmark.svg" alt="Canada logo" width="95" height="23" loading="lazy" decoding="async">              <img src="img/alinea-logo.svg" alt="Alinea logo" width="90" height="32" loading="lazy" decoding="async">            </div>          </div>          <div class="page-footer__socials-col">            <!--DEV            @ @include('blocks/social-link/social-link.html')            -->            <section class="social-link">              <h3 class="h4  social-link__title">Соцмережі</h3>              <ul class="list-nostyled  social-link__list">                <li class="social-link__item">                  <a href="#" class="social-link__link  social-link__link--fb" target="_blank" rel="nofollow noopener">                    <img src="img/facebook.svg" alt width="24" height="24">                    <span>www.facebook.com</span>                  </a>                </li>                <li class="social-link__item">                  <a href="#" class="social-link__link  social-link__link--tw" target="_blank" rel="nofollow noopener">                    <img src="img/twitter.svg" alt width="24" height="24">                    <span>www.twitter.com</span>                  </a>                </li>                <li class="social-link__item">                  <a href="#" class="social-link__link  social-link__link--ytb" target="_blank" rel="nofollow noopener">                    <img src="img/youtube.svg" alt width="24" height="24">                    <span>www.youtube.com</span>                  </a>                </li>              </ul>            </section>          </div>        </div>        <div class="page-footer__copyrights">          <!--DEV          @ @include('blocks/copyrights/copyrights.html')          -->          <section class="copyrights">            <h3 class="visually-hidden">Авторські права та інша правова інформація для користувачів</h3>            <p class="copyrights__inner">              <span>©&thinsp;2022&ensp;Community Knowledge Hub. Всі права захищені.</span>              <a href="#">Умови використання</a>              <a href="#">Обробка персональних даних</a>              <a href="https://itdoors.com.ua/" class="copyrights__dev" target="_blank" rel="nofollow noopener">Розробка&ensp;©&thinsp;IT-Doors Outsourcing</a>            </p>          </section>        </div>      </footer>    </div>  </div>  <!--DEV  @ @include('blocks/filter-modal/filter-modal.html')  -->  <div class="offcanvas offcanvas-start  filter-modal" tabindex="-1" id="offcanvasFilter" aria-labelledby="offcanvasFilterLabel">    <div class="offcanvas-header  filter-modal__header">      <h5 class="offcanvas-title" id="offcanvasFilterLabel" style="margin-top:0;">Фільтр даних</h5>      <button type="button" class="btn  btn--icononly" data-bs-dismiss="offcanvas" aria-label="Закрити">        <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#close"/></svg>      </button>    </div>    <div class="offcanvas-body  filter-modal__body" id="scroll-container">      <form class="filter__form" action method="post">        <fieldset>          <legend class="h4">Тип матеріалу</legend>          <div class="field-checkbox">            <label class="field-checkbox__name">              <input class="field-checkbox__input" type="checkbox" name="any" value checked>              <span class="field-checkbox__name-text">Документи</span>            </label>          </div>          <div class="field-checkbox">            <label class="field-checkbox__name">              <input class="field-checkbox__input" type="checkbox" name="any" value>              <span class="field-checkbox__name-text">Зоображення</span>            </label>          </div>          <div class="field-checkbox">            <label class="field-checkbox__name">              <input class="field-checkbox__input" type="checkbox" name="any" value>              <span class="field-checkbox__name-text">Відеоматеріали</span>            </label>          </div>          <div class="field-checkbox">            <label class="field-checkbox__name">              <input class="field-checkbox__input" type="checkbox" name="any" value>              <span class="field-checkbox__name-text">Аудіо</span>            </label>          </div>        </fieldset>        <fieldset>          <legend class="h4">Мова</legend>          <div class="field-checkbox">            <label class="field-checkbox__name">              <input class="field-checkbox__input" type="checkbox" name="any" value>              <span class="field-checkbox__name-text">Українська</span>            </label>          </div>          <div class="field-checkbox">            <label class="field-checkbox__name">              <input class="field-checkbox__input" type="checkbox" name="any" value>              <span class="field-checkbox__name-text">English</span>            </label>          </div>        </fieldset>        <fieldset>          <legend class="h4">Дата</legend>          <!-- <div id="dateModal"></div> -->          <label class="field-text">            <span class="field-text__input-wrap">              <input id="dateModal" class="field-text__input  field-text__input--date" type="hidden">              <span class="field-text__help-text"></span>            </span>          </label>        </fieldset>        <fieldset style="border:none;">          <legend class="h4">Автор</legend>          <label class="field-text">            <span class="field-text__input-wrap">              <input class="field-text__input  field-text__input--author" type="text" name="any" value placeholder="Введіть назву">              <span class="field-text__help-text"></span>            </span>          </label>          <div class="field-select">            <label for="citySelect" class="h4" style="display:block; margin-top:0;">              Місто            </label>            <span class="field-select__select-wrap">              <select id="citySelect" class="field-select__select  field-select__select--city" name="citySelect" multiple size="1">                <option value="value1">Київ</option>                <option value="value2">Значение 2</option>                <option value="value3">Значение 3</option>                <option value="value4">Значение 4</option>                <option value="value4">Значение 5</option>                <option value="value4">Значение 6</option>                <option value="value4">Значение 7</option>                <option value="value4">Значение 8</option>                <option value="value4">Значение 9</option>                <option value="value4">Значение 10</option>              </select>              <small class="field-select__help-text error"></small>            </span>          </div>        </fieldset>        <div class="content-more-wrapper" style="margin-top:0;">          <button class="btn" type="submit" style="width:100%;">            <span>Застосувати</span>            <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-right-sm"/></svg>          </button>        </div>      </form>    </div>  </div>  <!-- <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script> -->
   <script src="js/script.min.js"></script>
-</body>
-</html>
+</body></html>

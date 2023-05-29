@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="uk" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Knowledge database page</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+      @@include('blocks/page-header/page-header.html')
+
+      <div class="container  breadcrumbs__wrapper">
+        <div class="row">
+          <div class="col-12-10-8">
+             @@include('blocks/breadcrumbs/breadcrumbs.html')
+          </div>
+        </div>
+      </div>
+
+      <main class="main-page">
+
+        <article class="partners  knowledge-database">
+
+          <div class="container  knowledge-database__text">
+            <div class="row">
+              <div class="col-12-10-8">
+                <div>
+                  <h1>База знань</h1>
+                  <p class="lead">Філософія або організаційна стратегія, яка заохочує співробітництво на засадах партнерства поліції та місцевих громад. Її метою є найбільш ефективне попередження та вирішення проблем злочинності, страху перед злочинами, загрози фізичної безпеки та спокою місцевого населення.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="container  top-categories  knowledge-database__categories">
+            <h2 class="visually-hidden">Категорії бази</h2>
+            <div class="row" role="list">
+              <div class="top-categories__card-col" role="listitem">
+                @@include('./blocks/category-card/category-card.html', {
+                  "title": "Дорожня безпека"
+                })
+              </div>
+              <div class="top-categories__card-col" role="listitem">
+                @@include('./blocks/category-card/category-card.html', {
+                  "title": "Громадське здоров’я"
+                })
+              </div>
+              <div class="top-categories__card-col" role="listitem">
+                @@include('./blocks/category-card/category-card.html', {
+                  "title": "Протидія ґендерно зумовленому насильству"
+                })
+              </div>
+              <div class="top-categories__card-col" role="listitem">
+                @@include('./blocks/category-card/category-card.html', {
+                  "title": "Робота з дітьми"
+                })
+              </div>
+              <div class="top-categories__card-col" role="listitem">
+                @@include('./blocks/category-card/category-card.html', {
+                  "title": "Інклюзивний напрям у роботі поліції"
+                })
+              </div>
+              <div class="top-categories__card-col" role="listitem">
+                @@include('./blocks/category-card/category-card.html', {
+                  "title": "Неформальне спілкування"
+                })
+              </div>
+            </div>
+          </section>
+
+        </article>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>
