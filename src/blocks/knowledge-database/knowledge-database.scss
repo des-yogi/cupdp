@@ -1,0 +1,17 @@
+.knowledge-database {
+
+  $block-name:                &; // #{$block-name}__element
+
+
+  &__text {
+    padding-bottom: 72px;
+
+    @media (min-width: $screen-md) {
+      padding-bottom: 96px;
+    }
+  }
+
+  &__categories {
+    //padding-bottom: 0 !important;
+  }
+}

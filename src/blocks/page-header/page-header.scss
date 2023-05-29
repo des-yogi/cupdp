@@ -45,6 +45,36 @@
       }
   }
 
+  &__user-menu {
+    min-width: 100px;
+    background-color: $body-bg;
+    border: 2px solid $border-color;
+    border-radius: $border-radius--32;
+    overflow: hidden;
+
+    li + li {
+      border-top: 2px solid $border-color;
+    }
+  }
+
+  &__user-link {
+    display: block;
+    padding: 8px 24px;
+    font-size: $font-size-sm;
+    font-weight: 500;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      color: $link-color--hover;
+      background-color: $white;
+    }
+
+    &--logoff {
+      color: $color-danger;
+    }
+  }
+
   &__login-btn {
     padding-left: 16px;
     padding-right: 16px;
@@ -52,6 +82,21 @@
     @media (max-width: $screen-md - 1) {
       display: none;
     }
+
+    &--logged {
+      padding-top: 7px;
+      padding-bottom: 7px;
+    }
+  }
+
+  &__user-avatar {
+    display: block;
+    width: 32px;
+    height: 32px;
+    margin-right: 12px;
+    background-color: $white;
+    overflow: hidden;
+    border-radius: 50%;
   }
 
   &__burger {

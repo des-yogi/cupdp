@@ -55,7 +55,9 @@
     "search-collapsing": [],
     "reg-modal": [],
     "login-modal": [],
-    "remind-password-modal": []
+    "remind-password-modal": [],
+    "see-materials": [],
+    "knowledge-database": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",

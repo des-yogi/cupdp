@@ -1,0 +1,20 @@
+.see-materials {
+  padding: 24px 16px;
+  margin-top: 40px;
+  text-align: center;
+  background-color: $light-bg;
+  border-radius: $border-radius--24;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__caption {
+    margin-bottom: 24px;
+    margin-top: 0;
+    font-weight: 700;
+  }
+
+  &__link {
+    width: 100%;
+    max-width: 400px;
+  }
+}

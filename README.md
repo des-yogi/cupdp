@@ -7,6 +7,7 @@
 * https://des-yogi.github.io/cupdp/material
 * https://des-yogi.github.io/cupdp/search-result
 * https://des-yogi.github.io/cupdp/search-result-not-found
+* https://des-yogi.github.io/cupdp/knowledge-database
 * https://des-yogi.github.io/cupdp/partners
 * https://des-yogi.github.io/cupdp/partner-page
 * https://des-yogi.github.io/cupdp/text-page
