@@ -2,6 +2,7 @@
   const about = new Swiper('.about-slider', {
     speed: 400,
     spaceBetween: 4,
+    autoHeight: true,
     //loop: true,
     /*autoplay: {
       delay: 1000,

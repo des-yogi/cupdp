@@ -3,6 +3,8 @@
   $block-name:                &; // #{$block-name}__element
 
   .swiper-wrapper {
+    //box-sizing: border-box;
+    align-items: stretch;
     margin: 32px 0;
 
     @media (min-width: $screen-md) {
@@ -11,6 +13,8 @@
   }
 
   &__slide {
+    //box-sizing: inherit;
+    //height: 100%;
     width: 265px;
     padding: 16px;
     background-color: $white;
@@ -27,7 +31,7 @@
   }
 
   &__text {
-    padding: 16px 0;
+    padding: 16px 0 0;
   }
 
   &__name {
