@@ -1,0 +1,37 @@
+.social-footer {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__title {
+    margin-bottom: 8px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px;
+
+    transform: translateX(-10px);
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    color: $main-color;
+    text-decoration: none !important;
+
+    svg {
+      fill: currentColor;
+      transition: fill $transition-time;
+    }
+
+    &:hover,
+    &:focus {
+      color: $white;
+    }
+  }
+}

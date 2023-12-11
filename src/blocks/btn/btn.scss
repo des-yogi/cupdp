@@ -6,11 +6,12 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: $field-padding-vertical  $field-padding-horizontal;
+  min-height: 48px;
+  padding: 0  $field-padding-horizontal;
   margin: 0;
   text-align: center;
   font-size: $font-size;
-  font-weight: 700;
+  font-weight: 600;
   font-family: inherit;
   line-height: $line-height;
   text-decoration: none;
@@ -66,9 +67,9 @@
     padding: 13px;
     font-size: $font-size-sm;
     line-height: 1;
-    color: $text-color;
-    background-color: $white;
-    border-color: $gray-bg;
+    //color: $text-color;
+    //background-color: $white;
+    //border-color: $gray-bg;
     transition: all $transition-time;
 
     svg {
@@ -91,15 +92,15 @@
       margin-left: 16px;
     }
 
-    &:hover,
-    &:focus {
-      color: $white;
-      background-color: $link-color--hover;
-      border-color: $link-color--hover;
+    // &:hover,
+    // &:focus {
+    //   color: $white;
+    //   background-color: $link-color--hover;
+    //   border-color: $link-color--hover;
 
-      svg {
-        stroke: $white;
-      }
-    }
+    //   svg {
+    //     stroke: $white;
+    //   }
+    // }
   }
 }

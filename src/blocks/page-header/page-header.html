@@ -24,16 +24,10 @@
   <div class="page-header__menu-wrapper">
     @@include('../../blocks/main-nav/main-nav.html')
 
-    <a href="#" class="btn  btn--icononly  page-header__search-link" title="Пошук">
-      <!-- Для шаблона главной страницы ссылку поиска - отключить! -->
-      <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#search"></use></svg>
-      <span class="visually-hidden">Пошук</span>
-    </a>
-
     <div class="page-header__service-menu">
 
       <!-- Если пользователь зашел в аккаунт -->
-      <div class="dropdown-center  page-header__user">
+      <!-- <div class="dropdown-center  page-header__user">
         <button class="btn  btn--icononly  page-header__login-btn  page-header__login-btn--logged" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="0,8">
           <span class="page-header__user-avatar" role="presentation">
             <img src="img/user-avatar.jpg" width="32" height="32" alt="">
@@ -44,12 +38,12 @@
           <li><a class="dropdown-item  page-header__user-link" href="#">В адмінку</a></li>
           <li><a class="dropdown-item  page-header__user-link  page-header__user-link--logoff" href="#">Вихід</a></li>
         </ul>
-      </div>
+      </div> -->
 
-      <!-- <button class="btn  btn--icononly  page-header__login-btn" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">
+      <button class="btn  btn--icononly  page-header__login-btn" data-bs-toggle="modal" data-bs-target="#loginModal">
         <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#user-profile"></use></svg>
         <span>Увійти</span>
-      </button> -->
+      </button>
 
       @@include('../../blocks/lang-switcher/lang-switcher.html')
 

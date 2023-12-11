@@ -57,7 +57,8 @@
     "login-modal": [],
     "remind-password-modal": [],
     "see-materials": [],
-    "knowledge-database": []
+    "knowledge-database": [],
+    "social-footer": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",
