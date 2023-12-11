@@ -1,69 +1,89 @@
 .page-footer {
-  padding-top: 40px;
+  padding-top: 24px;
   color: $white;
   background-color: $secondary-color;
+  border-top-left-radius: $border-radius--32;
+  border-top-right-radius: $border-radius--32;
+
+  @media (min-width: $screen-lg) {
+    padding-top: 16px;
+  }
 
   $block-name:                &; // #{$block-name}__element
 
   &__main {
-    text-align: center;
-
-    @media (min-width: $screen-md) {
-      text-align: initial;
-    }
-  }
-
-  &__logo-col,
-  &__slogan-col,
-  &__socials-col {
-    @include col(xs, 12);
-    @include col(xl, 4);
-
-    @media (min-width: $screen-md) {
-      padding-left: 26px !important;
-    }
+    gap: 16px 0;
   }
 
   &__logo-col {
-    margin-bottom: 32px;
+    @include col(xs, 12);
+    @include col(lg, 3);
+    @include col(xl, 4);
+    @include col(xxl, 3);
+    //margin-bottom: 32px;
 
-    @media (min-width: $screen-md) {
-      margin-bottom: 40px;
+    @media (min-width: $screen-lg) {
+      padding-top: 40px;
     }
   }
 
   &__slogan-col {
-    margin-bottom: 32px;
+    @include col(xs, 12);
+    @include col(lg, 9);
+    @include col(xl, 8);
+    @include col(xxl, 9);
+    //margin-bottom: 32px;
+  }
+
+  &__about {
+    margin: 24px 0;
+  }
+
+  &__text {
+    padding: 16px;
+    //margin-bottom: 16px;
+    //text-align: center;
+    background-color: $dark-bg;
+    border-radius: $border-radius--32;
 
     @media (min-width: $screen-md) {
-      margin-bottom: 40px;
+      padding: 24px;
+      background-repeat: no-repeat;
+      background-position: bottom -126px left -58px;
+      background-size: 238px;
+      background-image: url(../img/orange-sphere.png);
+      background-image: url(../img/orange-sphere.webp);
+    }
+
+    @media (min-width: $screen-lg) {
+      height: 100%;
+      padding: 40px;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+
+    p + p {
+      margin-top: 8px;
     }
   }
 
-  &__socials-col {
-
+  &__title {
+    margin: 0 0 8px;
+    font-size: 24px;
+    font-weight: 500;
   }
 
-  &__slogan {
-    margin-bottom: 16px;
-    font-size: $font-size-sm;
-    //text-align: center;
-  }
-
-  &__logo-wrapper {
+  &__founders {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: flex-end;
+    gap: 16px 40px;
+    margin-top: 24px;
 
-    @media (min-width: $screen-md) {
-      justify-content: initial;
-    }
-
-    img + img {
-
-      @media (min-width: $screen-md) {
-        margin-left: 16px;
-      }
+    @media (min-width: $screen-lg) {
+      margin-top: 40px;
     }
   }
 
