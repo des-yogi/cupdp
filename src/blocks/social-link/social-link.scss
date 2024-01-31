@@ -44,8 +44,10 @@
     color: inherit;
     text-decoration: none !important;
 
-    img {
+    svg {
       margin-right: 16px;
+      fill: $link-color;
+      transition: fill $transition-time;
     }
 
     &--fb {
@@ -53,6 +55,10 @@
       &:hover,
       &:focus {
         color: $color-fb;
+
+        svg {
+          fill: currentColor;
+        }
       }
     }
 
@@ -61,6 +67,10 @@
       &:hover,
       &:focus {
         color: $color-tw;
+
+        svg {
+          fill: currentColor;
+        }
       }
     }
 
@@ -69,6 +79,10 @@
       &:hover,
       &:focus {
         color: $color-ytb;
+
+        svg {
+          fill: currentColor;
+        }
       }
     }
   }

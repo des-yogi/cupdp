@@ -50,6 +50,16 @@
 
               <div class="search-result__dt-filter-col">
                 @@include('blocks/filter/filter.html')
+
+                <div class="search-result__tags">
+                  @@include('blocks/tag-links/tag-links.html', {
+                    "title": "Теги"
+                  })
+                  <hr>
+                  @@include('blocks/tag-links/tag-links.html', {
+                    "title": "Ініціативи"
+                  })
+                </div>
               </div>
 
               <div class="search-result__content-col">

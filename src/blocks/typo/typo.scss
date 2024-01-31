@@ -220,8 +220,7 @@ hr {
   box-sizing: content-box; // Проблема Firefox
   height: 0;               // Проблема Firefox
   overflow: visible;       // Проблема Edge и IE
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 24px 0 24px;
   border: 0;
   border-top: 1px solid $border-color;
 }

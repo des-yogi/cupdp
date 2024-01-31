@@ -69,6 +69,16 @@
           </a>
         </div>
 
+        <div class="material__keywords">
+          @@include('../../blocks/tag-links/tag-links.html', {
+            "title": "Ініцативи"
+          })
+
+          @@include('../../blocks/tag-links/tag-links.html', {
+            "title": "Ключові слова"
+          })
+        </div>
+
       </div>
     </div>
 
@@ -76,18 +86,60 @@
       <div class="embed-responsive  embed-responsive--4-3  material__img">
         <img src="img/material-img.jpg" width="614" height="461" alt="Описание" loading="lazy" decoding="async">
       </div>
-    </div>
 
-    <div class="material__keywords-col">
-      <div class="material__keywords">
-        <p>Ключові слова:</p>
-        <p class="tags">
-          <span>#EmbassyofCanada toUkraine</span>
-          <span>#МВС</span>
-          <span>#Війна</span>
-          <span>#Фото</span>
-        </p>
-      </div>
+      <section class="material__form-wrapper">
+        <h2 class="visually-hidden">Форма зв'язку</h2>
+
+        <p class="h4" style="margin: 0 0 8px;">Потрібна допомога в реалізації подібної ініціативи?</p>
+        <p class="material__small-text" style="margin: 0 0 24px;">Залишіть заявку і ми зв'яжемося з Вами.</p>
+
+        <form class="contact-form" action="" method="post">
+          <label class="field-text">
+            <span class="field-text__input-wrap">
+              <input class="field-text__input" type="text" name="name" value="" placeholder="Ім'я" required>
+              <span class="field-text__help-text"></span>
+            </span>
+          </label>
+
+          <label class="field-text">
+            <span class="field-text__input-wrap">
+              <input class="field-text__input" type="text" inputmode="numeric" name="name" value="" placeholder="Телефон" required>
+              <span class="field-text__help-text"></span>
+            </span>
+          </label>
+
+          <label class="field-text">
+            <span class="field-text__input-wrap">
+              <input class="field-text__input" type="email" name="email" value="" placeholder="E-mail">
+              <span class="field-text__help-text"></span>
+            </span>
+          </label>
+
+          <label class="field-text">
+            <span class="field-text__input-wrap">
+              <textarea class="field-text__input" name="message" placeholder="Повідомлення" rows="4"></textarea>
+              <span class="field-text__help-text"></span>
+            </span>
+          </label>
+
+          <div class="field-text" style="margin: 24px 0;">
+            Место для Капчи
+          </div>
+
+          <div class="contact-form__agreement">
+            <button class="btn" type="submit" name="submit" style="width:100%;margin-bottom:24px;">
+              <span>Отправить</span>
+            </button>
+            <div class="field-checkbox">
+              <label class="field-checkbox__name">
+                <input class="field-checkbox__input  agreement-field" type="checkbox" name="check" checked>
+                <span class="field-checkbox__name-text">Я згоден на обробку персональних даних відповідно до Політики конфіденційності</span>
+              </label>
+            </div>
+          </div>
+
+        </form>
+      </section>
     </div>
 
   </div>
