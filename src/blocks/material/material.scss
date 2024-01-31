@@ -11,6 +11,15 @@
     @include col(xs, 12);
     @include col(md, 10);
     @include col(xl, 8);
+    margin-bottom: 32px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 40px;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 0;
+    }
   }
 
   &__img-col {
@@ -20,10 +29,14 @@
   }
 
 
-  &__keywords-col {
-    @include col(xs, 12);
-    @include col(md, 10);
-    @include col(xl, 8);
+  &__keywords {
+    // @include col(xs, 12);
+    // @include col(md, 10);
+    // @include col(xl, 8);
+
+    & > * + * {
+      margin-top: 40px;
+    }
   }
 
   &__text {
@@ -190,13 +203,6 @@
       object-fit: contain;
       object-position: center;
       border-radius: $border-radius;
-    }
-  }
-
-  &__keywords {
-
-    p:not(.tags) {
-      font-weight: 500;
     }
   }
 }

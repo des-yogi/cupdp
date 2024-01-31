@@ -119,4 +119,14 @@
       text-align: center;
     }
   }
+
+  &__tags {
+    padding-top: 24px;
+    margin-top: 24px;
+    border-top: 1px solid $border-color;
+
+    & > * + * {
+
+    }
+  }
 }
