@@ -17,11 +17,8 @@
   &--footer {
 
     img {
-
-      @media (max-width: $screen-xl - 1) {
-        width: 158px;
-        height: 48px;
-      }
+      width: 237px;
+      height: 72px;
     }
   }
 }
