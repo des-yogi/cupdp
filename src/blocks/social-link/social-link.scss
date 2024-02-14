@@ -8,131 +8,59 @@
 
   &__list {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
-
-    @media (min-width: $screen-md) {
-      flex-direction: initial;
-    }
-
-    @media (min-width: $screen-xl) {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  }
-
-  &__item {
-
-    & + & {
-      margin-top: 4px;
-
-      @media (min-width: $screen-md) {
-        margin-top: 0;
-        margin-left: 24px;
-      }
-
-      @media (min-width: $screen-xl) {
-        margin-left: 0;
-      }
-    }
+    gap: 4px;
+    transform: translateX(-10px);
   }
 
   &__link {
     display: inline-flex;
     align-items: center;
-    padding: 10px 0;
-    color: inherit;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    color: $main-color;
     text-decoration: none !important;
 
     svg {
-      margin-right: 16px;
-      fill: $link-color;
+      fill: currentColor;
       transition: fill $transition-time;
     }
 
-    &--fb {
-
-      &:hover,
-      &:focus {
-        color: $color-fb;
-
-        svg {
-          fill: currentColor;
-        }
-      }
-    }
-
-    &--tw {
-
-      &:hover,
-      &:focus {
-        color: $color-tw;
-
-        svg {
-          fill: currentColor;
-        }
-      }
-    }
-
-    &--ytb {
-
-      &:hover,
-      &:focus {
-        color: $color-ytb;
-
-        svg {
-          fill: currentColor;
-        }
-      }
-    }
-  }
-
-  &--partner {
-
-    #{$block-name}__list {
-      align-items: flex-start;
-
-      @media (min-width: $screen-md) {
-        flex-wrap: wrap;
-        justify-content: space-between;
-      }
-
-      @media (min-width: $screen-xl) {
-        flex-direction: initial;
-        flex-wrap: wrap;
-        justify-content: space-between;
-      }
-    }
-
-    #{$block-name}__item {
-
-      @media (min-width: $screen-md) {
-        flex: 0 1;
-        flex-basis: calc(50% - 12px);
-      }
-
-      &:nth-child(odd) {
-        margin-right: 24px;
-      }
-    }
-
-    #{$block-name}__item + #{$block-name}__item {
-
-      @media (min-width: $screen-md) {
-        margin-left: 0;
-      }
+    &:hover,
+    &:focus {
+      color: $white;
     }
   }
 
   &--contacts {
 
     #{$block-name}__list {
-      align-items: flex-start;
-      flex-direction: column !important;
+      flex-direction: column;
+      align-items: initial;
+      gap: 16px;
+      transform: none;
     }
 
-    #{$block-name}__item {
-      margin-left: 0 !important;
+    #{$block-name}__link {
+      width: auto;
+      height: auto;
+      font-weight: 500;
+
+      &:hover,
+      &:focus {
+        color: $link-color--hover;
+
+        span {
+          color: currentColor;
+        }
+      }
+
+      span {
+        margin-left: 12px;
+        color: $text-color;
+      }
     }
   }
 }
