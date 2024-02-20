@@ -48,7 +48,7 @@
   }
 
   &__item {
-    flex: 0 0 auto;
+    flex: 0 1 auto;
 
     &.active {
 
@@ -62,7 +62,7 @@
     display: inline-flex;
     padding: 2px 8px;
     font-size: $font-size-sm;
-    white-space: nowrap;
+    overflow-wrap: break-word;
     color: inherit;
     background-color: $gray-bg;
     border-radius: $border-radius--32;
